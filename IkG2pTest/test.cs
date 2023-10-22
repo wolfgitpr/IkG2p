@@ -1,6 +1,7 @@
 ﻿using IKg2p;
 using System.Reflection;
 using System.Text;
+using TinyPinyin;
 
 namespace IKg2pTest
 {
@@ -38,7 +39,11 @@ namespace IKg2pTest
                                 string key = keyValuePair[0];
                                 string value = keyValuePair[1];
                                 string result = zhG2p.Convert(key, false, true);
-                                count++;
+                                // var result = TinyPinyin.PinyinHelper.GetPinyin(key).ToLower();
+
+                                var words = value.Split(" ");
+                                int wordSize = words.Length;
+                                count += wordSize;
 
                                 if (result != value)
                                 {
@@ -46,7 +51,16 @@ namespace IKg2pTest
                                     Console.WriteLine(value);
                                     Console.WriteLine(result);
                                     Console.WriteLine();
-                                    error++;
+
+                                    var resWords = result.Split(" ");
+                                    for (int i = 0; i < wordSize; i++)
+                                    {
+                                        if (words[i] != resWords[i])
+                                        {
+                                            error++;
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -58,6 +72,10 @@ namespace IKg2pTest
                 }
 
             }
+
+            double percentage = Math.Round(((double)error / (double)count) * 100.0, 2);
+            Console.WriteLine(percentage);
+
             Console.WriteLine(error);
             Console.WriteLine(count);
         }
