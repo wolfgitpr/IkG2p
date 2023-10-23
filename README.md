@@ -11,6 +11,9 @@ IkG2p is a lightweight Chinese&Cantonese G2p.
 + [opencpop](http://wenet.org.cn/opencpop/) 
   The test data source.
 
++ [M4Singer](https://github.com/M4Singer/M4Singer)
+  The test data source.
+
 + [cc-edict](https://cc-cedict.org/wiki/) 
   The dictionary source.
 
