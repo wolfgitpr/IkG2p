@@ -315,7 +315,7 @@
 像普通旧朋友|xiang pu tong jiu peng you
 还是你依然会心疼我|hai shi ni yi ran hui xin teng wo
 好多好多的话想对你说|hao duo hao duo de hua xiang dui ni shuo
-悬着一颗心没着落|xuan zhe yi ke xin mei zhao luo
+悬着一颗心没着落|xuan zhe yi ke xin mei zhuo luo
 要怎么附和舍不得又无可奈何|yao zen me fu he she bu de you wu ke nai he
 如果你也听说|ru guo ni ye ting shuo
 会不会相信我|hui bu hui xiang xin wo
@@ -333,7 +333,7 @@
 像普通旧朋友|xiang pu tong jiu peng you
 还是你依然会心疼我|hai shi ni yi ran hui xin teng wo
 好多好多的话想对你说|hao duo hao duo de hua xiang dui ni shuo
-悬着一颗心没着落|xuan zhe yi ke xin mei zhao luo
+悬着一颗心没着落|xuan zhe yi ke xin mei zhuo luo
 要怎么附和舍不得|yao zen me fu he she bu de
 又无可奈何|you wu ke nai he
 如果你也听说|ru guo ni ye ting shuo
@@ -514,7 +514,7 @@
 你就在对岸等我勇敢你还是我的我的我的|ni jiu zai dui an deng wo yong gan ni hai shi wo de wo de wo de
 你看|ni kan
 浪漫无处消磨无聊伴着生活|lang man wu chu xiao mo wu liao ban zhe sheng huo
-空荡荡的自我莫名地焦灼|kong dang dang de zi wo mo ming di jiao zhuo
+空荡荡的自我莫名地焦灼|kong dang dang de zi wo mo ming de jiao zhuo
 世界孤立我任它奚落|shi jie gu li wo ren ta xi luo
 我只保持我的沉默明白什么才是好的坏的|wo zhi bao chi wo de chen mo ming bai shen me cai shi hao de huai de
 都散了散了太多无关的|dou san le san le tai duo wu guan de
@@ -554,7 +554,7 @@
 可惜你早已远去消失在人海|ke xi ni zao yi yuan qu xiao shi zai ren hai
 后来终于在眼泪中明白|hou lai zhong yu zai yan lei zhong ming bai
 有些人一旦错过就不在|you xie ren yi dan cuo guo jiu bu zai
-永远不会再重来|yong yuan bu hui zai zhong lai
+永远不会再重来|yong yuan bu hui zai chong lai
 有一个男孩爱着那个女孩|you yi ge nan hai ai zhe na ge nv hai
 说不痛苦那是假的|shuo bu tong ku na shi jia de
 毕竟我的心也是肉做的|bi jing wo de xin ye shi rou zuo de
@@ -566,7 +566,7 @@
 世界都是黑色|shi jie dou shi hei se
 若不是你突然闯进我生活|ruo bu shi ni tu ran chuang jin wo sheng huo
 我怎会把死守的寂寞放任了爱我的话你都说爱我的事你不做|wo zen hui ba si shou de ji mo fang ren le ai wo de hua ni dou shuo ai wo de shi ni bu zuo
-我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu ke
+我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu qiao
 你的悲伤难过我不参破|ni de bei shang nan guo wo bu can po
 我也会把曾经的且过当施舍不去计较你太多从此你在我心里|wo ye hui ba ceng jing de qie guo dang shi she bu qu ji jiao ni tai duo cong ci ni zai wo xin li
 只剩绿色|zhi sheng lv se
@@ -575,19 +575,19 @@
 若不是你突然闯进我生活|ruo bu shi ni tu ran chuang jin wo sheng huo
 我怎会把死守的寂寞放任了|wo zen hui ba si shou de ji mo fang ren le
 爱我的话你都说爱我的事你不做|ai wo de hua ni dou shuo ai wo de shi ni bu zuo
-我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu ke
+我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu qiao
 你的悲伤难过我不参破|ni de bei shang nan guo wo bu can po
 我也会把曾经的且过当施舍|wo ye hui ba ceng jing de qie guo dang shi she
 不去计较你太多从此你在我心里只剩绿色|bu qu ji jiao ni tai duo cong ci ni zai wo xin li zhi sheng lv se
 若不是你突然闯进我生活我怎会把死守的寂寞放任了|ruo bu shi ni tu ran chuang jin wo sheng huo wo zen hui ba si shou de ji mo fang ren le
 爱我的话你都说爱我的事你不做|ai wo de hua ni dou shuo ai wo de shi ni bu zuo
-我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu ke
+我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu qiao
 不是你突然闯进我生活我怎会把死守的寂寞放任了|bu shi ni tu ran chuang jin wo sheng huo wo zen hui ba si shou de ji mo fang ren le
 爱我的话你都说爱我的事你不做|ai wo de hua ni dou shuo ai wo de shi ni bu zuo
-我却把甜言蜜语当做你爱我的躯壳你的悲伤难过我不参破|wo que ba tian yan mi yu dang zuo ni ai wo de qu ke ni de bei shang nan guo wo bu can po
+我却把甜言蜜语当做你爱我的躯壳你的悲伤难过我不参破|wo que ba tian yan mi yu dang zuo ni ai wo de qu qiao ni de bei shang nan guo wo bu can po
 我也会把曾经的且过当施舍若不是你突然闯进我生活|wo ye hui ba ceng jing de qie guo dang shi she ruo bu shi ni tu ran chuang jin wo sheng huo
 我怎会把死守的寂寞放任了爱我的话你都说爱我的事你不做|wo zen hui ba si shou de ji mo fang ren le ai wo de hua ni dou shuo ai wo de shi ni bu zuo
-我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu ke
+我却把甜言蜜语当做你爱我的躯壳|wo que ba tian yan mi yu dang zuo ni ai wo de qu qiao
 爱情就像蓝蓝天上|ai qing jiu xiang lan lan tian shang
 一片留白有你陪我想象|yi pian liu bai you ni pei wo xiang xiang
 白马突然不再抽象青蛙|bai ma tu ran bu zai chou xiang qing wa
@@ -951,9 +951,9 @@
 我可以假装看不见也可以偷偷地想念|wo ke yi jia zhuang kan bu jian ye ke yi tou tou de xiang nian
 直到让我摸到你那温暖|zhi dao rang wo mo dao ni na wen nuan
 的脸|de lian
-知了也睡了安心的睡了|zhi liao ye shui liao an xin de shui liao
+知了也睡了安心的睡了|zhi liao ye shui le an xin de shui le
 在我心里面宁静的夏天|zai wo xin li mian ning jing de xia tian
-知了也睡了安心的睡了|zhi liao ye shui liao an xin de shui liao
+知了也睡了安心的睡了|zhi liao ye shui le an xin de shui le
 在我心里面宁静的|zai wo xin li mian ning jing de
 夏天|xia tian
 宁静的夏天天空中繁星点点|ning jing de xia tian tian kong zhong fan xing dian dian
@@ -963,9 +963,9 @@
 的脸|de lian
 那是个宁静的夏天|na shi ge ning jing de xia tian
 你来到宁夏的那一天|ni lai dao ning xia de na yi tian
-知了也睡了安心的睡了|zhi liao ye shui liao an xin de shui liao
+知了也睡了安心的睡了|zhi liao ye shui le an xin de shui le
 在我心里面宁静的夏天|zai wo xin li mian ning jing de xia tian
-知了也睡了安心的睡了|zhi liao ye shui liao an xin de shui liao
+知了也睡了安心的睡了|zhi liao ye shui le an xin de shui le
 在我心里面|zai wo xin li mian
 宁静的夏天|ning jing de xia tian
 只剩下钢琴陪我谈了一天|zhi sheng xia gang qin pei wo tan le yi tian
@@ -1133,10 +1133,6 @@
 会有孤独会有悲伤也会有无尽的希望|hui you gu du hui you bei shang ye hui you wu jin de xi wang
 亲爱的旅人这一程会短暂却又漫长|qin ai de lv ren zhe yi cheng hui duan zan que you man chang
 而一切终将汇聚成最充盈的景象|er yi qie zhong jiang hui ju cheng zui chong ying de jing xiang
-啦啦啦啦啦啦啦啦啦啦啦啦啦啦|la la la la la la la la la la la la la la
-啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦|la la la la la la la la la la la la la la la la la la
-嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟|du du du du du du du du du du du du du du du du du du du
-呜呜呜呜呜呜呜呜呜呜呜呜|wu wu wu wu wu wu wu wu wu wu wu wu
 就此告别吧身后的灯火逐渐暗淡|jiu ci gao bie ba shen hou de deng huo zhu jian an dan
 每个恋家的孩子都要扬起远行的帆|mei ge lian jia de hai zi dou yao yang qi yuan xing de fan
 说声再见吧美好的梦境不会消散|shuo sheng zai jian ba mei hao de meng jing bu hui xiao san
@@ -1153,11 +1149,6 @@
 在半空中飞扬|zai ban kong zhong fei yang
 永远轻盈永远滚烫|yong yuan qing ying yong yuan gun tang
 不愿下沉不肯下降|bu yuan xia chen bu ken xia jiang
-啦啦啦啦啦啦啦啦啦啦啦啦啦啦|la la la la la la la la la la la la la la
-啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦|la la la la la la la la la la la la la la la la la la
-嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟|du du du du du du du du du du du du du du du du du du du
-呜呜呜呜呜呜|wu wu wu wu wu wu
-呜呜呜呜呜呜呜|wu wu wu wu wu wu wu
 我等的模样好不|wo deng de mu yang hao bu
 具象|ju xiang
 用皮肤感受你的|yong pi fu gan shou ni de
@@ -1399,7 +1390,7 @@
 你提着孤灯|ni ti zhe gu deng
 独自寻找星辰|du zi xun zhao xing chen
 转身前的眼神|zhuan shen qian de yan shen
-泄露多少灵魂|xie lou duo shao ling hun
+泄露多少灵魂|xie lu duo shao ling hun
 誓言谎言一并封存|shi yan huang yan yi bing feng cun
 悬而未决最残忍|xuan er wei jue zui can ren
 愿得一心人|yuan de yi xin ren
@@ -1421,7 +1412,7 @@
 你提着孤灯|ni ti zhe gu deng
 独自寻找星辰|du zi xun zhao xing chen
 转身前的眼神|zhuan shen qian de yan shen
-泄露多少灵魂|xie lou duo shao ling hun
+泄露多少灵魂|xie lu duo shao ling hun
 誓言谎言一并封存|shi yan huang yan yi bing feng cun
 悬而未决最残忍|xuan er wei jue zui can ren
 愿得一心人白首不离分|yuan de yi xin ren bai shou bu li fen
@@ -1436,7 +1427,7 @@
 看尽浮浮沉沉细数晨晨昏昏|kan jin fu fu chen chen xi shu chen chen hun hun
 一怀温暖是否愈合你|yi huai wen nuan shi fou yu he ni
 余生伤痕|yu sheng shang hen
-七月的风懒懒地|qi yue de feng lan lan di
+七月的风懒懒地|qi yue de feng lan lan de
 连云都变热热地|lian yun dou bian re re di
 不久后天闷闷地一|bu jiu hou tian men men de yi
 阵云后雨下过|zhen yun hou yu xia guo
@@ -1447,7 +1438,7 @@
 听到心跳喔在乎我和|ting dao xin tiao wo zai hu o he
 天气一样温度|tian qi yi yang wen du
 夏天的风我永远记得|xia tian de feng wo yong yuan ji de
-清清楚楚地说你爱我|qing qing chu chu di shuo ni ai wo
+清清楚楚地说你爱我|qing qing chu chu de shuo ni ai wo
 我看见你酷酷的笑容|wo kan jian ni ku ku de xiao rong
 也有腼腆的时候|ye you mian tian de shi hou
 夏天的风正暖暖吹过|xia tian de feng zheng nuan nuan chui guo
@@ -1471,7 +1462,7 @@
 穿过头发穿过耳朵你和我的夏天|chuan guo tou fa chuan guo er duo ni he wo de xia tian
 风轻轻说着|feng qing qing shuo zhe
 夏天的风我永远记得|xia tian de feng wo yong yuan ji de
-清清楚楚地说你爱我|qing qing chu chu di shuo ni ai wo
+清清楚楚地说你爱我|qing qing chu chu de shuo ni ai wo
 我看见你酷酷的笑容|wo kan jian ni ku ku de xiao rong
 也有腼腆的时候|ye you mian tian de shi hou
 夏天的风正暖暖吹过|xia tian de feng zheng nuan nuan chui guo
@@ -2351,9 +2342,9 @@
 我能学会飞行从不听谁的命令|wo neng xue hui fei xing cong bu ting shei de ming ling
 很独立耳朵用来听自己的心灵|hen du li er duo yong lai ting zi ji de xin ling
 淋雨一直走是一颗宝石就该闪烁|lin yu yi zhi zou shi yi ke bao shi jiu gai shan shuo
-人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng wo you meng jiu bie pa tong
+人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng o you meng jiu bie pa tong
 淋雨一直走是道阳光就该暖和|lin yu yi zhi zou shi dao yang guang jiu gai nuan huo
-人都应该有梦噢有梦就|ren dou ying gai you meng wo you meng jiu
+人都应该有梦噢有梦就|ren dou ying gai you meng o you meng jiu
 别怕痛|bie pa tong
 有前面盘旋的秃鹰有背后尖酸的耳语|you qian mian pan xuan de tu ying you bei hou jian suan de er yu
 黑色的童话是给长大的洗礼|hei se de tong hua shi gei zhang da de xi li
@@ -2372,12 +2363,6 @@
 噢我说希望无穷你猜美梦成空|o wo shuo xi wang wu qiong ni cai mei meng cheng kong
 相信和怀疑总要决斗|xiang xin he huai yi zong yao jue dou
 淋雨一直走是一颗宝石就该闪烁|lin yu yi zhi zou shi yi ke bao shi jiu gai shan shuo
-人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng wo you meng jiu bie pa tong
-淋雨一直走是道阳光就该暖和|lin yu yi zhi zou shi dao yang guang jiu gai nuan huo
-人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng wo you meng jiu bie pa tong
-淋雨一直走是一颗宝石就该闪烁|lin yu yi zhi zou shi yi ke bao shi jiu gai shan shuo
-人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng wo you meng jiu bie pa tong
-淋雨一直走是道阳光就该暖和|lin yu yi zhi zou shi dao yang guang jiu gai nuan huo
 教室里那台风琴叮咚叮咚叮咛|jiao shi li na tai feng qin ding dong ding dong ding ning
 像你告白的声音|xiang ni gao bai de sheng yin
 动作一直很轻|dong zuo yi zhi hen qing
@@ -2460,7 +2445,7 @@
 一起走过许多个四季|yi qi zou guo xu duo ge si ji
 天南地北别忘记|tian nan di bei bie wang ji
 我们之间的情谊|wo men zhi jian de qing yi
-我们的开始是很长的|wo men de kai shi shi hen zhang de
+我们的开始是很长的|wo men de kai shi shi hen chang de
 电影放映了三年|dian ying fang ying le san nian
 我票都还留着|wo piao dou hai liu zhe
 冰上的芭蕾|bing shang de ba lei
@@ -2470,7 +2455,7 @@
 我们溜了多远|wo men liu le duo yuan
 冰刀划的圈|bing dao hua de quan
 圈起了谁改变|quan qi le shei gai bian
-如果再重来|ru guo zai zhong lai
+如果再重来|ru guo zai chong lai
 会不会稍嫌狼狈|hui bu hui shao xian lang bei
 爱是不是不开口才珍贵|ai shi bu shi bu kai kou cai zhen gui
 再给我两分钟|zai gei wo liang fen zhong
@@ -2484,7 +2469,7 @@
 我们溜了多远|wo men liu le duo yuan
 冰刀划的圈|bing dao hua de quan
 圈起了谁改变|quan qi le shei gai bian
-如果再重来|ru guo zai zhong lai
+如果再重来|ru guo zai chong lai
 会不会稍嫌狼狈|hui bu hui shao xian lang bei
 爱是不是不开口才珍贵|ai shi bu shi bu kai kou cai zhen gui
 再给我两分钟|zai gei wo liang fen zhong
@@ -2693,7 +2678,7 @@
 我却只为你折腰|wo que zhi wei ni zhe yao
 过荒村野桥寻世外古道|guo huang cun ye qiao xun shi wai gu dao
 远离人间尘嚣|yuan li ren jian chen xiao
-柳絮飘执子之手逍遥|liu xu piao zhi zi zhi shu xiao yao
+柳絮飘执子之手逍遥|liu xu piao zhi zi zhi shou xiao yao
 檐下窗棂斜映枝桠|yan xia chuang ling xie ying zhi ya
 与你席地对座饮茶|yu ni xi di dui zuo yin cha
 我以工笔画将你牢牢的记下|wo yi gong bi hua jiang ni lao lao de ji xia
@@ -2710,7 +2695,7 @@
 我却只为你折腰|wo que zhi wei ni zhe yao
 过荒村野桥寻世外古道|guo huang cun ye qiao xun shi wai gu dao
 远离人间尘嚣|yuan li ren jian chen xiao
-柳絮飘执子之手逍遥|liu xu piao zhi zi zhi shu xiao yao
+柳絮飘执子之手逍遥|liu xu piao zhi zi zhi shou xiao yao
 任武林谁领风骚|ren wu lin shei ling feng sao
 我却只为你折腰|wo que zhi wei ni zhe yao
 你回眸多娇我泪中带笑|ni hui mou duo jiao wo lei zhong dai xiao
@@ -3152,7 +3137,7 @@
 但是心却跳动在左边|dan shi xin que tiao dong zai zuo bian
 你和我之间的遥远|ni he wo zhi jian de yao yuan
 永远隔着亲切爱少的可怜|yong yuan ge zhe qin qie ai shao de ke lian
-伸出右手想陪着你向前走|shen chu you shu xiang pei zhe ni xiang qian zou
+伸出右手想陪着你向前走|shen chu you shou xiang pei zhe ni xiang qian zou
 感受你爱我的心跳在左边|gan shou ni ai wo de xin tiao zai zuo bian
 那么深深爱你的我|na me shen shen ai ni de wo
 你一定|ni yi ding
@@ -3977,7 +3962,7 @@
 你不曾发觉你总是用右手牵着我|ni bu ceng fa jue ni zong shi yong you shou qian zhe wo
 但是心却跳动在左边|dan shi xin que tiao dong zai zuo bian
 你和我之间的遥远永远隔着亲切爱少的可怜|ni he wo zhi jian de yao yuan yong yuan ge zhe qin qie ai shao de ke lian
-伸出右手想陪着你向前走|shen chu you shu xiang pei zhe ni xiang qian zou
+伸出右手想陪着你向前走|shen chu you shou xiang pei zhe ni xiang qian zou
 感受你爱我的心跳在左边|gan shou ni ai wo de xin tiao zai zuo bian
 那么深深爱你的我相信你|na me shen shen ai ni de wo xiang xin ni
 恩总在埋怨过你的冷漠之后|en zong zai man yuan guo ni de leng mo zhi hou
@@ -3988,7 +3973,7 @@
 也许太自由的你心里面那个家谁也不能回你不曾发觉|ye xu tai zi you de ni xin li mian na ge jia shei ye bu neng hui ni bu ceng fa jue
 你总是用右手牵着我但是心却跳动在左边|ni zong shi yong you shou qian zhe wo dan shi xin que tiao dong zai zuo bian
 你和我之间的遥远永远隔着亲切爱少的可怜|ni he wo zhi jian de yao yuan yong yuan ge zhe qin qie ai shao de ke lian
-伸出右手想陪着你向前走|shen chu you shu xiang pei zhe ni xiang qian zou
+伸出右手想陪着你向前走|shen chu you shou xiang pei zhe ni xiang qian zou
 感受你爱我的心跳在左边|gan shou ni ai wo de xin tiao zai zuo bian
 那么深深爱你的我相信你|na me shen shen ai ni de wo xiang xin ni
 会了解我一直相信|hui liao jie wo yi zhi xiang xin
@@ -3999,7 +3984,7 @@
 我爱你你不曾发觉你总是用右手牵着我|wo ai ni ni bu ceng fa jue ni zong shi yong you shou qian zhe wo
 但是心却跳动在左边|dan shi xin que tiao dong zai zuo bian
 你和我之间的遥远永远隔着亲切爱少的可怜|ni he wo zhi jian de yao yuan yong yuan ge zhe qin qie ai shao de ke lian
-伸出右手想陪着你向前走|shen chu you shu xiang pei zhe ni xiang qian zou
+伸出右手想陪着你向前走|shen chu you shou xiang pei zhe ni xiang qian zou
 感受你爱我的心跳在左边|gan shou ni ai wo de xin tiao zai zuo bian
 那么深深爱你的我你一定|na me shen shen ai ni de wo ni yi ding
 看得见|kan de jian
@@ -4063,7 +4048,7 @@
 呼呼无无|hu hu wu wu
 知道吗|zhi dao ma
 这里的雨季只有一两天|zhe li de yu ji zhi you yi liang tian
-白昼很长也很短|bai zhou hen zhang ye hen duan
+白昼很长也很短|bai zhou hen chang ye hen duan
 夜晚有三年|ye wan you san nian
 知道嘛|zhi dao ma
 今天的消息|jin tian de xiao xi
@@ -4182,7 +4167,7 @@
 见证孤单的终点|jian zheng gu dan de zhong dian
 我们还有好多好多年|wo men hai you hao duo hao duo nian
 将未完的预言都实现|jiang wei wan de yu yan dou shi xian
-锁在日记手写的思念|suo zai ri ji shu xie de si nian
+锁在日记手写的思念|suo zai ri ji shou xie de si nian
 你发足狂奔赶来拥抱我的长街|ni fa zu kuang ben gan lai yong bao wo de chang jie
 我不管他们说多少至理名言|wo bu guan ta men shuo duo shao zhi li ming yan
 我除了你没有第二志愿就用这青春的手验算永远的远恩|wo chu le ni mei you di er zhi yuan jiu yong zhe qing chun de shou yan suan yong yuan de yuan en
@@ -4304,7 +4289,7 @@
 之间两难|zhi jian liang nan
 恩过了很久终于我愿抬头看你就在对岸等我勇敢你还是我的|en guo le hen jiu zhong yu wo yuan tai tou kan ni jiu zai dui an deng wo yong gan ni hai shi wo de
 我的我的你看|wo de wo de ni kan
-恩浪漫无处消磨无聊伴着生活空荡荡的自我莫名地焦灼|en lang man wu chu xiao mo wu liao ban zhe sheng huo kong dang dang de zi wo mo ming di jiao zhuo
+恩浪漫无处消磨无聊伴着生活空荡荡的自我莫名地焦灼|en lang man wu chu xiao mo wu liao ban zhe sheng huo kong dang dang de zi wo mo ming de jiao zhuo
 世界孤立我任它奚落我只保持我的沉默明白什么才是好的|shi jie gu li wo ren ta xi luo wo zhi bao chi wo de chen mo ming bai shen me cai shi hao de
 坏的都散了散了太多无关的|huai de dou san le san le tai duo wu guan de
 散了后无醒了醒了醒了醒了|san le hou wu xing le xing le xing le xing le
@@ -4348,7 +4333,7 @@
 不是命运这是我最深爱的|bu shi ming yun zhe shi wo zui shen ai de
 时间啊|shi jian a
 来吧|lai ba
-再重来一次我都会|zai zhong lai yi ci wo dou hui
+再重来一次我都会|zai chong lai yi ci wo dou hui
 没有明天般挥霍着|mei you ming tian ban hui huo zhe
 找到你时间啊|zhao dao ni shi jian a
 走吧|zou ba
@@ -4724,12 +4709,11 @@
 我怀念的是你很激动求我原谅|wo huai nian de shi ni hen ji dong qiu wo yuan liang
 抱得我都痛我记得你在背后|bao de wo dou tong wo ji de ni zai bei hou
 也记得我颤抖着记得感觉汹涌|ye ji de wo chan dou zhe ji de gan jue xiong yong
-最美的烟火最长的相拥谁爱得太自由|zui mei de yan huo zui zhang de xiang yong shei ai de tai zi you
+最美的烟火最长的相拥谁爱得太自由|zui mei de yan huo zui chang de xiang yong shei ai de tai zi you
 谁过头太远了额谁要走我的心|shei guo tou tai yuan le e shei yao zou wo de xin
 谁忘了那就是承诺谁自顾自地走|shei wang le na jiu shi cheng nuo shei zi gu zi di zou
 谁忘了看着我额谁让爱变沉重|shei wang le kan zhe wo e shei rang ai bian chen zhong
 谁忘了要给你温柔偶|shei wang le yao gei ni wen rou ou
-和|he
 我怀念的|wo huai nian de
 我还有想要爱你的冲动我记得那年生日|wo hai you xiang yao ai ni de chong dong wo ji de na nian sheng ri
 也记得那一首歌记得那片星空|ye ji de na yi shou ge ji de na pian xing kong
@@ -4916,7 +4900,7 @@
 之间两难|zhi jian liang nan
 恩过了很久终于我愿抬头看你就在对岸等我勇敢你还是我的我的我的|en guo le hen jiu zhong yu wo yuan tai tou kan ni jiu zai dui an deng wo yong gan ni hai shi wo de wo de wo de
 你看|ni kan
-浪漫无处消磨无聊伴着生活空荡荡的自我莫名地焦灼|lang man wu chu xiao mo wu liao ban zhe sheng huo kong dang dang de zi wo mo ming di jiao zhuo
+浪漫无处消磨无聊伴着生活空荡荡的自我莫名地焦灼|lang man wu chu xiao mo wu liao ban zhe sheng huo kong dang dang de zi wo mo ming de jiao zhuo
 世界孤立我任它奚落我只保持我的沉默明白什么才是|shi jie gu li wo ren ta xi luo wo zhi bao chi wo de chen mo ming bai shen me cai shi
 好的坏的都散了散了太多|hao de huai de dou san le san le tai duo
 无关的散了后我醒了醒了醒了|wu guan de san le hou wo xing le xing le xing le
@@ -5038,41 +5022,41 @@
 几年前的幻想几年后的原谅|ji nian qian de huan xiang ji nian hou de yuan liang
 为一张脸去养一身伤|wei yi zhang lian qu yang yi shen shang
 别讲想念我我会受不了这样|bie jiang xiang nian wo wo hui shou bu liao zhe yang
-沉默的嘴唇|chen mo di zui chun
+沉默的嘴唇|chen mo de zui chun
 还留着泪痕|hai liu zhe lei hen
 这不是胭脂红粉|zhe bu shi yan zhi hong fen
-可掩饰的伤痕|ke yan shi di shang hen
+可掩饰的伤痕|ke yan shi de shang hen
 破碎的心灵|po sui de xin ling
-流失了多少的情|liu shi liao duo shao di qing
-弥补的谎言偿还的借口我不会去当真|mi bu di huang yan chang huan di jie kou wo bu hui qu dang zhen
-爱的心路旅程|ai di xin lu lv cheng
+流失了多少的情|liu shi liao duo shao de qing
+弥补的谎言偿还的借口我不会去当真|mi bu de huang yan chang huan de jie kou wo bu hui qu dang zhen
+爱的心路旅程|ai de xin lu lv cheng
 只能够你我两个人|zhi neng gou ni wo liang ge ren
 不可能是我独徘会|bu ke neng shi wo du pai hui
 也不可能三人行|ye bu ke neng san ren xing
-你可以去找新的恋情|ni ke yi qu zhao xin di lian qing
+你可以去找新的恋情|ni ke yi qu zhao xin de lian qing
 也可以不留一点音信|ye ke yi bu liu yi dian yin xin
 但不要用偿还做借口|dan bu yao yong chang huan zuo jie kou
 再让我伤心|zai rang wo shang xin
-爱哭的眼睛|ai ku di yan jing
+爱哭的眼睛|ai ku de yan jing
 让泪水染红|rang lei shui ran hong
 要多少岁月时光|yao duo shao sui yue shi guang
 才遗忘这段情|cai yi wang zhe duan qing
-脆弱的心灵|cui ruo di xin ling
-还留着你的伤痕|hai liu zhe ni di shang hen
-弥补的谎言偿还的借口我怎么能相信|mi bu di huang yan chang huan di jie kou wo zen me neng xiang xin
-爱的心路旅程|ai di xin lu lv cheng
+脆弱的心灵|cui ruo de xin ling
+还留着你的伤痕|hai liu zhe ni de shang hen
+弥补的谎言偿还的借口我怎么能相信|mi bu de huang yan chang huan de jie kou wo zen me neng xiang xin
+爱的心路旅程|ai de xin lu lv cheng
 我曾经答应你牵引|wo ceng jing da ying ni qian yin
 这只能说我太多情|zhe zhi neng shuo wo tai duo qing
 不敢埋怨你无情|bu gan man yuan ni wu qing
 我曾经耐心听你表明|wo ceng jing nai xin ting ni biao ming
-也已经谅解你的苦衷|ye yi jing liang jie ni di ku zhong
+也已经谅解你的苦衷|ye yi jing liang jie ni de ku zhong
 请不要用偿还做借口|qing bu yao yong chang huan zuo jie kou
 伤了我自尊|shang liao wo zi zun
-爱的心路旅程|ai di xin lu lv cheng
+爱的心路旅程|ai de xin lu lv cheng
 只能够你我两个人|zhi neng gou ni wo liang ge ren
 不可能是我独徘会|bu ke neng shi wo du pai hui
 也不可能三人行|ye bu ke neng san ren xing
-你可以去找新的恋情|ni ke yi qu zhao xin di lian qing
+你可以去找新的恋情|ni ke yi qu zhao xin de lian qing
 也可以不留一点音信|ye ke yi bu liu yi dian yin xin
 但不要用偿还做借口|dan bu yao yong chang huan zuo jie kou
 再让我伤心|zai rang wo shang xin
@@ -5127,7 +5111,7 @@
 那微笑的眼睛连日落|na wei xiao de yan jing lian ri luo
 也看作唇印|ye kan zuo chun yin
 我喜欢这样跟着你随便你带我到哪里你的脸|wo xi huan zhe yang gen zhe ni sui bian ni dai wo dao na li ni de lian
-慢慢贴近明天也慢慢地慢慢清晰我喜欢你爱我的心|man man tie jin ming tian ye man man di man man qing xi wo xi huan ni ai wo de xin
+慢慢贴近明天也慢慢地慢慢清晰我喜欢你爱我的心|man man tie jin ming tian ye man man de man man qing xi wo xi huan ni ai wo de xin
 轻触我每根手指感应我知道|qing chu wo mei gen shou zhi gan ying wo zhi dao
 它在诉说着你承诺言语|ta zai su shuo zhe ni cheng nuo yan yu
 喜欢你车窗上的雾气|xi huan ni che chuang shang de wu qi
@@ -5136,12 +5120,12 @@
 连日落也看作唇印|lian ri luo ye kan zuo chun yin
 我喜欢这样跟着你随便你带我|wo xi huan zhe yang gen zhe ni sui bian ni dai wo
 到哪里你的脸慢慢贴近|dao na li ni de lian man man tie jin
-明天也慢慢地慢慢清晰我喜欢你还我的心|ming tian ye man man di man man qing xi wo xi huan ni hai wo de xin
+明天也慢慢地慢慢清晰我喜欢你还我的心|ming tian ye man man de man man qing xi wo xi huan ni hai wo de xin
 轻触我每根手指感应我知道|qing chu wo mei gen shou zhi gan ying wo zhi dao
 它在诉说着你承诺言语|ta zai su shuo zhe ni cheng nuo yan yu
 我喜欢这样跟着你随便你带我|wo xi huan zhe yang gen zhe ni sui bian ni dai wo
 到哪里你的脸慢慢贴近|dao na li ni de lian man man tie jin
-明天也慢慢地慢慢清晰我喜欢你还我的心|ming tian ye man man di man man qing xi wo xi huan ni hai wo de xin
+明天也慢慢地慢慢清晰我喜欢你还我的心|ming tian ye man man de man man qing xi wo xi huan ni hai wo de xin
 轻触我每一根手指感应我知道|qing chu wo mei yi gen shou zhi gan ying wo zhi dao
 它在诉说着你承诺言语|ta zai su shuo zhe ni cheng nuo yan yu
 我知道|wo zhi dao
@@ -5720,7 +5704,7 @@
 谢谢你不再让我彷徨你是我情深似海的依赖|xie xie ni bu zai rang wo pang huang ni shi wo qing shen si hai de yi lai
 我是你早已过时的旧爱反正这不三不四的年纪|wo shi ni zao yi guo shi de jiu ai fan zheng zhe bu san bu si de nian ji
 谁也不会只为谁而着迷|shei ye bu hui zhi wei shei er zhao mi
-你是我甘心瞑目的遗憾|ni shi wo gan xin ming mu di yi han
+你是我甘心瞑目的遗憾|ni shi wo gan xin ming mu de yi han
 我用那无悔时光来填满就让这无怨无悔的双手|wo yong na wu hui shi guang lai tian man jiu rang zhe wu yuan wu hui de shuang shou
 收拾出我想要的以后|shou shi chu wo xiang yao de yi hou
 一首歌深夜写给黄淮|yi shou ge shen ye xie gei huang huai
@@ -5740,7 +5724,7 @@
 当时看见彩虹就笑开一无窒碍在胸怀带你抛下课堂|dang shi kan jian cai hong jiu xiao kai yi wu zhi ai zai xiong huai dai ni pao xia ke tang
 翻过围墙只为了往一片大海告别了初爱|fan guo wei qiang zhi wei le wang yi pian da hai gao bie le chu ai
 告别了制服上的名牌告别天真|gao bie le zhi fu shang de ming pai gao bie tian zhen
-学着去拨开雨天的阴霾沮丧反复失落重来|xue zhe qu bo kai yu tian de yin mai ju sang fan fu shi luo zhong lai
+学着去拨开雨天的阴霾沮丧反复失落重来|xue zhe qu bo kai yu tian de yin mai ju sang fan fu shi luo chong lai
 不能放弃勇敢去爱是你让我|bu neng fang qi yong gan qu ai shi ni rang wo
 还相信未来|hai xiang xin wei lai
 若不是你包容我年少时轻狂和执拗|ruo bu shi ni bao rong wo nian shao shi qing kuang he zhi niu
@@ -6489,7 +6473,7 @@
 修炼爱情的心酸|xiu lian ai qing de xin suan
 学会放好以前的渴望|xue hui fang hao yi qian de ke wang
 我们那些信仰要忘记多难|wo men na xie xin yang yao wang ji duo nan
-远距离的欣赏近距离的迷忙|yuan ju li di xin shang jin ju li de mi mang
+远距离的欣赏近距离的迷忙|yuan ju li de xin shang jin ju li de mi mang
 谁说太阳会找到月亮|shei shuo tai yang hui zhao dao yue liang
 别人有的爱我们不可能模仿|bie ren you de ai wo men bu ke neng mo fang
 修炼爱情的悲欢|xiu lian ai qing de bei huan
@@ -6681,7 +6665,7 @@
 在这相似的深夜里|zai zhe xiang si de shen ye li
 你是否一样|ni shi fou yi yang
 也在静静追悔感伤|ye zai jing jing zhui hui gan shang
-如果当时我们能不那么倔强|ru guo dang shi wo men neng bu na me jue qiang
+如果当时我们能不那么倔强|ru guo dang shi wo men neng bu na me jue jiang
 现在也不那么遗憾你都如何回迎我|xian zai ye bu na me yi han ni dou ru he hui ying wo
 带着笑或是很沉默这些年来|dai zhe xiao huo shi hen chen mo zhe xie nian lai
 有没有人能让你不寂寞|you mei you ren neng rang ni bu ji mo
@@ -7180,7 +7164,7 @@
 我怀念的是你很激动求我原谅|wo huai nian de shi ni hen ji dong qiu wo yuan liang
 抱着我都痛我记得你在背后|bao zhe wo dou tong wo ji de ni zai bei hou
 也记得我颤抖着记得感觉汹涌|ye ji de wo chan dou zhe ji de gan jue xiong yong
-最美的烟火最长的相拥谁爱得|zui mei di yan huo zui chang de xiang yong shei ai de
+最美的烟火最长的相拥谁爱得|zui mei de yan huo zui chang de xiang yong shei ai de
 太自由谁过头太远了|tai zi you shei guo tou tai yuan le
 谁要走我的心谁忘了那就是承诺|shei yao zou wo de xin shei wang le na jiu shi cheng nuo
 谁自顾自地走谁忘了看着我|shei zi gu zi de zou shei wang le kan zhe wo
@@ -7336,7 +7320,7 @@
 都揉进了一个清晨|dou rou jin le yi ge qing chen
 把所有停不下的言语变成秘密|ba suo you ting bu xia de yan yu bian cheng mi mi
 关上了门|guan shang le men
-莫名的情愫啊请问谁来将它带走呢|mo ming di qing su a qing wen shei lai jiang ta dai zou ne
+莫名的情愫啊请问谁来将它带走呢|mo ming de qing su a qing wen shei lai jiang ta dai zou ne
 只好把岁月化成歌|zhi hao ba sui yue hua cheng ge
 留在山河|liu zai shan he
 我在鼓楼的夜色中为你唱花香自来|wo zai gu lou de ye se zhong wei ni chang hua xiang zi lai
@@ -7346,7 +7330,7 @@
 不离开把所有的春天|bu li kai ba suo you de chun tian
 都揉进了一个清晨|dou rou jin le yi ge qing chen
 把所有停不下的言语变成秘密关上了门|ba suo you ting bu xia de yan yu bian cheng mi mi guan shang le men
-莫名的情愫啊请问谁来将它带走呢|mo ming di qing su a qing wen shei lai jiang ta dai zou ne
+莫名的情愫啊请问谁来将它带走呢|mo ming de qing su a qing wen shei lai jiang ta dai zou ne
 只好把岁月都化成歌|zhi hao ba sui yue dou hua cheng ge
 留在山河|liu zai shan he
 我在二环路的里边|wo zai er huan lu de li bian
@@ -7727,7 +7711,7 @@
 不要再让你变老了我愿用我一切换你岁月长留|bu yao zai rang ni bian lao le wo yuan yong wo yi qie huan ni sui yue chang liu
 一生要强的爸爸|yi sheng yao qiang de ba ba
 我能为你做些什么微不足道的关心|wo neng wei ni zuo xie shen me wei bu zu dao de guan xin
-收下吧|shu xia ba
+收下吧|shou xia ba
 谢谢你做的一切双手撑起我们的家|xie xie ni zuo de yi qie shuang shou cheng qi wo men de jia
 我是你的骄傲吗还在为我而担心吗|wo shi ni de jiao ao ma hai zai wei wo er dan xin ma
 你牵挂的孩子啊长大啦|ni qian gua de hai zi a zhang da la
@@ -7791,7 +7775,7 @@
 比如美酒和咖啡都是水|bi ru mei jiu he ka fei dou shi shui
 可一个让你醒一个让你醉|ke yi ge rang ni xing yi ge rang ni zui
 那么感情是否以此类推|na mo gan qing shi fou yi ci lei tui
-有的很平淡有的撕心裂肺|you de hen pin dan you de si xin lie fei
+有的很平淡有的撕心裂肺|you de hen ping dan you de si xin lie fei
 所以说永远多长永远短暂永远很缓慢|suo yi shuo yong yuan duo chang yong yuan duan zan yong yuan hen huan man
 每个人有每个人不同的计算|mei ge ren you mei ge ren bu tong de ji suan
 神秘的诺言誓言甚至谎言|shen mi de nuo yan shi yan shen zhi huang yan
@@ -9494,7 +9478,7 @@
 绝对会到达|jue dui hui dao da
 实现了真的渴望才能够算到过了天堂|shi xian le zhen de ke wang cai neng gou suan dao guo le tian tang
 我们的开始|wo men de kai shi
-是很长的电影|shi hen zhang de dian ying
+是很长的电影|shi hen chang de dian ying
 放映了三年|fang ying le san nian
 我票都还留着|wo piao dou hai liu zhe
 冰上的芭蕾|bing shang de ba lei
@@ -9615,10 +9599,10 @@
 可是你不在我身旁|ke shi ni bu zai wo shen pang
 托清风捎去安康|tuo qing feng shao qu an kang
 时光时光慢些吧|shi guang shi guang man xie ba
-不要再让你偏老了我愿用我一切换你岁月长留|bu yao zai rang ni pian lao le wo yuan yong wo yi qie huan ni sui yue zhang liu
+不要再让你偏老了我愿用我一切换你岁月长留|bu yao zai rang ni pian lao le wo yuan yong wo yi qie huan ni sui yue chang liu
 一生要强的爸爸|yi sheng yao qiang de ba ba
 我能为你做些什么微不足道的关心|wo neng wei ni zuo xie shen me wei bu zu dao de guan xin
-收下吧|shu xia ba
+收下吧|shou xia ba
 谢谢你做的一切双手撑起我们的家|xie xie ni zuo de yi qie shuang shou cheng qi wo men de jia
 总是竭尽所有把最好的给我|zong shi jie jin suo you ba zui hao de gei wo
 我是你的骄傲吗|wo shi ni de jiao ao ma
@@ -10796,9 +10780,9 @@
 你给我幻想|ni gei wo huan xiang
 又剥夺希望|you bo duo xi wang
 让我跌落还迷失了方向|rang wo die luo hai mi shi le fang xiang
-我们都太倔强总是为爱逞强|wo men dou tai jue qiang zong shi wei ai cheng qiang
+我们都太倔强总是为爱逞强|wo men dou tai jue jiang zong shi wei ai cheng qiang
 你学不会说谎才让我没机会奢望|ni xue bu hui shuo huang cai rang wo mei ji hui she wang
-我们都太倔强某相信爱那么多遗忘那么长|wo men dou tai jue qiang mou xiang xin ai na me duo yi wang na me chang
+我们都太倔强某相信爱那么多遗忘那么长|wo men dou tai jue jiang mou xiang xin ai na me duo yi wang na me chang
 该怎么假装|gai zen me jia zhuang
 最后的拥抱让我变得|zui hou de yong bao rang wo bian de
 慌张那种温暖又再次将我|huang zhang na zhong wen nuan you zai ci jiang wo
@@ -10810,18 +10794,18 @@
 你给我幻想|ni gei wo huan xiang
 又剥夺希望|you bo duo xi wang
 让我跌落还迷失了方向|rang wo die luo hai mi shi le fang xiang
-我们都太倔强嗯总是为爱逞强|wo men dou tai jue qiang en zong shi wei ai cheng qiang
+我们都太倔强嗯总是为爱逞强|wo men dou tai jue jiang en zong shi wei ai cheng qiang
 你学不会说谎才让我没机会奢望|ni xue bu hui shuo huang cai rang wo mei ji hui she wang
-我们都太倔强不相信爱那么多遗忘那么长|wo men dou tai jue qiang bu xiang xin ai na me duo yi wang na me chang
+我们都太倔强不相信爱那么多遗忘那么长|wo men dou tai jue jiang bu xiang xin ai na me duo yi wang na me chang
 该怎么假装|gai zen me jia zhuang
 倔强的尽头没有人等我|jue jiang de jin tou mei you ren deng wo
 这是你预料的结果|zhe shi ni yu liao de jie guo
 所以我退缩你还说|suo yi wo tui suo ni hai shuo
 让我不要难过|rang wo bu yao nan guo
 我怎么可能不难过|wo zen me ke neng bu nan guo
-我们头太倔强总是为爱逞强|wo men tou tai jue qiang zong shi wei ai cheng qiang
+我们头太倔强总是为爱逞强|wo men tou tai jue jiang zong shi wei ai cheng qiang
 你学不会|ni xue bu hui
-说谎才让我没机会奢望我们都太倔强|shuo huang cai rang wo mei ji hui she wang wo men dou tai jue qiang
+说谎才让我没机会奢望我们都太倔强|shuo huang cai rang wo mei ji hui she wang wo men dou tai jue jiang
 不相信爱那么多遗忘那么长|bu xiang xin ai na me duo yi wang na me chang
 该怎么假创|gai zen me jia chuang
 爱那么团遗忘那么|ai na me tuan yi wang na me
@@ -11174,7 +11158,7 @@
 黄焖辣子鸡红烧排骨醋酱鱼不如你全都不如你|huang men la zi ji hong shao pai gu cu jiang yu bu ru ni quan dou bu ru ni
 冰糖雪梨梅菜扣肉饼柠檬味雪碧椒盐九吐鱼|bing tang xue li mei cai kou rou bing ning meng wei xue bi jiao yan jiu tu yu
 白酒青啤安慕希不如你|bai jiu qing pi an mu xi bu ru ni
-春风觅香穿过谁家庭院捎周谁的收获自处寻开心|chun feng mi xiang chuan guo shui jia ting yuan shao zhou shei de shou huo zi chu xun kai xin
+春风觅香穿过谁家庭院捎周谁的收获自处寻开心|chun feng mi xiang chuan guo shei jia ting yuan shao zhou shei de shou huo zi chu xun kai xin
 和煦的春风吹过杨柳堤终于找到你|he xu de chun feng chui guo yang liu di zhong yu zhao dao ni
 等这春风潇洒去带走不忍心时光慢慢行|deng zhe chun feng xiao sa qu dai zou bu ren xin shi guang man man xing
 永远爱你好比一把火炬春风吹又起|yong yuan ai ni hao bi yi ba huo ju chun feng chui you qi
@@ -11185,7 +11169,7 @@
 冰糖雪梨梅菜扣肉饼柠檬味雪碧椒盐九吐鱼|bing tang xue li mei cai kou rou bing ning meng wei xue bi jiao yan jiu tu yu
 白酒青啤安慕希|bai jiu qing pi an mu xi
 不如你|bu ru ni
-春风觅香穿过谁家庭院捎周谁的收获自处寻开心|chun feng mi xiang chuan guo shui jia ting yuan shao zhou shei de shou huo zi chu xun kai xin
+春风觅香穿过谁家庭院捎周谁的收获自处寻开心|chun feng mi xiang chuan guo shei jia ting yuan shao zhou shei de shou huo zi chu xun kai xin
 和煦的春风吹过杨柳堤终于找到你|he xu de chun feng chui guo yang liu di zhong yu zhao dao ni
 等这春风潇刹去带走不忍心时光慢慢行|deng zhe chun feng xiao sha qu dai zou bu ren xin shi guang man man xing
 永远爱你好比一把火炬春风吹又起|yong yuan ai ni hao bi yi ba huo ju chun feng chui you qi
@@ -11193,7 +11177,7 @@
 摇曳的裙摆荡漾着光芒这世上无双|yao ye de qun bai dang yang zhe guang mang zhe shi shang wu shuang
 又是一年好风光跃大街小巷寻你的模样|you shi yi nian hao feng guang yue da jie xiao xiang xun ni de mu yang
 熙熙攘攘纸鸢水风飘扬只为一缕香|xi xi rang rang zhi yuan shui feng piao yang zhi wei yi lv xiang
-春风觅香穿过谁家庭院捎周谁的收获自促熊开心|chun feng mi xiang chuan guo shui jia ting yuan shao zhou shei de shou huo zi cu xiong kai xin
+春风觅香穿过谁家庭院捎周谁的收获自促熊开心|chun feng mi xiang chuan guo shei jia ting yuan shao zhou shei de shou huo zi cu xiong kai xin
 和煦的春风吹过杨柳堤终于找到你|he xu de chun feng chui guo yang liu di zhong yu zhao dao ni
 嗯等这春风潇刹去带轴不忍心|en deng zhe chun feng xiao sha qu dai zhou bu ren xin
 时光慢慢行永远爱你好比一把火炬春风吹又起|shi guang man man xing yong yuan ai ni hao bi yi ba huo ju chun feng chui you qi
@@ -11337,7 +11321,7 @@
 关掉了手机管他谁是谁|guan diao le shou ji guan ta shei shi shei
 不要去理会是是与非非|bu yao qu li hui shi shi yu fei fei
 天亮走到天黑黄昏中的堡垒|tian liang zou dao tian hei huang hun zhong de bao lei
-如果迎着风|ru guo ying zhao feng
+如果迎着风|ru guo ying zhe feng
 就飞俯瞰这世界有多美|jiu fei fu kan zhe shi jie you duo mei
 自我藉慰|zi wo jie wei
 嗯如果还有梦|en ru guo hai you meng
@@ -11351,7 +11335,7 @@
 何必去辩解谁错或是对|he bi qu bian jie shei cuo huo shi dui
 就让一切回归|jiu rang yi qie hui gui
 那自由的感觉|na zi you de gan jue
-如果迎着风|ru guo ying zhao feng
+如果迎着风|ru guo ying zhe feng
 就飞俯瞰这世界有多美|jiu fei fu kan zhe shi jie you duo mei
 让烦恼都灰飞别去理会|rang fan nao dou hui fei bie qu li hui
 自我藉慰|zi wo jie wei
@@ -11359,7 +11343,7 @@
 就追至少不会遗憾后悔|jiu zhui zhi shao bu hui yi han hou hui
 迎着光勇敢追远走高飞|ying zhe guang yong gan zhui yuan zou gao fei
 说就走走一回|shuo jiu zou zou yi hui
-如果迎着风|ru guo ying zhao feng
+如果迎着风|ru guo ying zhe feng
 就飞俯瞰这世界有多美|jiu fei fu kan zhe shi jie you duo mei
 让烦恼都灰飞别去理会|rang fan nao dou hui fei bie qu li hui
 如果还有梦|ru guo hai you meng
@@ -11770,7 +11754,7 @@
 方人的直爽|fang ren de zhi shuang
 日子过得就像|ri zi guo de jiu xiang
 那些不眠的晚上|na xie bu mian de wan shang
-她嚼着口香糖对墙漫谈着理想|ta jue zhe kou xiang tang dui qiang man tan zhe li xiang
+她嚼着口香糖对墙漫谈着理想|ta jiao zhe kou xiang tang dui qiang man tan zhe li xiang
 南方姑娘|nan fang gu niang
 你的希望哎嗨|ni de xi wang ai hai
 昨日的雨曾淋漓过她|zuo ri de yu ceng lin li guo ta
@@ -12996,7 +12980,7 @@
 当年的朋友|dang nian de peng you
 拂去岁月厚厚的封尘|fu qu sui yue hou hou de feng chen
 敞开心的世界记忆的闸门|chang kai xin de shi jie ji yi de zha men
-一副副一帧帧|yi fu fu yi zheng zheng
+一副副一帧帧|yi fu fu yi zhen zhen
 不能忘却的画卷|bu neng wang que de hua juan
 引领着我|yin ling zhe wo
 默默地向前|mo mo de xiang qian
@@ -14356,7 +14340,7 @@
 我愿用我一切换你岁月长留|wo yuan yong wo yi qie huan ni sui yue chang liu
 一生要强的爸爸|yi sheng yao qiang de ba ba
 我能为你做些什么微不足道的关心|wo neng wei ni zuo xie shen me wei bu zu dao de guan xin
-收下吧谢谢你做的一切|shu xia ba xie xie ni zuo de yi qie
+收下吧谢谢你做的一切|shou xia ba xie xie ni zuo de yi qie
 双手撑起我们的家总是竭尽所有把最好的给我|shuang shou cheng qi wo men de jia zong shi jie jin suo you ba zui hao de gei wo
 我是你的骄傲吗|wo shi ni de jiao ao ma
 还在为我而担心吗你牵挂的孩子啊|hai zai wei wo er dan xin ma ni qian gua de hai zi a
@@ -14367,7 +14351,7 @@
 时光时光慢些吧|shi guang shi guang man xie ba
 不要再让你变老了我愿用我一切换你岁月长留|bu yao zai rang ni bian lao le wo yuan yong wo yi qie huan ni sui yue chang liu
 一生要强的爸爸|yi sheng yao qiang de ba ba
-我能为你做些什么微不足道的关心收下吧|wo neng wei ni zuo xie shen me wei bu zu dao de guan xin shu xia ba
+我能为你做些什么微不足道的关心收下吧|wo neng wei ni zuo xie shen me wei bu zu dao de guan xin shou xia ba
 谢谢你做的一切|xie xie ni zuo de yi qie
 双手撑起我们的家总是竭尽所有把最好的给我|shuang shou cheng qi wo men de jia zong shi jie jin suo you ba zui hao de gei wo
 我是你的骄傲吗|wo shi ni de jiao ao ma
@@ -15431,7 +15415,7 @@
 爱一个人希望他过更好|ai yi ge ren xi wang ta guo geng hao
 我也希望变更好|wo ye xi wang bian geng hao
 我们的开始|wo men de kai shi
-是最长的电影|shi zui zhang de dian ying
+是最长的电影|shi zui chang de dian ying
 放映了三年|fang ying le san nian
 我票都还留着|wo piao dou hai liu zhe
 冰上的芭蕾|bing shang de ba lei
@@ -15441,7 +15425,7 @@
 我们溜了多远|wo men liu le duo yuan
 冰刀划的圈|bing dao hua de quan
 圈起了谁改变|quan qi le shei gai bian
-如果再重来|ru guo zai zhong lai
+如果再重来|ru guo zai chong lai
 会不会稍嫌狼狈|hui bu hui shao xian lang bei
 爱是不是不开口才珍贵|ai shi bu shi bu kai kou cai zhen gui
 再给我两分钟|zai gei wo liang fen zhong
@@ -15453,7 +15437,7 @@
 我们溜了多远|wo men liu le duo yuan
 嗯冰刀划的圈|en bing dao hua de quan
 圈起了谁改变|quan qi le shei gai bian
-呃如果再重来|e ru guo zai zhong lai
+呃如果再重来|e ru guo zai chong lai
 会不会稍嫌狼呸|hui bu hui shao xian lang pei
 爱是不是|ai shi bu shi
 不开口才珍贵|bu kai kou cai zhen gui
@@ -15682,11 +15666,11 @@
 没有尽头的彼方却不明白为什么|mei you jin tou de bi fang que bu ming bai wei shen me
 也许你希望我听你的话|ye xu ni xi wang wo ting ni de hua
 我也曾经努力的尝试我还是回到海洋|wo ye ceng jing nu li de chang shi wo hai shi hui dao hai yang
-不怕多困难那熟悉地方是我的|bu pa duo kun nan na shu xi di fang shi wo de
+不怕多困难那熟悉地方是我的|bu pa duo kun nan na shu xi de fang shi wo de
 渴望我听到地平线那一边|ke wang wo ting dao di ping xian na yi bian
 呼唤我|hu huan wo
 谁会知道能走多远|shei hui zhi dao neng zou duo yuan
-乘着风迎着浪扬着帆前勇敢前进|cheng zhao feng ying zhe lang yang zhe fan qian yong gan qian jin
+乘着风迎着浪扬着帆前勇敢前进|cheng zhe feng ying zhe lang yang zhe fan qian yong gan qian jin
 终会知道|zhong hui zhi dao
 我要走的路不管多远也好|wo yao zou de lu bu guan duo yuan ye hao
 虽然在这海岛每一个人仿佛|sui ran zai zhe hai dao mei yi ge ren fang fu
@@ -15700,7 +15684,7 @@
 请告诉我我应该期待什么是未来|qing gao su wo wo ying gai qi dai shen me shi wei lai
 在那地平线另一边呼唤我|zai na di ping xian ling yi bian hu huan wo
 谁会知道能走多远|shei hui zhi dao neng zou duo yuan
-迎着风迎着浪扬着帆勇敢前行|ying zhao feng ying zhe lang yang zhe fan yong gan qian xing
+迎着风迎着浪扬着帆勇敢前行|ying zhe feng ying zhe lang yang zhe fan yong gan qian xing
 总会知道能走多远|zong hui zhi dao neng zou duo yuan
 嗯举头望无尽灰云|en ju tou wang wu jin hui yun
 那季节叫做寂寞|na ji jie jiao zuo ji mo
@@ -16092,9 +16076,9 @@
 为此间独风骚山高水长|wei ci jian du feng sao shan gao shui chang
 华夏故园|hua xia gu yuan
 春秋过往岁月辉炎黄|chun qiu guo wang sui yue hui yan huang
-最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue zhang
+最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue chang
 苍茫茫千年梦想|cang mang mang qian nian meng xiang
-最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue zhang
+最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue chang
 苍茫茫千年梦想|cang mang mang qian nian meng xiang
 今朝写华章|jin zhao xie hua zhang
 北望长城南望江|bei wang chang cheng nan wang jiang
@@ -16104,15 +16088,15 @@
 只为那中国梦青春韶光|zhi wei na zhong guo meng qing chun shao guang
 万般牵挂|wan ban qian gua
 无限希望少年中国强|wu xian xi wang shao nian zhong guo qiang
-最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue zhang
+最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue chang
 苍茫茫千年梦想|cang mang mang qian nian meng xiang
 今朝写华章|jin zhao xie hua zhang
 最美中国意|zui mei zhong guo yi
-书磬岁月长|shu qing sui yue zhang
+书磬岁月长|shu qing sui yue chang
 苍茫茫千年梦想|cang mang mang qian nian meng xiang
 今朝写华章最美中国意|jin zhao xie hua zhang zui mei zhong guo yi
-书磬岁月长|shu qing sui yue zhang
-最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue zhang
+书磬岁月长|shu qing sui yue chang
+最美中国意书磬岁月长|zui mei zhong guo yi shu qing sui yue chang
 苍茫茫千年梦想|cang mang mang qian nian meng xiang
 今朝写诶诶诶诶|jin zhao xie ei ei ei ei
 华章|hua zhang
@@ -16592,7 +16576,7 @@
 把所有的春天|ba suo you de chun tian
 都揉进了一个清晨|dou rou jin le yi ge qing chen
 关上了门恩|guan shang le men en
-莫名的情愫啊请问谁来将它带走呢|mo ming di qing su a qing wen shei lai jiang ta dai zou ne
+莫名的情愫啊请问谁来将它带走呢|mo ming de qing su a qing wen shei lai jiang ta dai zou ne
 只好把岁月化成歌留在山河|zhi hao ba sui yue hua cheng ge liu zai shan he
 我在鼓楼的夜色中为你唱花香自来|wo zai gu lou de ye se zhong wei ni chang hua xiang zi lai
 挥别处沉默相遇|hui bie chu chen mo xiang yu
@@ -16601,7 +16585,7 @@
 不离开|bu li kai
 把所有的春天都揉进了一个清晨|ba suo you de chun tian dou rou jin le yi ge qing chen
 关上了门恩|guan shang le men en
-莫名的情愫啊请问谁来将它带走呢|mo ming di qing su a qing wen shei lai jiang ta dai zou ne
+莫名的情愫啊请问谁来将它带走呢|mo ming de qing su a qing wen shei lai jiang ta dai zou ne
 只好把岁月都化成歌|zhi hao ba sui yue dou hua cheng ge
 留在山河|liu zai shan he
 我在二环路的里边|wo zai er huan lu de li bian
@@ -16865,23 +16849,23 @@
 映照窗棂|ying zhao chuang ling
 串串藤花送来芳馨咦|chuan chuan teng hua song lai fang xin yi
 望着窗前|wang zhe chuang qian
-熟悉地身影|shu xi di shen ying
+熟悉地身影|shu xi de shen ying
 我地心啊日绪纷纷|wo di xin a ri xu fen fen
 破鱼儿|po yu er
 游向大海|you xiang da hai
-出笼地鸟儿飞向云空|chu long di niao er fei xiang yun kong
+出笼地鸟儿飞向云空|chu long de niao er fei xiang yun kong
 冲开封建家庭地牢笼|chong kai feng jian jia ting di lao long
-去寻求自由地爱情|qu xun qiu zi you di ai qing
-去寻求自由地爱情|qu xun qiu zi you di ai qing
+去寻求自由地爱情|qu xun qiu zi you de ai qing
+去寻求自由地爱情|qu xun qiu zi you de ai qing
 歌中的情|ge zhong de qing
 唱不尽姑娘地心声|chang bu jin gu niang di xin sheng
-啊诗一样地花|a shi yi yang di hua
-花一样地梦|hua yi yang di meng
+啊诗一样地花|a shi yi yang de hua
+花一样地梦|hua yi yang de meng
 他是我心中明亮地星|ta shi wo xin zhong ming liang di xing
 一抹夕阳|yi mo xi yang
 映照窗棂|ying zhao chuang ling
 串串藤花送来芳馨咦|chuan chuan teng hua song lai fang xin yi
-望着窗前熟悉的身影|wang zhe chuang qian shu xi di shen ying
+望着窗前熟悉的身影|wang zhe chuang qian shu xi de shen ying
 我的心啊难以平静|wo di xin a nan yi ping jing
 平静|ping jing
 身边的那片田野啊|shen bian de na pian tian ye a
@@ -17753,18 +17737,6 @@
 你地那一双|ni di na yi shuang
 是否又把别人|shi fou you ba bie ren
 错看成我地模样|cuo kan cheng wo di mu yang
-春露秋霜|chun lu qiu shuang
-寒来暑往|han lai shu wang
-娘啊娘啊|niang a niang a
-朝思暮想|zhao si mu xiang
-泪眼迷茫|lei yan mi mang
-责怪吧我地娘|ze guai ba wo di niang
-责怪吧我地娘|ze guai ba wo di niang
-去把你探啊望|qu ba ni tan a wang
-娘啊娘啊|niang a niang a
-娘啊娘啊|niang a niang a
-白发亲娘|bai fa qin niang
-小儿长针儿密|xiao er chang zhen er mi
 含着热泪绣红旗绣呀绣红旗|han zhe re lei xiu hong qi xiu ya xiu hong qi
 热泪随着|re lei sui zhe
 针线走|zhen xian zou
@@ -18062,7 +18034,6 @@
 吼|hou
 准备好了岁图万恩诺哦为让来|zhun bei hao le sui tu yuan en nuo o wei rang lai
 和你万图万爱开始扩散我们连结了|he ni yuan tu yuan ai kai shi kuo san wo men lian jie le
-穿越天空银河喔喔|chuan yue tian kong yin he wo wo
 开始倒数岁图万|kai shi dao shu sui tu yuan
 魔安魔尽是深刻|mo an mo jin shi shen ke
 爱亮了爱笑了爱哦为昂来|ai liang le ai xiao le ai o wei ang lai
@@ -18293,24 +18264,24 @@
 为我生气为我闹幸福开始有预兆|wei wo sheng qi wei wo nao xing fu kai shi you yu zhao
 缘分让我们慢慢紧靠|yuan fen rang wo men man man jin kao
 然后孤单被吞没了无聊变得有话聊|ran hou gu dan bei tun mo le wu liao bian de you hua liao
-有变化了小酒窝长睫毛是你最美的记号我每天睡不着|you bian hua le xiao jiu wo zhang jie mao shi ni zui mei de ji hao wo mei tian shui bu zhuo
+有变化了小酒窝长睫毛是你最美的记号我每天睡不着|you bian hua le xiao jiu wo chang jie mao shi ni zui mei de ji hao wo mei tian shui bu zhuo
 想念你的微笑你不知道你对我多么重要|xiang nian ni de wei xiao ni bu zhi dao ni dui wo duo me zhong yao
 有了你生命完整的刚好|you le ni sheng ming wan zheng de gang hao
-小酒窝长睫毛迷人的无可救药我放慢了步调|xiao jiu wo zhang jie mao mi ren de wu ke jiu yao wo fang man le bu diao
+小酒窝长睫毛迷人的无可救药我放慢了步调|xiao jiu wo chang jie mao mi ren de wu ke jiu yao wo fang man le bu diao
 感觉像是喝醉了终于找到心有灵犀的美好|gan jue xiang shi he zui le zhong yu zhao dao xin you ling xi de mei hao
 一辈子暖暖的好|yi bei zi nuan nuan de hao
 我永远爱你到老|wo yong yuan ai ni dao lao
 幸福开始有预兆|xing fu kai shi you yu zhao
 缘分让我们慢慢紧靠|yuan fen rang wo men man man jin kao
 然后孤单被吞没了无聊变得有话聊|ran hou gu dan bei tun mo le wu liao bian de you hua liao
-有变化了小酒窝长睫毛是你最美的记号我每天睡不着|you bian hua le xiao jiu wo zhang jie mao shi ni zui mei de ji hao wo mei tian shui bu zhuo
+有变化了小酒窝长睫毛是你最美的记号我每天睡不着|you bian hua le xiao jiu wo chang jie mao shi ni zui mei de ji hao wo mei tian shui bu zhuo
 想念你的微笑你不知道你对我多么重要|xiang nian ni de wei xiao ni bu zhi dao ni dui wo duo me zhong yao
 有了你生命完整的刚好|you le ni sheng ming wan zheng de gang hao
-小酒窝长睫毛迷人的无可救药无放慢了步调|xiao jiu wo zhang jie mao mi ren de wu ke jiu yao wu fang man le bu diao
+小酒窝长睫毛迷人的无可救药无放慢了步调|xiao jiu wo chang jie mao mi ren de wu ke jiu yao wu fang man le bu diao
 感觉像是喝醉了终于找到心有灵犀的美好|gan jue xiang shi he zui le zhong yu zhao dao xin you ling xi de mei hao
 一辈子暖暖的好|yi bei zi nuan nuan de hao
 我永远爱你到老|wo yong yuan ai ni dao lao
-小酒窝长睫毛迷人的无可救药无放慢了步调|xiao jiu wo zhang jie mao mi ren de wu ke jiu yao wu fang man le bu diao
+小酒窝长睫毛迷人的无可救药无放慢了步调|xiao jiu wo chang jie mao mi ren de wu ke jiu yao wu fang man le bu diao
 感觉像是喝醉了终于找到心有灵犀的美好|gan jue xiang shi he zui le zhong yu zhao dao xin you ling xi de mei hao
 一辈子暖暖的好|yi bei zi nuan nuan de hao
 我永远爱你到老|wo yong yuan ai ni dao lao
@@ -18375,7 +18346,7 @@
 当一个|dang yi ge
 歌颂者|ge song zhe
 风到这里就是粘|feng dao zhe li jiu shi zhan
-粘住过客的思念|zhan zhu guo ke de si nian
+粘住过客的思念|nian zhu guo ke de si nian
 雨到了这里缠成线|yu dao le zhe li chan cheng xian
 缠着我们流连人世间|chan zhe wo men liu lian ren shi jian
 你在身边就是缘|ni zai shen bian jiu shi yuan
@@ -18474,7 +18445,6 @@
 你离去|ni li qu
 那天忽然倾盆大雨忘记关的窗|na tian hu ran qing pen da yu wang ji guan de chuang
 忘记关的窗|wang ji guan de chuang
-喔喔偶无偶|wo wo ou wu ou
 忘了有多久再没听到你|wang le you duo jiu zai mei ting dao ni
 对我说你最爱的故事|dui wo shuo ni zui ai de gu shi
 我想了很久我开始慌了|wo xiang le hen jiu wo kai shi huang le
@@ -18504,7 +18474,6 @@
 张开双手变成翅膀守护你|zhang kai shuang shou bian cheng chi bang shou hu ni
 你要相信相信我们会像童话故事里|ni yao xiang xin xiang xin wo men hui xiang tong hua gu shi li
 幸福和快乐是结局|xing fu he kuai le shi jie ju
-喔喔呜偶偶一起写|wo o wu ou ou yi qi xie
 我们的结局|wo men de jie ju
 同样的机场不同世界|tong yang de ji chang bu tong shi jie
 同样的咖啡不同味觉|tong yang de ka fei bu tong wei jue
@@ -18512,7 +18481,6 @@
 看飞机划过天空不|kan fei ji hua guo tian kong bu
 见了|jian le
 用你给我的翅膀飞我懂这不是伤悲|yong ni gei wo de chi bang fei wo dong zhe bu shi shang bei
-再高都不会累我们都说好了喔喔喔|zai gao dou bu hui lei wo men dou shuo hao le wo wo o
 用你给我的翅膀飞我感觉已够安慰|yong ni gei wo de chi bang fei wo gan jue yi gou an wei
 乌云也不再多我们也|wu yun ye bu zai duo wo men ye
 不为谁掉眼泪|bu wei shei diao yan lei
@@ -18571,7 +18539,6 @@
 寻找太阳的梦自不量力说自己也变成太阳的念头|xun zhao tai yang de meng zi bu liang li shuo zi ji ye bian cheng tai yang de nian tou
 有时候寂寞几乎扛不动年在喉咙里无人诉说我们到底在追求些什么|you shi hou ji mo ji hu kang bu dong nian zai hou long li wu ren su shuo wo men dao di zai zhui qiu xie shen me
 为何一直不断往前冲捏出血的双手忘了也能够|wei he yi zhi bu duan wang qian chong nie chu xue de shuang shou wang le ye neng gou
-稍微退后喔喔我们总是以为能够|shao wei tui hou wo wo wo men zong shi yi wei neng gou
 自由回过头那世界却依旧哎爱爱它来的时候紧过的拳头|zi you hui guo tou na shi jie que yi jiu ai ai ai ta lai de shi hou jin guo de quan tou
 别忘了捉喔哦那个梦|bie wang le zhuo o o na ge meng
 传说中愤怒的恶魔曾让这地球四处着火|chuan shuo zhong fen nu de e mo ceng rang zhe di qiu si chu zhao huo
@@ -18581,7 +18548,6 @@
 寻找太阳的梦自不量力说自己也变成太阳的念头|xun zhao tai yang de meng zi bu liang li shuo zi ji ye bian cheng tai yang de nian tou
 有时候寂寞几乎扛不动咽在喉咙里无人诉说|you shi hou ji mo ji hu kang bu dong yan zai hou long li wu ren su shuo
 我们到底在追求些什么为何一直不断往前冲|wo men dao di zai zhui qiu xie shen me wei he yi zhi bu duan wang qian chong
-捏出血的双手忘了也能够稍微退后喔喔我们总是以为能够|nie chu xue de shuang shou wang le ye neng gou shao wei tui hou wo wo wo men zong shi yi wei neng gou
 自由回过头来世界却依旧哎爱爱它来的时候紧握的拳头|zi you hui guo tou lai shi jie que yi jiu ai ai ai ta lai de shi hou jin wo de quan tou
 别忘了捉无喔那个梦来到我的身旁|bie wang le zhuo wu o na ge meng lai dao wo de shen pang
 收拢世界的光|shou long shi jie de guang
@@ -18614,7 +18580,7 @@
 有谁又能让我倾心除了你|you shei you neng rang wo qing xin chu le ni
 也许我一直害怕有答案|ye xu wo yi zhi hai pa you da an
 也许爱静静在风里打转|ye xu ai jing jing zai feng li da zhuan
-离开释怀很短暂又重来|li kai shi huai hen duan zan you zhong lai
+离开释怀很短暂又重来|li kai shi huai hen duan zan you chong lai
 有时候自问自答|you shi hou zi wen zi da
 我不要困难把我们击散|wo bu yao kun nan ba wo men ji san
 我责备自己那么不勇敢|wo ze bei zi ji na me bu yong gan
@@ -18821,7 +18787,6 @@
 那是我仅有的温柔也是我爱你的原因|na shi wo jin you de wen rou ye shi wo ai ni de yuan yin
 如此不可及耶诶诶诶如此不思议耶诶诶诶|ru ci bu ke ji ye ei ei ei ru ci bu si yi ye ei ei ei
 让我坠落在这凄美地|rang wo zhui luo zai zhe qi mei di
-偶尅|ou kei
 你在南方的艳阳里|ni zai nan fang de yan yang li
 大雪纷飞|da xue fen fei
 我在北方的寒夜里四季如春|wo zai bei fang de han ye li si ji ru chun
@@ -19121,7 +19086,6 @@
 在婚礼上多喝几杯祝我|zai hun li shang duo he ji bei zhu wo
 年少|nian shao
 有为|you wei
-偶尅|ou kei
 我忘记了是哪个夏天|wo wang ji le shi nei ge xia tian
 你轻靠着我飘散而过的落叶|ni qing kao zhe wo piao san er guo de luo ye
 为了誓言|wei le shi yan
@@ -19186,7 +19150,6 @@
 没有再没谁能拥有像你像我|mei you zai mei shei neng yong you xiang ni xiang wo
 哭和笑都懂得再触摸|ku he xiao dou dong de zai chu mo
 我心底藏了好久那最柔软的角落|wo xin di cang le hao jiu na zui rou ruan de jiao luo
-偶尅|ou kei
 穿过丛林和铁锈|chuan guo cong lin he tie xiu
 突然之间木已成舟|tu ran zhi jian mu yi cheng zhou
 非要等到刻上额头|fei yao deng dao ke shang e tou
@@ -19241,11 +19204,11 @@
 如果爱告诉我走下去|ru guo ai gao su wo zou xia qu
 我会拼到爱尽头|wo hui pin dao ai jin tou
 心若在灿烂中死去|xin ruo zai can lan zhong si qu
-爱会在灰烬里重生|ai hui zai hui jin li zhong sheng
+爱会在灰烬里重生|ai hui zai hui jin li chong sheng
 难忘缠绵细语时|nan wang chan mian xi yu shi
 用你笑容为我祭奠|yong ni xiao rong wei wo ji dian
 让心在灿烂中死去|rang xin zai can lan zhong si qu
-让爱在灰烬里重生|rang ai zai hui jin li zhong sheng
+让爱在灰烬里重生|rang ai zai hui jin li chong sheng
 烈火烧过青草痕|lie huo shao guo qing cao hen
 看看又是|kan kan you shi
 一年春风|yi nian chun feng
@@ -19261,18 +19224,17 @@
 如果爱告诉我走下去|ru guo ai gao su wo zou xia qu
 我会拼到爱尽头|wo hui pin dao ai jin tou
 心若在灿烂中死去|xin ruo zai can lan zhong si qu
-爱会在灰烬里重生|ai hui zai hui jin li zhong sheng
+爱会在灰烬里重生|ai hui zai hui jin li chong sheng
 难忘缠绵细语时|nan wang chan mian xi yu shi
 用你笑容|yong ni xiao rong
 为我祭奠|wei wo ji dian
 让心在灿烂中死去|rang xin zai can lan zhong si qu
-让爱在灰烬里重生|rang ai zai hui jin li zhong sheng
+让爱在灰烬里重生|rang ai zai hui jin li chong sheng
 烈火烧过青草痕|lie huo shao guo qing cao hen
 看看又是|kan kan you shi
 一年春风|yi nian chun feng
 堂花瓣离开花朵|tang hua ban li kai hua duo
 暗香残留|an xiang can liu
-偶尅|ou kei
 傍晚六点下班|bang wan liu dian xia ban
 换掉药厂的衣裳|huan diao yao chang de yi shang
 妻子在熬粥|qi zi zai ao zhou
@@ -19357,7 +19319,6 @@
 环游是无趣|huan you shi wu qu
 至少可以|zhi shao ke yi
 陪着你|pei zhe ni
-偶尅|ou kei
 当你走进这欢乐场|dang ni zou jin zhe huan le chang
 背上所有的梦与想|bei shang suo you de meng yu xiang
 各色的脸上各色的妆|ge se de lian shang ge se de zhuang
@@ -19907,7 +19868,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 只是没了你的画面|zhi shi mei le ni de hua mian
 我们回不到|wo men hui bu dao
 那天|na tian
-你会不会忽然地出现|ni hui bu hui hu ran di chu xian
+你会不会忽然地出现|ni hui bu hui hu ran de chu xian
 在街角的咖啡店|zai jie jiao de ka fei dian
 我会带着笑脸挥手寒暄和你|wo hui dai zhe xiao lian hui shou han xuan he ni
 坐着聊聊天|zuo zhe liao liao tian
@@ -19922,7 +19883,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 熟悉的那一条街|shu xi de na yi tiao jie
 只是没了你的画面|zhi shi mei le ni de hua mian
 我们回不到那天|wo men hui bu dao na tian
-你会不会忽然地出现|ni hui bu hui hu ran di chu xian
+你会不会忽然地出现|ni hui bu hui hu ran de chu xian
 在街角的咖啡店|zai jie jiao de ka fei dian
 我会带着笑脸|wo hui dai zhe xiao lian
 挥手寒暄和你|hui shou han xuan he ni
@@ -20339,8 +20300,8 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 在举手投降以前让我再陪你一段|zai ju shou tou xiang yi qian rang wo zai pei ni yi duan
 陪你把沿路感想活出了答案|pei ni ba yan lu gan xiang huo chu le da an
 陪你把独自孤单变成了勇敢|pei ni ba du zi gu dan bian cheng le yong gan
-一次次失去又重来我没离开陪伴是|yi ci ci shi qu you zhong lai wo mei li kai pei ban shi
-最长情的告白陪你把想念的酸|zui zhang qing de gao bai pei ni ba xiang nian de suan
+一次次失去又重来我没离开陪伴是|yi ci ci shi qu you chong lai wo mei li kai pei ban shi
+最长情的告白陪你把想念的酸|zui chang qing de gao bai pei ni ba xiang nian de suan
 拥抱成温暖陪你把彷徨写出情节来|yong bao cheng wen nuan pei ni ba pang huang xie chu qing jie lai
 未来多漫长再漫长还有期待陪伴你|wei lai duo man chang zai man chang hai you qi dai pei ban ni
 一直到故事给说完|yi zhi dao gu shi gei shuo wan
@@ -20350,15 +20311,15 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 都感觉幸福感觉不孤单|dou gan jue xing fu gan jue bu gu dan
 陪你把沿路感想活出了答案|pei ni ba yan lu gan xiang huo chu le da an
 陪你把独自孤单变成了勇敢|pei ni ba du zi gu dan bian cheng le yong gan
-一次次失去又重来我没离开陪伴是|yi ci ci shi qu you zhong lai wo mei li kai pei ban shi
-最长情的告白陪你把想念的酸|zui zhang qing de gao bai pei ni ba xiang nian de suan
+一次次失去又重来我没离开陪伴是|yi ci ci shi qu you chong lai wo mei li kai pei ban shi
+最长情的告白陪你把想念的酸|zui chang qing de gao bai pei ni ba xiang nian de suan
 拥抱成温暖陪你把彷徨写出情节来|yong bao cheng wen nuan pei ni ba pang huang xie chu qing jie lai
 未来多漫长再漫长还有期待陪伴你|wei lai duo man chang zai man chang hai you qi dai pei ban ni
 一直到故事给说完|yi zhi dao gu shi gei shuo wan
 陪你把沿路感想活出了答案|pei ni ba yan lu gan xiang huo chu le da an
 陪你把独自孤单变成了勇敢|pei ni ba du zi gu dan bian cheng le yong gan
-一次次失去又重来我没离开陪伴是|yi ci ci shi qu you zhong lai wo mei li kai pei ban shi
-最长情的告白陪你把想念的酸拥抱成温暖|zui zhang qing de gao bai pei ni ba xiang nian de suan yong bao cheng wen nuan
+一次次失去又重来我没离开陪伴是|yi ci ci shi qu you chong lai wo mei li kai pei ban shi
+最长情的告白陪你把想念的酸拥抱成温暖|zui chang qing de gao bai pei ni ba xiang nian de suan yong bao cheng wen nuan
 陪你把彷徨写出情节来|pei ni ba pang huang xie chu qing jie lai
 未来多漫长再漫长还有期待陪伴你|wei lai duo man chang zai man chang hai you qi dai pei ban ni
 一直到这故事|yi zhi dao zhe gu shi
@@ -20516,7 +20477,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 只为了完成一个夙愿还将付出几多鲜血|zhi wei le wan cheng yi ge su yuan hai jiang fu chu ji duo xian xue
 忠义之言自欺欺人的谎言|zhong yi zhi yan zi qi qi ren de huang yan
 有些情入苦难回绵窗间月夕夕成玦|you xie qing ru ku nan hui mian chuang jian yue xi xi cheng jue
-有些仇心藏却无言腹化风雪为刀剑|you xie chou xin zang que wu yan fu hua feng xue wei dao jian
+有些仇心藏却无言腹化风雪为刀剑|you xie chou xin cang que wu yan fu hua feng xue wei dao jian
 只为了完成一个夙愿荒乱中邪正如何辨|zhi wei le wan cheng yi ge su yuan huang luan zhong xie zheng ru he bian
 飞沙狼烟将乱我徒有悲添|fei sha lang yan jiang luan wo tu you bei tian
 半城烟沙兵临池下金戈铁马替谁争天下|ban cheng yan sha bing lin chi xia jin ge tie ma ti shei zheng tian xia
@@ -20524,7 +20485,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 恩半城烟沙随风而下恩手中还有一缕牵挂|en ban cheng yan sha sui feng er xia en shou zhong hai you yi lv qian gua
 只盼归田卸甲还能捧回你沏的茶|zhi pan gui tian xie jia hai neng peng hui ni qi de cha
 有些情入苦难回绵窗间月夕夕成玦|you xie qing ru ku nan hui mian chuang jian yue xi xi cheng jue
-有些仇心藏却无言腹化风雪为刀剑|you xie chou xin zang que wu yan fu hua feng xue wei dao jian
+有些仇心藏却无言腹化风雪为刀剑|you xie chou xin cang que wu yan fu hua feng xue wei dao jian
 爱爱爱为了一个夙愿荒乱中邪正如何辨|ai ai ai wei le yi ge su yuan huang luan zhong xie zheng ru he bian
 飞沙狼烟将乱我徒有悲添|fei sha lang yan jiang luan wo tu you bei tian
 半城烟沙兵临池下恩金戈铁马替谁争天下|ban cheng yan sha bing lin chi xia en jin ge tie ma ti shei zheng tian xia
@@ -20596,7 +20557,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 飘飘洒洒谁来听|piao piao sa sa shei lai ting
 摘取一颗海上星|zhai qu yi ke hai shang xing
 陪我终夜不孤寂|pei wo zhong ye bu gu ji
-灵柩长埋深谷底|ling jiu zhang mai shen gu di
+灵柩长埋深谷底|ling jiu chang mai shen gu di
 没有永远的秘密|mei you yong yuan de mi mi
 染指江湖结悲局|ran zhi jiang hu jie bei ju
 无人逃得过宿命|wu ren tao de guo su ming
@@ -21180,7 +21141,6 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 想多么简单就多么简单让我大声的对你说|xiang duo me jian dan jiu duo me jian dan rang wo da sheng de dui ni shuo
 脑袋都是你心里都是你小小的爱在大城里好甜蜜|nao dai dou shi ni xin li dou shi ni xiao xiao de ai zai dai cheng li hao tian mi
 念的都是你全部都是你小小的爱在大城里只为你倾心|nian de dou shi ni quan bu dou shi ni xiao xiao de ai zai dai cheng li zhi wei ni qing xin
-那回程的票根你留做纪念不必害怕面对离别唔喔喔|na hui cheng de piao gen ni liu zuo ji nian bu bi hai pa mian dui li bie wu wo wo
 剪掉一束头发让我放在胸前走到哪里都有你陪|jian diao yi shu tou fa rang wo fang zai xiong qian zou dao na li dou you ni pei
 相随咿耶耶脑袋都是你|xiang sui yi ye ye nao dai dou shi ni
 心里都是你小小的爱在大城里好甜蜜|xin li dou shi ni xiao xiao de ai zai da cheng li hao tian mi
@@ -21578,7 +21538,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 我怀念的是你很激动求我原谅|wo huai nian de shi ni hen ji dong qiu wo yuan liang
 抱得我都痛我记得你在背后|bao de wo dou tong wo ji de ni zai bei hou
 也记得我颤抖着记得感觉汹涌|ye ji de wo chan dou zhe ji de gan jue xiong yong
-最美的烟火最长的相拥谁爱得太自由|zui mei de yan huo zui zhang de xiang yong shei ai de tai zi you
+最美的烟火最长的相拥谁爱得太自由|zui mei de yan huo zui chang de xiang yong shei ai de tai zi you
 谁过头太远了|shei guo tou tai yuan le
 谁要走我的心谁忘了那就是承诺|shei yao zou wo de xin shei wang le na jiu shi cheng nuo
 谁自顾自地走|shei zi gu zi de zou
@@ -21977,10 +21937,10 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 也许你希望我听你的话|ye xu ni xi wang wo ting ni de hua
 我也曾经努力的尝试我还是回到海洋|wo ye ceng jing nu li de chang shi wo hai shi hui dao hai yang
 每一个转弯每一个路段每一次选择每一次失望|mei yi ge zhuan wan mei yi ge lu duan mei yi ci xuan ze mei yi ci shi wang
-不怕多困难那熟悉地方是我的|bu pa duo kun nan na shu xi di fang shi wo de
+不怕多困难那熟悉地方是我的|bu pa duo kun nan na shu xi de fang shi wo de
 渴望我听到地平线那一边|ke wang wo ting dao di ping xian na yi bian
 呼唤我谁会知道|hu huan wo shei hui zhi dao
-能走多远乘着风迎着浪扬着帆勇敢前进|neng zou duo yuan cheng zhao feng ying zhe lang yang zhe fan yong gan qian jin
+能走多远乘着风迎着浪扬着帆勇敢前进|neng zou duo yuan cheng zhe feng ying zhe lang yang zhe fan yong gan qian jin
 终会知道我要走的路不管有多远也好|zhong hui zhi dao wo yao zou de lu bu guan you duo yuan ye hao
 虽然在这海岛每一个人仿佛开心没有忧愁|sui ran zai zhe hai dao mei yi ge ren fang fu kai xin mei you you chou
 所有事都被安排|suo you shi dou bei an pai
@@ -22931,7 +22891,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 走到最后|zou dao zui hou
 拂去岁月厚厚的封尘|fu qu sui yue hou hou de feng chen
 敞开心的世界记忆的闸门|chang kai xin de shi jie ji yi de zha men
-一副副一帧帧|yi fu fu yi zheng zheng
+一副副一帧帧|yi fu fu yi zhen zhen
 不能忘却的画卷|bu neng wang que de hua juan
 引领着我|yin ling zhe wo
 默默的前行|mo mo de qian xing
@@ -23286,7 +23246,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 南方姑娘你是否喜欢|nan fang gu niang ni shi fou xi huan
 北方人的直爽|bei fang ren de zhi shuang
 日子过得就像那些不眠的晚上|ri zi guo de jiu xiang na xie bu mian de wan shang
-她嚼着口香糖对墙漫谈着理想哎哎南方姑娘|ta jue zhe kou xiang tang dui qiang man tan zhe li xiang ai ai nan fang gu niang
+她嚼着口香糖对墙漫谈着理想哎哎南方姑娘|ta jiao zhe kou xiang tang dui qiang man tan zhe li xiang ai ai nan fang gu niang
 我们都在忍受着漫长|wo men dou zai ren shou zhe man chang
 南方姑娘是不是高楼遮住了|nan fang gu niang shi bu shi gao lou zhe zhu le
 你的希望哎嗨|ni de xi wang ai hai
@@ -23705,7 +23665,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 沙漠你爱吗|sha mo ni ai ma
 我问太多啦|wo wen tai duo la
 知道吗这里的雨季只有一两天|zhi dao ma zhe li de yu ji zhi you yi liang tian
-白昼很长也很短夜晚有三年|bai zhou hen zhang ye hen duan ye wan you san nian
+白昼很长也很短夜晚有三年|bai zhou hen chang ye hen duan ye wan you san nian
 知道吗今天的消息|zhi dao ma jin tian de xiao xi
 说一号公路上那座桥断啦|shuo yi hao gong lu shang na zuo qiao duan la
 我们还去吗要不再说呢|wo men hai qu ma yao bu zai shuo ne
@@ -23829,7 +23789,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 吹来多少美梦|chui lai duo shao mei meng
 吹来多少轻松|chui lai duo shao qing song
 吹走无数隐痛|chui zou wu shu yin tong
-迎着风近看水影朦胧|ying zhao feng jin kan shui ying meng long
+迎着风近看水影朦胧|ying zhe feng jin kan shui ying meng long
 遥望无尽星空|yao wang wu jin xing kong
 忘掉那些我不曾|wang diao na xie wo bu ceng
 湖面上闪烁的点点流莹|hu mian shang shan shuo de dian dian liu ying
