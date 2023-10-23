@@ -52,6 +52,12 @@ namespace IKg2pTest
                                     Console.WriteLine(result);
                                     Console.WriteLine();
 
+                                    if(result.Split(" ").Length !=value.Split(" ").Length)
+                                    {
+                                        Console.WriteLine("Error.");
+                                        Environment.Exit(0);
+                                    }
+
                                     var resWords = result.Split(" ");
                                     for (int i = 0; i < wordSize; i++)
                                     {
