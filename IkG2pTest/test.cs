@@ -2,8 +2,6 @@
 using System.Diagnostics;
 using System.Reflection;
 using System.Text;
-using TinyPinyin;
-using EzPinyin;
 
 namespace IKg2pTest
 {
@@ -32,12 +30,25 @@ namespace IKg2pTest
         }
         static void Main(string[] args)
         {
-            string[] dataLines = ReadData("op_lab.txt");
+            string[] dataLines;
+
+            // mandarin or cantonese
+            bool mandarin = true;
+            bool resDisplay = true;
+            ZhG2p zhG2p;
+            if (mandarin)
+            {
+                zhG2p = new ZhG2p("mandarin");
+                dataLines = ReadData("op_lab.txt");
+            }
+            else
+            {
+                zhG2p = new ZhG2p("cantonses");
+                dataLines = ReadData("jyutping_test.txt");
+            }
+
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-
-            // 创建一个ZhG2p实例
-            var zhG2p = new ZhG2p("mandarin");
 
             StreamWriter writer = new StreamWriter("out.txt");
             int count = 0;
@@ -61,21 +72,30 @@ namespace IKg2pTest
                         int wordSize = words.Length;
                         count += wordSize;
 
-                        if (result != value)
+                        bool diff = false;
+                        var resWords = result.Split(" ");
+                        for (int i = 0; i < wordSize; i++)
+                        {
+                            if (words[i] != resWords[i] && !words[i].Split("/").Contains(resWords[i]))
+                            {
+                                diff = true;
+                                error++;
+                            }
+                        }
+
+                        if (resDisplay && diff)
                         {
                             Console.WriteLine("text: " + key);
                             Console.WriteLine("raw: " + value);
                             Console.Write("out:");
                             writer.WriteLine(trimmedLine);
 
-                            var resWords = result.Split(" ");
                             for (int i = 0; i < wordSize; i++)
                             {
-                                if (words[i] != resWords[i])
+                                if (words[i] != resWords[i] && !words[i].Split("/").Contains(resWords[i]))
                                 {
                                     Console.ForegroundColor = ConsoleColor.Red;
                                     Console.Write(" " + resWords[i]);
-                                    error++;
                                 }
                                 else
                                 {
