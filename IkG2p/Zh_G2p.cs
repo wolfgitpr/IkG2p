@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlTypes;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -187,17 +184,32 @@ namespace IKg2p
                     {
                         if (cursor + length <= inputList.Count)
                         {
-                            var subPhrase = string.Join("", inputList.GetRange(cursor, Math.Min(length, inputList.Count - cursor)));
+                            // cursor: 地, subPhrase: 地久天长
+                            var subPhrase = string.Join("", inputList.GetRange(cursor, length));
                             if (PhrasesDict.ContainsKey(subPhrase))
                             {
                                 AddString(PhrasesDict[subPhrase], result);
                                 cursor += length;
                                 found = true;
                             }
+
+                            if (cursor >= 1 && !found)
+                            {
+                                // cursor: 重, subPhrase_1: 语重心长
+                                var subPhrase_1 = string.Join("", inputList.GetRange(cursor - 1, length));
+                                if (PhrasesDict.ContainsKey(subPhrase_1))
+                                {
+                                    result.RemoveAt(result.Count - 1);
+                                    AddString(PhrasesDict[subPhrase_1], result);
+                                    cursor += length - 1;
+                                    found = true;
+                                }
+                            }
                         }
 
-                        if (cursor + 1 - length >= 0 && !found && cursor <= inputList.Count)
+                        if (cursor + 1 - length >= 0 && !found && cursor + 1 <= inputList.Count)
                         {
+                            // cursor: 好, xSubPhrase: 各有所好
                             var xSubPhrase = string.Join("", inputList.GetRange(cursor + 1 - length, length));
                             if (PhrasesDict.ContainsKey(xSubPhrase))
                             {
@@ -205,6 +217,20 @@ namespace IKg2p
                                 RemoveElements(result, cursor + 1 - length, pos);
                                 AddString(PhrasesDict[xSubPhrase], result);
                                 cursor += 1;
+                                found = true;
+                            }
+                        }
+
+                        if (cursor + 2 - length >= 0 && cursor + 2 <= inputList.Count && !found)
+                        {
+                            // cursor: 好, xSubPhrase: 叶公好龙
+                            var xSubPhrase_1 = string.Join("", inputList.GetRange(cursor + 2 - length, length));
+                            if (PhrasesDict.ContainsKey(xSubPhrase_1))
+                            {
+                                var pos = xSubPhrase_1.LastIndexOf(currentChar);
+                                RemoveElements(result, cursor + 2 - length, pos);
+                                AddString(PhrasesDict[xSubPhrase_1], result);
+                                cursor += 2;
                                 found = true;
                             }
                         }
