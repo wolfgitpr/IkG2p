@@ -39,6 +39,7 @@ namespace IKg2pTest
             // 创建一个ZhG2p实例
             var zhG2p = new ZhG2p("mandarin");
 
+            StreamWriter writer = new StreamWriter("out.txt");
             int count = 0;
             int error = 0;
             if (dataLines.Length > 0)
@@ -65,6 +66,7 @@ namespace IKg2pTest
                             Console.WriteLine("text: " + key);
                             Console.WriteLine("raw: " + value);
                             Console.Write("out:");
+                            writer.WriteLine(trimmedLine);
 
                             var resWords = result.Split(" ");
                             for (int i = 0; i < wordSize; i++)
@@ -87,6 +89,7 @@ namespace IKg2pTest
                         }
                     }
                 }
+                writer.Close();
                 stopwatch.Stop();
 
                 double percentage = Math.Round(((double)error / (double)count) * 100.0, 2);
