@@ -11,14 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="jyutping_test.txt" />
     <None Remove="op_lab.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="jyutping_test.txt" />
     <EmbeddedResource Include="op_lab.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EzPinyin" Version="1.1.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.10" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />

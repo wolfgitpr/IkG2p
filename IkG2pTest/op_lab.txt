@@ -306,7 +306,7 @@
 剩下了什么|sheng xia le shen me
 原谅走过的那些曲折|yuan liang zou guo de na xie qu zhe
 原来留下的都是真的|yuan lai liu xia de dou shi zhen de
-纵然似梦啊半醒着|zong ran shi meng a ban xing zhe
+纵然似梦啊半醒着|zong ran si meng a ban xing zhe
 笑着哭着都快活谁让|xiao zhe ku zhe dou kuai huo shei rang
 时间是让人猝不及防的东西|shi jian shi rang ren cu bu ji fang de dong xi
 晴时有风阴有时雨|qing shi you feng yin you shi yu
@@ -1552,7 +1552,7 @@
 我能学会飞行从不听谁的命令|wo neng xue hui fei xing cong bu ting shei de ming ling
 很独立耳朵用来听自己的心灵|hen du li er duo yong lai ting zi ji de xin ling
 淋雨一直走是一颗宝石就该闪烁|lin yu yi zhi zou shi yi ke bao shi jiu gai shan shuo
-人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng wo you meng jiu bie pa tong
+人都应该有梦噢有梦就别怕痛|ren dou ying gai you meng o you meng jiu bie pa tong
 淋雨一直走是道阳光就该暖和|lin yu yi zhi zou shi dao yang guang jiu gai nuan huo
 人都应该有梦噢有梦就|ren dou ying gai you meng o you meng jiu
 别怕痛|bie pa tong
@@ -5235,7 +5235,7 @@
 我怀念别怀念怀念也|wo huai nian bie huai nian huai nian ye
 回不到从前又是一个安静的晚上|hui bu dao cong qian you shi yi ge an jing de wan shang
 听说你还在搞什么原创搞来搞去好像也就这样|ting shuo ni hai zai gao shen me yuan chuang gao lai gao qu hao xiang ye jiu zhe yang
-不如花点时间想声琢磨一下模|bu ru hua dian shi jian xiang sheng zhuo mo yi xia mo
+不如花点时间想声琢磨一下模|bu ru hua dian shi jian xiang sheng zuo mo yi xia mo
 样今夜化了美美的妆我相信是很美美的妆|yang jin ye hua le mei mei de zhuang wo xiang xin shi hen mei mei de zhuang
 我摇晃在舞池中央那种体态可以想象|wo yao huang zai wu chi zhong yang na zhong ti tai ke yi xiang xiang
 我做我的改变又何必纠结|wo zuo wo de gai bian you he bi jiu jie
@@ -7176,7 +7176,7 @@
 待空山新雨后放一叶小舟后|dai kong shan xin yu hou fang yi ye xiao zhou hou
 载上无人问津的温柔嗯摆渡寻处去|zai shang wu ren wen jin de wen rou en bai du xun chu qu
 我承认这样真的安详和楼下老爷爷一样耶|wo cheng ren zhe yang zhen de an xiang he lou xia lao ye ye yi yang ye
-不如花点时间想想琢磨一下模样|bu ru hua dian shi jian xiang xiang zhuo mo yi xia mu yang
+不如花点时间想想琢磨一下模样|bu ru hua dian shi jian xiang xiang zuo mo yi xia mu yang
 今夜化了美美的妆我相信是很美美的妆|jin ye hua le mei mei de zhuang wo xiang xin shi hen mei mei de zhuang
 素面朝天要多纯洁就有多纯洁|su mian chao tian yao duo chun jie jiu you duo chun jie
 如果再看你一眼是否还会有感觉最真实的喜怒哀乐全都埋葬在|ru guo zai kan ni yi yan shi fou hai hui you gan jue zui zhen shi de xi nu ai le quan dou mai zang zai
@@ -8013,7 +8013,7 @@
 庄稼早已收割完|zhuang jia zao yi shou ge wan
 我的老母亲去年|wo de lao mu qin qu nian
 离开了人间|li kai le ren jian
-女儿扎着马尾辫跑进了校园|nv er zha zhe ma yi bian pao jin le xiao yuan
+女儿扎着马尾辫跑进了校园|nv er zha zhe ma wei bian pao jin le xiao yuan
 瘦了一|shou le yi
 大圈想一想未来我老成了一堆旧纸钱|da quan xiang yi xiang wei lai wo lao cheng le yi dui jiu zhi qian
 那时的女儿一定会美得|na shi de nv er yi ding hui mei de
@@ -11329,7 +11329,7 @@
 那是我仅有的温柔也是我|na shi wo jin you de wen rou ye shi wo
 爱你的原因在这凄美地也诶诶诶|ai ni de yuan yin zai zhe qi mei di ye ei ei ei
 曾经这里是无人之地|ceng jing zhe li shi wu ren zhi di
-为何没留下有效地址肆意的消息|wei he mei liu xia you xiao di zhi si yi di xiao xi
+为何没留下有效地址肆意的消息|wei he mei liu xia you xiao di zhi si yi de xiao xi
 迷失在十月没有音讯云|mi shi zai shi yue mei you yin xun yun
 哦哦哦哦哦如今这里是风和日丽|o o o o o ru jin zhe li shi feng he ri li
 等你再回来雨过迁徙看夜幕将近|deng ni zai hui lai yu guo qian xi kan ye mu jiang jin
@@ -11626,7 +11626,7 @@
 悬在绒绒的天上|xuan zai rong rong de tian shang
 你的心事三三两两蓝蓝|ni de xin shi san san liang liang lan lan
 停在我幽幽心上|ting zai wo you you xin shang
-彷佛走入第五个|pang fo zou ru di wu ge
+彷佛走入第五个|fang fu zou ru di wu ge
 季节昼夜乱了和谐|ji jie zhou ye luan le he xie
 潮泛任性涨退字典里没春天|chao fan ren xing zhang tui zi dian li mei chun tian
 的离别你不敢想明天|de li bie ni bu gan xiang ming tian
@@ -11714,7 +11714,7 @@
 从此以后拥挤的房间一个人的心|cong ci yi hou yong ji de fang jian yi ge ren de xin
 有多孤独我已经相信有些人我永远不必等|you duo gu du wo yi jing xiang xin you xie ren wo yong yuan bu bi deng
 嫁给我明天有多幸福只想你明白我心甘情愿爱爱爱爱到要吐|jia gei wo ming tian you duo xing fu zhi xiang ni ming bai wo xin gan qing yuan ai ai ai ai dao yao tu
-让我断了气铁了心爱的过火一回头就找到出路让我成为了无情的尅歌之王|rang wo duan le qi tie le xin ai de guo huo yi hui tou jiu zhao dao chu lu rang wo cheng wei liao wu qing de kei ge zhi wang
+让我断了气铁了心爱的过火一回头就找到出路让我成为了无情的尅歌之王|rang wo duan le qi tie le xin ai de guo huo yi hui tou jiu zhao dao chu lu rang wo cheng wei le wu qing de kei ge zhi wang
 麦克风都让我征服想不到你|mai ke feng dou rang wo zheng fu xiang bu dao ni
 若无其事的说这样滥情|ruo wu qi shi de shuo zhe yang lan qing
 何苦|he ku
@@ -12406,10 +12406,10 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 是欢欣是斜阳下不舍的背影|shi huan xin shi xie yang xia bu she de bei ying
 夜寂静守孤城|ye ji jing shou gu cheng
 恩战沙场恩终此生|en zhan sha chang en zhong ci sheng
-风一更雪一更聒碎乡心梦不成|feng yi geng xue yi geng gua sui xiang xin meng bu cheng
+风一更雪一更聒碎乡心梦不成|feng yi geng xue yi geng guo sui xiang xin meng bu cheng
 恩故园无此声|en gu yuan wu ci sheng
 夜深千家|ye shen qian jia
-灯恩风一更雪一更聒碎乡心梦不成|deng en feng yi geng xue yi geng gua sui xiang xin meng bu cheng
+灯恩风一更雪一更聒碎乡心梦不成|deng en feng yi geng xue yi geng guo sui xiang xin meng bu cheng
 故园无|gu yuan wu
 此声|ci sheng
 时光一逝永不回|shi guang yi shi yong bu hui
@@ -12743,7 +12743,7 @@ o偶偶无我啊偶|o ou ou wu wo a ou
 你的微笑结束了疲倦千万不要说天长地久|ni de wei xiao jie shu le pi juan qian wan bu yao shuo tian chang di jiu
 免得你却得我不切实际|mian de ni que de wo bu qie shi ji
 想多么简单就多么简单让我大声的对你说|xiang duo me jian dan jiu duo me jian dan rang wo da sheng de dui ni shuo
-脑袋都是你心里都是你小小的爱在大城里好甜蜜|nao dai dou shi ni xin li dou shi ni xiao xiao de ai zai dai cheng li hao tian mi
+脑袋都是你心里都是你小小的爱在大城里好甜蜜|nao dai dou shi ni xin li dou shi ni xiao xiao de ai zai da cheng li hao tian mi
 念的都是你全部都是你小小的爱在大城里只为你倾心|nian de dou shi ni quan bu dou shi ni xiao xiao de ai zai dai cheng li zhi wei ni qing xin
 剪掉一束头发让我放在胸前走到哪里都有你陪|jian diao yi shu tou fa rang wo fang zai xiong qian zou dao na li dou you ni pei
 相随咿耶耶脑袋都是你|xiang sui yi ye ye nao dai dou shi ni

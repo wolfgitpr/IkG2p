@@ -35,6 +35,11 @@ namespace IKg2pTest
             // mandarin or cantonese
             bool mandarin = true;
             bool resDisplay = true;
+
+            //HmmPosTag hmmPos = new HmmPosTag();
+            //var hmmRes = hmmPos.Predict("感受 停 在 我 发端 的 指尖");
+            //Console.WriteLine(hmmRes);
+
             ZhG2p zhG2p;
             if (mandarin)
             {
