@@ -133,7 +133,7 @@ namespace IKg2p
         {
             for (int i = 0; i < input.Count; i++)
             {
-                if (WordDict.ContainsKey(input[i]) || TransDict.ContainsKey(input[i]))
+                if (WordDict.ContainsKey(input[i]) || TransDict.ContainsKey(input[i]) || NumMap.ContainsKey(input[i]))
                 {
                     res.Add(input[i]);
                     positions.Add(i);
@@ -161,8 +161,9 @@ namespace IKg2p
 
                 if (convertNum && NumMap.ContainsKey(currentChar))
                 {
-                    result.Add(NumMap[currentChar]);
+                    result.Add(GetDefaultPinyin(NumMap[currentChar]));
                     cursor++;
+                    continue;
                 }
 
                 if (!WordDict.ContainsKey(currentChar))
