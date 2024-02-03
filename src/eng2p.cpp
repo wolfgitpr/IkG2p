@@ -4,8 +4,13 @@
 
 #include "g2pglobal.h"
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#  include <QtCore5Compat>
+#endif
+
 namespace IKg2p {
-    bool loadArpabetDict(const QString &dict_dir, const QString &fileName, QHash<QString, QString> &resultMap) {
+    bool loadArpabetDict(const QString &dict_dir, const QString &fileName,
+                         QHash<QString, QString> &resultMap) {
         QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
         QFile file(file_path);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -52,9 +57,9 @@ namespace IKg2p {
 
         for (QString &item : arpabetList) {
             if (removeNum) {
-                item.remove(QRegExp("[^a-z ]"));
-            } else {
-                item.remove(QRegExp("[^a-z\\d ]"));
+                if (item.back().isDigit()) {
+                    item.chop(1);
+                }
             }
         }
 

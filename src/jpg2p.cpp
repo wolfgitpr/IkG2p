@@ -4,6 +4,10 @@
 
 #include "g2pglobal.h"
 
+#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
+#  include <QtCore5Compat>
+#endif
+
 namespace IKg2p {
     // keep only letters
     static QString filterString(const QString &str) {
@@ -66,17 +70,19 @@ namespace IKg2p {
                 for (QChar kanaChar : kana) {
                     if (kanaType == KanaType::Hiragana) {
                         // target is Hiragana
-                        if (kanaChar >= katakanaStart && kanaChar < katakanaStart + 0x5E) {
+                        if (kanaChar >= katakanaStart && kanaChar < QChar(katakanaStart + 0x5E)) {
                             // Katakana->Hiragana
-                            convertedKana += QChar(kanaChar.unicode() - katakanaStart + hiraganaStart);
+                            convertedKana +=
+                                QChar(kanaChar.unicode() - katakanaStart + hiraganaStart);
                         } else {
                             convertedKana += kanaChar;
                         }
                     } else {
                         // target is Katakana
-                        if (kanaChar >= hiraganaStart && kanaChar < hiraganaStart + 0x5E) {
+                        if (kanaChar >= hiraganaStart && kanaChar < QChar(hiraganaStart + 0x5E)) {
                             // Hiragana->Katakana
-                            convertedKana += QChar(kanaChar.unicode() + katakanaStart - hiraganaStart);
+                            convertedKana +=
+                                QChar(kanaChar.unicode() + katakanaStart - hiraganaStart);
                         } else {
                             convertedKana += kanaChar;
                         }
@@ -101,7 +107,7 @@ namespace IKg2p {
         QStringList inputList = d->convertKana(kanaList, JpG2pPrivate::KanaType::Hiragana);
         QStringList romajiList;
         for (const QString &kana : inputList) {
-            if (kana!="゜" && kana!="ー") {
+            if (kana != "゜" && kana != "ー") {
                 romajiList.append(d->kanaToRomajiMap.value(kana, kana));
             }
         }

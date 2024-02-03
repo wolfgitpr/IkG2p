@@ -24,11 +24,11 @@ namespace IKg2p {
     }
 
     bool isHanzi(QChar c) {
-        return (c >= 0x4e00 && c <= 0x9fa5);
+        return (c >= QChar(0x4e00) && c <= QChar(0x9fa5));
     }
 
     bool isKana(QChar c) {
-        return ((c >= 0x3040 && c <= 0x309F) || (c >= 0x30A0 && c <= 0x30FF));
+        return ((c >= QChar(0x3040) && c <= QChar(0x309F)) || (c >= QChar(0x30A0) && c <= QChar(0x30FF)));
     }
 
     bool isSpecialKana(QChar c) {

@@ -27,10 +27,10 @@ if (MSVC)
     endif ()
 endif ()
 
-if(IKG2p_INSTALL)
+if (IKG2p_INSTALL)
     include(GNUInstallDirs)
     include(CMakePackageConfigHelpers)
-endif()
+endif ()
 # ----------------------------------
 # Main Project
 # ----------------------------------
@@ -39,6 +39,23 @@ add_library(${PROJECT_NAME} STATIC ${_src})
 
 if (IKG2P_BUILD_TESTS)
     add_subdirectory(tests)
+    set(DIRECTORIES_TO_COPY
+            dict
+            mecabDict
+    )
+
+    foreach (dir ${DIRECTORIES_TO_COPY})
+        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                COMMAND
+                ${CMAKE_COMMAND} -E copy_directory
+                ${CMAKE_CURRENT_SOURCE_DIR}/res/${dir}
+                ${CMAKE_BINARY_DIR}/tests/${dir}
+        )
+        install(
+                DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/res/${dir}
+                DESTINATION .
+        )
+    endforeach ()
 endif ()
 
 # ----------------------------------
@@ -46,6 +63,11 @@ endif ()
 # ----------------------------------
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
+
+if (QT_VERSION_MAJOR GREATER_EQUAL 6)
+    find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core5Compat REQUIRED)
+    target_link_libraries(${PROJECT_NAME} PUBLIC Qt${QT_VERSION_MAJOR}::Core5Compat)
+endif ()
 
 # ----------------------------------
 # link libraries
@@ -65,25 +87,22 @@ set(DIRECTORIES_TO_COPY
 )
 
 foreach (dir ${DIRECTORIES_TO_COPY})
-    if (IKG2P_BUILD_TESTS)
-        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-                COMMAND
-                ${CMAKE_COMMAND} -E copy_directory
-                ${CMAKE_CURRENT_SOURCE_DIR}/res/${dir}
-                $<TARGET_FILE_DIR:${PROJECT_NAME}>/tests/${dir}
-        )
-    endif ()
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+            COMMAND
+            ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_CURRENT_SOURCE_DIR}/res/${dir}
+            ${CMAKE_BINARY_DIR}/bin/${dir}
+    )
     install(
             DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/res/${dir}
             DESTINATION .
     )
-
 endforeach ()
 
 # ----------------------------------
 # install
 # ----------------------------------
-if(IKG2P_INSTALL)
+if (IKG2P_INSTALL)
     target_include_directories(${PROJECT_NAME} PUBLIC
             "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
     )
@@ -94,4 +113,4 @@ if(IKG2P_INSTALL)
             LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" OPTIONAL
             ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" OPTIONAL
     )
-endif()
+endif ()
