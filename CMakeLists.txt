@@ -41,7 +41,6 @@ if (IKG2P_BUILD_TESTS)
     add_subdirectory(tests)
     set(DIRECTORIES_TO_COPY
             dict
-            mecabDict
     )
 
     foreach (dir ${DIRECTORIES_TO_COPY})
@@ -83,7 +82,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 # ----------------------------------
 set(DIRECTORIES_TO_COPY
         dict
-        mecabDict
 )
 
 foreach (dir ${DIRECTORIES_TO_COPY})
