@@ -12,7 +12,7 @@ namespace IKg2p {
     // keep only letters
     static QString filterString(const QString &str) {
         QString words;
-        for (const auto &ch : str) {
+        for (const auto &ch: str) {
             auto u = ch.unicode();
             if (u >= 128 || !ch.isLetter()) {
                 if (words.isEmpty() || words.back() != ' ') {
@@ -63,17 +63,17 @@ namespace IKg2p {
         const ushort katakanaStart = 0x30A1;
 
         QStringList convertedList;
-        for (const QString &kana : kanaList) {
+        for (const QString &kana: kanaList) {
             QString convertedKana;
             QRegExp rx("[\u3040-\u309F\u30A0-\u30FF]+");
             if (rx.exactMatch(kana)) {
-                for (QChar kanaChar : kana) {
+                for (QChar kanaChar: kana) {
                     if (kanaType == KanaType::Hiragana) {
                         // target is Hiragana
                         if (kanaChar >= katakanaStart && kanaChar < QChar(katakanaStart + 0x5E)) {
                             // Katakana->Hiragana
                             convertedKana +=
-                                QChar(kanaChar.unicode() - katakanaStart + hiraganaStart);
+                                    QChar(kanaChar.unicode() - katakanaStart + hiraganaStart);
                         } else {
                             convertedKana += kanaChar;
                         }
@@ -82,7 +82,7 @@ namespace IKg2p {
                         if (kanaChar >= hiraganaStart && kanaChar < QChar(hiraganaStart + 0x5E)) {
                             // Hiragana->Katakana
                             convertedKana +=
-                                QChar(kanaChar.unicode() + katakanaStart - hiraganaStart);
+                                    QChar(kanaChar.unicode() + katakanaStart - hiraganaStart);
                         } else {
                             convertedKana += kanaChar;
                         }
@@ -102,11 +102,11 @@ namespace IKg2p {
     JpG2p::~JpG2p() {
     }
 
-    QString JpG2p::kanaToRomaji(const QStringList &kanaList, bool doubleWrittenSokuon) const {
+    QStringList JpG2p::kanaToRomaji(const QStringList &kanaList, bool doubleWrittenSokuon) const {
         Q_D(const JpG2p);
         QStringList inputList = d->convertKana(kanaList, JpG2pPrivate::KanaType::Hiragana);
         QStringList romajiList;
-        for (const QString &kana : inputList) {
+        for (const QString &kana: inputList) {
             if (kana != "゜" && kana != "ー") {
                 romajiList.append(d->kanaToRomajiMap.value(kana, kana));
             }
@@ -120,10 +120,10 @@ namespace IKg2p {
                 romajiList.removeAt(i);
             }
         }
-        return romajiList.join(" ");
+        return romajiList;
     }
 
-    QString JpG2p::kanaToRomaji(const QString &kanaStr, bool doubleWrittenSokuon) const {
+    QStringList JpG2p::kanaToRomaji(const QString &kanaStr, bool doubleWrittenSokuon) const {
         QStringList input = viewList2strList(splitString(kanaStr));
         return kanaToRomaji(input, doubleWrittenSokuon);
     }
@@ -142,7 +142,7 @@ namespace IKg2p {
     QStringList JpG2p::romajiToKana(const QStringList &romajiList) const {
         Q_D(const JpG2p);
         QStringList kanaList;
-        for (const QString &romaji : romajiList) {
+        for (const QString &romaji: romajiList) {
             kanaList.append(d->romajiToKanaMap.value(romaji, romaji));
         }
         return kanaList;

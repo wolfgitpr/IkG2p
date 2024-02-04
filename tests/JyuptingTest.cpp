@@ -17,7 +17,7 @@ namespace G2pTest {
     bool JyuptingTest::convertNumTest() {
         QString raw1 = "明月@1几32时有##一";
         QString tar1 = "ming jyut jat gei saam ji si jau jat";
-        QString res1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore);
+        QString res1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore).join(" ");
         if (res1 != tar1) {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
@@ -27,7 +27,7 @@ namespace G2pTest {
 
         QString raw2 = "明月@1几32时有##一";
         QString tar2 = "ming jyut gei si jau jat";
-        QString res2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore);
+        QString res2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore).join(" ");
         if (res2 != tar2) {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
@@ -42,7 +42,7 @@ namespace G2pTest {
     bool JyuptingTest::removeToneTest() {
         QString raw1 = "明月@1几32时有##一";
         QString tar1 = "ming4 jyut6 jat1 gei2 saam1 ji6 si4 jau5 jat1";
-        QString res1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore);
+        QString res1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore).join(" ");
         if (res1 != tar1) {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
@@ -52,7 +52,7 @@ namespace G2pTest {
 
         QString raw2 = "明月@1几32时有##一";
         QString tar2 = "ming4 jyut6 gei2 si4 jau5 jat1";
-        QString res2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore);
+        QString res2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore).join(" ");
         if (res2 != tar2) {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
@@ -63,6 +63,7 @@ namespace G2pTest {
         qDebug() << "removeToneTest: success";
         return true;
     }
+
     bool JyuptingTest::batchTest(bool resDisplay) {
         int count = 0;
         int error = 0;
@@ -72,37 +73,37 @@ namespace G2pTest {
 
         QElapsedTimer time;
         time.start();
-        foreach (const QString &line, dataLines) {
-            QStringList keyValuePair = line.trimmed().split('|');
+                foreach (const QString &line, dataLines) {
+                QStringList keyValuePair = line.trimmed().split('|');
 
-            if (keyValuePair.size() == 2) {
-                QString key = keyValuePair[0];
+                if (keyValuePair.size() == 2) {
+                    QString key = keyValuePair[0];
 
-                QString value = keyValuePair[1];
-                QString result = g2p_can->hanziToPinyin(key, false, true);
+                    QString value = keyValuePair[1];
+                    QString result = g2p_can->hanziToPinyin(key, false, true).join(" ");
 
-                QStringList words = value.split(" ");
-                int wordSize = words.size();
-                count += wordSize;
+                    QStringList words = value.split(" ");
+                    int wordSize = words.size();
+                    count += wordSize;
 
-                bool diff = false;
-                QStringList resWords = result.split(" ");
-                for (int i = 0; i < wordSize; i++) {
-                    if (words[i] != resWords[i] && !words[i].split("/").contains(resWords[i])) {
-                        diff = true;
-                        error++;
+                    bool diff = false;
+                    QStringList resWords = result.split(" ");
+                    for (int i = 0; i < wordSize; i++) {
+                        if (words[i] != resWords[i] && !words[i].split("/").contains(resWords[i])) {
+                            diff = true;
+                            error++;
+                        }
                     }
-                }
 
-                if (resDisplay && diff) {
-                    qDebug() << "text: " << key;
-                    qDebug() << "raw: " << value;
-                    qDebug() << "res: " << result;
+                    if (resDisplay && diff) {
+                        qDebug() << "text: " << key;
+                        qDebug() << "raw: " << value;
+                        qDebug() << "res: " << result;
+                    }
+                } else {
+                    qDebug() << keyValuePair;
                 }
-            } else {
-                qDebug() << keyValuePair;
             }
-        }
 
         double percentage = ((double) error / (double) count) * 100.0;
 

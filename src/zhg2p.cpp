@@ -8,16 +8,16 @@
 namespace IKg2p {
 
     static const QMap<QChar, QString> numMap = {
-        {'0', "零"},
-        {'1', "一"},
-        {'2', "二"},
-        {'3', "三"},
-        {'4', "四"},
-        {'5', "五"},
-        {'6', "六"},
-        {'7', "七"},
-        {'8', "八"},
-        {'9', "九"}
+            {'0', "零"},
+            {'1', "一"},
+            {'2', "二"},
+            {'3', "三"},
+            {'4', "四"},
+            {'5', "五"},
+            {'6', "六"},
+            {'7', "七"},
+            {'8', "八"},
+            {'9', "九"}
     };
 
     static QString joinView(const QList<QStringView> &viewList, const QStringView &separator) {
@@ -33,18 +33,30 @@ namespace IKg2p {
         return result;
     }
 
+    static QStringList joinViewList(const QList<QStringView> &viewList) {
+        if (viewList.isEmpty())
+            return {};
+
+        QStringList result;
+        for (auto it = viewList.begin(); it != viewList.end() - 1; ++it) {
+            result.append(it->toString());
+        }
+        result += (viewList.end() - 1)->toString();
+        return result;
+    }
+
     // reset pinyin to raw string
-    static QString resetZH(const QList<QStringView> &input, const QList<QStringView> &res,
-                           const QList<int> &positions) {
+    static QStringList resetZH(const QList<QStringView> &input, const QList<QStringView> &res,
+                               const QList<int> &positions) {
         QList<QStringView> result = input;
         for (int i = 0; i < positions.size(); i++) {
             result.replace(positions[i], res.at(i));
         }
-        return joinView(result, QStringLiteral(" "));
+        return joinViewList(result);
     }
 
     // delete elements from the list
-    template <class T>
+    template<class T>
     static inline void removeElements(QList<T> &list, int start, int n) {
         list.erase(list.begin() + start, list.begin() + start + n);
     }
@@ -66,7 +78,7 @@ namespace IKg2p {
         for (auto it = src.begin(); it != src.end(); ++it) {
             QList<QStringView> viewList;
             viewList.reserve(it.value().size());
-            for (const auto &item : it.value()) {
+            for (const auto &item: it.value()) {
                 viewList.push_back(item);
             }
             dest.insert(it.key(), viewList);
@@ -122,11 +134,11 @@ namespace IKg2p {
     ZhG2p::~ZhG2p() {
     }
 
-    QString ZhG2p::hanziToPinyin(const QString &input, bool tone, bool convertNum, errorType error) {
+    QStringList ZhG2p::hanziToPinyin(const QString &input, bool tone, bool convertNum, errorType error) {
         return hanziToPinyin(splitString(input), tone, convertNum, error);
     }
 
-    QString ZhG2p::hanziToPinyin(const QList<QStringView> &input, bool tone, bool convertNum, errorType error) {
+    QStringList ZhG2p::hanziToPinyin(const QList<QStringView> &input, bool tone, bool convertNum, errorType error) {
         Q_D(const ZhG2p);
         QList<QStringView> inputList;
         QList<int> inputPos;
@@ -234,7 +246,7 @@ namespace IKg2p {
         }
 
         if (!tone) {
-            for (QStringView &item : result) {
+            for (QStringView &item: result) {
                 if (item.back().isDigit()) {
                     item.chop(1);
                 }
@@ -243,7 +255,7 @@ namespace IKg2p {
 
         // Alloc 2
         if (error == errorType::Ignore) {
-            return joinView(result, QStringLiteral(" "));
+            return joinViewList(result);
         }
         return resetZH(input, result, inputPos);
     }
@@ -263,6 +275,7 @@ namespace IKg2p {
         Q_D(const ZhG2p);
         return d->isPolyphonic(text);
     }
+
     QStringList ZhG2p::getDefaultPinyin(const QString &text) const {
         Q_D(const ZhG2p);
         return d->word_dict.value(d->tradToSim(text).toString(), {});

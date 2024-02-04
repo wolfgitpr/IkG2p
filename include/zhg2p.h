@@ -20,10 +20,10 @@ namespace IKg2p {
 
         ~ZhG2p();
 
-        QString hanziToPinyin(const QString &input, bool tone = true, bool convertNum = true,
+        QStringList hanziToPinyin(const QString &input, bool tone = true, bool convertNum = true,
                               errorType error = errorType::Default);
 
-        QString hanziToPinyin(const QList<QStringView> &input, bool tone = true, bool convertNum = true,
+        QStringList hanziToPinyin(const QList<QStringView> &input, bool tone = true, bool convertNum = true,
                               errorType error = errorType::Default);
 
         QString tradToSim(const QString &text) const;
