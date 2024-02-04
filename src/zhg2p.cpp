@@ -122,11 +122,11 @@ namespace IKg2p {
     ZhG2p::~ZhG2p() {
     }
 
-    QString ZhG2p::convert(const QString &input, bool tone, bool convertNum, errorType error) {
-        return convert(splitString(input), tone, convertNum, error);
+    QString ZhG2p::hanziToPinyin(const QString &input, bool tone, bool convertNum, errorType error) {
+        return hanziToPinyin(splitString(input), tone, convertNum, error);
     }
 
-    QString ZhG2p::convert(const QList<QStringView> &input, bool tone, bool convertNum, errorType error) {
+    QString ZhG2p::hanziToPinyin(const QList<QStringView> &input, bool tone, bool convertNum, errorType error) {
         Q_D(const ZhG2p);
         QList<QStringView> inputList;
         QList<int> inputPos;

@@ -15,7 +15,7 @@ namespace IKg2p {
     inline QStringList viewList2strList(const QList<QStringView> &viewList) {
         QStringList res;
         res.reserve(viewList.size());
-        for (const auto &item : viewList) {
+        for (const auto &item: viewList) {
             res.push_back(item.toString());
         }
         return res;
@@ -23,7 +23,8 @@ namespace IKg2p {
 
     bool loadDict(const QString &dict_dir, const QString &fileName, QHash<QString, QString> &resultMap);
 
-    bool loadDict(const QString &dict_dir, const QString &fileName, QHash<QString, QStringList> &resultMap);
+    bool loadDict(const QString &dict_dir, const QString &fileName, QHash<QString, QStringList> &resultMap,
+                  const QString &sep1 = ":", const QString &sep2 = " ");
 
     bool isLetter(QChar c);
 

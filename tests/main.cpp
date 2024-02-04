@@ -38,9 +38,9 @@ int main(int argc, char *argv[]) {
     auto g2p_man = new IKg2p::Mandarin();
     QString raw2 =
         "举杯あャ坐ュ饮放あ歌竹林间/清风拂 面悄word然xax asx a xxs拨？Q！动初弦/便推开烦恼与尘喧/便还是当时的少年";
-    qDebug() << g2p_man->convert(raw2, false, false);
+    qDebug() << g2p_man->hanziToPinyin(raw2, false, false);
     qDebug() << "--------------------";
-    qDebug() << g2p_man->convert(raw2, false, false, IKg2p::errorType::Ignore);
+    qDebug() << g2p_man->hanziToPinyin(raw2, false, false, IKg2p::errorType::Ignore);
 
     return 0;
 }

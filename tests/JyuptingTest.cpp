@@ -17,7 +17,7 @@ namespace G2pTest {
     bool JyuptingTest::convertNumTest() {
         QString raw1 = "明月@1几32时有##一";
         QString tar1 = "ming jyut jat gei saam ji si jau jat";
-        QString res1 = g2p_can->convert(raw1, false, true, IKg2p::errorType::Ignore);
+        QString res1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore);
         if (res1 != tar1) {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
@@ -27,7 +27,7 @@ namespace G2pTest {
 
         QString raw2 = "明月@1几32时有##一";
         QString tar2 = "ming jyut gei si jau jat";
-        QString res2 = g2p_can->convert(raw1, false, false, IKg2p::errorType::Ignore);
+        QString res2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore);
         if (res2 != tar2) {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
@@ -42,7 +42,7 @@ namespace G2pTest {
     bool JyuptingTest::removeToneTest() {
         QString raw1 = "明月@1几32时有##一";
         QString tar1 = "ming4 jyut6 jat1 gei2 saam1 ji6 si4 jau5 jat1";
-        QString res1 = g2p_can->convert(raw1, true, true, IKg2p::errorType::Ignore);
+        QString res1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore);
         if (res1 != tar1) {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
@@ -52,7 +52,7 @@ namespace G2pTest {
 
         QString raw2 = "明月@1几32时有##一";
         QString tar2 = "ming4 jyut6 gei2 si4 jau5 jat1";
-        QString res2 = g2p_can->convert(raw1, true, false, IKg2p::errorType::Ignore);
+        QString res2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore);
         if (res2 != tar2) {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
@@ -79,7 +79,7 @@ namespace G2pTest {
                 QString key = keyValuePair[0];
 
                 QString value = keyValuePair[1];
-                QString result = g2p_can->convert(key, false, true);
+                QString result = g2p_can->hanziToPinyin(key, false, true);
 
                 QStringList words = value.split(" ");
                 int wordSize = words.size();

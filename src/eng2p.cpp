@@ -48,7 +48,7 @@ namespace IKg2p {
     EnG2p::~EnG2p() {
     }
 
-    QString EnG2p::word2arpabet(const QStringList &wordList, bool removeNum) const {
+    QString EnG2p::wordToArpabet(const QStringList &wordList, bool removeNum) const {
         Q_D(const EnG2p);
         QStringList arpabetList;
         for (const QString &word : wordList) {
@@ -66,10 +66,10 @@ namespace IKg2p {
         return arpabetList.join(" ");
     }
 
-    QString EnG2p::word2arpabet(const QString &word, bool removeNum) const {
+    QString EnG2p::wordToArpabet(const QString &word, bool removeNum) const {
         Q_D(const EnG2p);
         QStringList input = viewList2strList(splitString(word));
-        return word2arpabet(input, removeNum);
+        return wordToArpabet(input, removeNum);
     }
 
     EnG2p::EnG2p(EnG2pPrivate &d, QObject *parent) : QObject(parent), d_ptr(&d) {

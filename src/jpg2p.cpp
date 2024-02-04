@@ -50,7 +50,7 @@ namespace IKg2p {
     // load jp convert dict
     void JpG2pPrivate::init() {
         auto dict_dir = dictionaryPath();
-        loadDict(dict_dir, "kana2romaji.txt", kanaToRomajiMap);
+        loadDict(dict_dir, "kanaToRomaji.txt", kanaToRomajiMap);
 
         for (auto it = kanaToRomajiMap.begin(); it != kanaToRomajiMap.end(); ++it) {
             romajiToKanaMap.insert(it.value(), it.key());
@@ -102,7 +102,7 @@ namespace IKg2p {
     JpG2p::~JpG2p() {
     }
 
-    QString JpG2p::kana2romaji(const QStringList &kanaList, bool doubleWrittenSokuon) const {
+    QString JpG2p::kanaToRomaji(const QStringList &kanaList, bool doubleWrittenSokuon) const {
         Q_D(const JpG2p);
         QStringList inputList = d->convertKana(kanaList, JpG2pPrivate::KanaType::Hiragana);
         QStringList romajiList;
@@ -123,9 +123,9 @@ namespace IKg2p {
         return romajiList.join(" ");
     }
 
-    QString JpG2p::kana2romaji(const QString &kanaStr, bool doubleWrittenSokuon) const {
+    QString JpG2p::kanaToRomaji(const QString &kanaStr, bool doubleWrittenSokuon) const {
         QStringList input = viewList2strList(splitString(kanaStr));
-        return kana2romaji(input, doubleWrittenSokuon);
+        return kanaToRomaji(input, doubleWrittenSokuon);
     }
 
     JpG2p::JpG2p(JpG2pPrivate &d, QObject *parent) : QObject(parent), d_ptr(&d) {
@@ -134,12 +134,12 @@ namespace IKg2p {
         d.init();
     }
 
-    QStringList JpG2p::romaji2kana(const QString &romajiStr) const {
+    QStringList JpG2p::romajiToKana(const QString &romajiStr) const {
         QStringList input = splitRomaji(romajiStr);
-        return romaji2kana(input);
+        return romajiToKana(input);
     }
 
-    QStringList JpG2p::romaji2kana(const QStringList &romajiList) const {
+    QStringList JpG2p::romajiToKana(const QStringList &romajiList) const {
         Q_D(const JpG2p);
         QStringList kanaList;
         for (const QString &romaji : romajiList) {

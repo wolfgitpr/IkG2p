@@ -84,7 +84,8 @@ namespace IKg2p {
         return true;
     }
 
-    bool loadDict(const QString &dict_dir, const QString &fileName, QHash<QString, QStringList> &resultMap) {
+    bool loadDict(const QString &dict_dir, const QString &fileName, QHash<QString, QStringList> &resultMap,
+                  const QString& sep1, const QString& sep2) {
         QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
         QFile file(file_path);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -94,12 +95,12 @@ namespace IKg2p {
 
         while (!file.atEnd()) {
             QString line = file.readLine().trimmed();
-            QStringList keyValuePair = line.split(":");
+            QStringList keyValuePair = line.split(sep1);
             if (keyValuePair.count() == 2) {
                 QString key = keyValuePair[0];
                 QString value = keyValuePair[1];
-                if (value.split(" ").count() > 0) {
-                    resultMap[key] = value.split(" ");
+                if (value.split(sep2).count() > 0) {
+                    resultMap[key] = value.split(sep2);
                 }
             }
         }
