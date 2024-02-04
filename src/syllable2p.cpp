@@ -18,8 +18,8 @@ namespace IKg2p {
     }
 
     void Syllable2pPrivate::init() {
-        auto dict_dir = dictionaryPath();
-        loadDict(dict_dir, "syllable2p.txt", phonemeMap, sep1, sep2);
+        QFileInfo phonemeDictInfo(phonemeDict);
+        loadDict(phonemeDictInfo.absolutePath(), phonemeDictInfo.fileName(), phonemeMap, sep1, sep2);
     }
 
     Syllable2p::Syllable2p(QString phonemeDict, QString sep1, QString sep2, QObject *parent) : Syllable2p(
