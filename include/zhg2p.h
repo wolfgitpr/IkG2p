@@ -21,10 +21,10 @@ namespace IKg2p {
         ~ZhG2p();
 
         QStringList hanziToPinyin(const QString &input, bool tone = true, bool convertNum = true,
-                              errorType error = errorType::Default);
+                                  errorType error = errorType::Default);
 
-        QStringList hanziToPinyin(const QList<QStringView> &input, bool tone = true, bool convertNum = true,
-                              errorType error = errorType::Default);
+        QStringList hanziToPinyin(const QStringList &input, bool tone = true, bool convertNum = true,
+                                  errorType error = errorType::Default);
 
         QString tradToSim(const QString &text) const;
 
@@ -36,6 +36,9 @@ namespace IKg2p {
         ZhG2p(ZhG2pPrivate &d, QObject *parent = nullptr);
 
         QScopedPointer<ZhG2pPrivate> d_ptr;
+    private:
+        QStringList hanziToPinyin(const QList<QStringView> &input, bool tone = true, bool convertNum = true,
+                                  errorType error = errorType::Default);
     };
 
 }

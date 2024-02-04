@@ -138,6 +138,15 @@ namespace IKg2p {
         return hanziToPinyin(splitString(input), tone, convertNum, error);
     }
 
+    QStringList ZhG2p::hanziToPinyin(const QStringList &input, bool tone, bool convertNum, errorType error) {
+        QList<QStringView> inputList;
+        inputList.reserve(input.size());
+        for (const auto &item: input) {
+            inputList.push_back(item);
+        }
+        return hanziToPinyin(inputList, tone, convertNum, error);
+    }
+
     QStringList ZhG2p::hanziToPinyin(const QList<QStringView> &input, bool tone, bool convertNum, errorType error) {
         Q_D(const ZhG2p);
         QList<QStringView> inputList;

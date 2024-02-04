@@ -32,7 +32,8 @@ namespace G2pTest {
         QString raw1 = "明月@1几32时有##一";
         QString tar1 = "ming yue yi ji san er shi you yi";
         QString res1 = g2p_zh->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore).join(" ");
-        if (res1 != tar1) {
+        QString res1List = g2p_zh->hanziToPinyin(raw1.split(""), false, true, IKg2p::errorType::Ignore).join(" ");
+        if (res1 != tar1 | res1List != tar1) {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
             qDebug() << "res1:" << res1;
@@ -42,7 +43,8 @@ namespace G2pTest {
         QString raw2 = "明月@1几32时有##一";
         QString tar2 = "ming yue ji shi you yi";
         QString res2 = g2p_zh->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore).join(" ");
-        if (res2 != tar2) {
+        QString res2List = g2p_zh->hanziToPinyin(raw1.split(""), false, false, IKg2p::errorType::Ignore).join(" ");
+        if (res2 != tar2 | res2List != tar2) {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
             qDebug() << "res2:" << res2;
