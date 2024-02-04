@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(CkIKg2p VERSION 0.0.0.1 LANGUAGES CXX) # ChorusKit IceKyrin G2P
+project(IKg2p VERSION 0.0.0.1 LANGUAGES CXX) # ChorusKit IceKyrin G2P
 
 set(CMAKE_CXX_STANDARD 17)
 
