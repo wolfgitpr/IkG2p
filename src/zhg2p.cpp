@@ -285,7 +285,7 @@ namespace IKg2p {
         return d->isPolyphonic(text);
     }
 
-    QStringList ZhG2p::getDefaultPinyin(const QString &text, bool &tone) const {
+    QStringList ZhG2p::getDefaultPinyin(const QString &text, bool tone) const {
         Q_D(const ZhG2p);
         QStringList res = d->word_dict.value(d->tradToSim(text).toString(), {});
         if (tone) {
