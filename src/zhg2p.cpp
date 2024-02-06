@@ -285,9 +285,22 @@ namespace IKg2p {
         return d->isPolyphonic(text);
     }
 
-    QStringList ZhG2p::getDefaultPinyin(const QString &text) const {
+    QStringList ZhG2p::getDefaultPinyin(const QString &text, bool &tone) const {
         Q_D(const ZhG2p);
-        return d->word_dict.value(d->tradToSim(text).toString(), {});
+        QStringList res = d->word_dict.value(d->tradToSim(text).toString(), {});
+        if (tone) {
+            return res;
+        } else {
+            QStringList result;
+            for (const auto &item: res) {
+                if (item.back().isDigit()) {
+                    result.append(item.left(item.size() - 1));
+                } else {
+                    result.append(item);
+                }
+            }
+            return result;
+        }
     }
 
 }

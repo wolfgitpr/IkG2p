@@ -30,7 +30,7 @@ namespace IKg2p {
 
         bool isPolyphonic(const QString &text) const;
 
-        QStringList getDefaultPinyin(const QString &text) const;
+        QStringList getDefaultPinyin(const QString &text, bool tone = true) const;
 
     protected:
         ZhG2p(ZhG2pPrivate &d, QObject *parent = nullptr);
@@ -39,6 +39,8 @@ namespace IKg2p {
     private:
         QStringList hanziToPinyin(const QList<QStringView> &input, bool tone = true, bool convertNum = true,
                                   errorType error = errorType::Default);
+
+        QStringList getDefaultPinyin(const QString &text, bool &tone) const;
     };
 
 }
