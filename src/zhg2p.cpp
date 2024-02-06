@@ -289,7 +289,7 @@ namespace IKg2p {
         Q_D(const ZhG2p);
         QStringList res = d->word_dict.value(d->tradToSim(text).toString(), {});
         if (!tone) {
-            for (QString item: res) {
+            for (QString &item: res) {
                 if (item.back().isDigit()) {
                     item.chop(1);
                 }
