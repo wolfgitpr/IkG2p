@@ -288,19 +288,14 @@ namespace IKg2p {
     QStringList ZhG2p::getDefaultPinyin(const QString &text, bool tone) const {
         Q_D(const ZhG2p);
         QStringList res = d->word_dict.value(d->tradToSim(text).toString(), {});
-        if (tone) {
-            return res;
-        } else {
-            QStringList result;
-            for (const auto &item: res) {
+        if (!tone) {
+            for (QString item: res) {
                 if (item.back().isDigit()) {
-                    result.append(item.left(item.size() - 1));
-                } else {
-                    result.append(item);
+                    item.chop(1);
                 }
             }
-            return result;
+            res.removeDuplicates();
         }
+        return res;
     }
-
 }

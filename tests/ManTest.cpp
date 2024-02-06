@@ -24,6 +24,8 @@ namespace G2pTest {
             return false;
         if (!(g2p_zh->getDefaultPinyin("杆").at(0) == "gan3" && g2p_zh->getDefaultPinyin("杆").at(1) == "gan1"))
             return false;
+        if (!(g2p_zh->getDefaultPinyin("杆", false).at(0) == "gan"))
+            return false;
         qDebug() << "apiTest: success";
         return true;
     }
