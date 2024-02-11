@@ -50,7 +50,7 @@ namespace IKg2p {
     // load jp convert dict
     void JpG2pPrivate::init() {
         auto dict_dir = dictionaryPath();
-        loadDict(dict_dir, "kanaToRomaji.txt", kanaToRomajiMap);
+        loadDict(dict_dir, "kana2romaji.txt", kanaToRomajiMap);
 
         for (auto it = kanaToRomajiMap.begin(); it != kanaToRomajiMap.end(); ++it) {
             romajiToKanaMap.insert(it.value(), it.key());
