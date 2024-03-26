@@ -7,14 +7,14 @@ namespace IKg2p
 {
     class JpG2pPrivate;
 
-    class JpG2p final : public QObject
+    class JapaneseG2p final : public QObject
     {
         Q_OBJECT
         Q_DECLARE_PRIVATE(JpG2p)
 
     public:
-        explicit JpG2p(QObject* parent = nullptr);
-        ~JpG2p() override;
+        explicit JapaneseG2p(QObject* parent = nullptr);
+        ~JapaneseG2p() override;
 
         [[nodiscard]] QStringList kanaToRomaji(const QString& kanaStr, const bool& doubleWrittenSokuon = false) const;
         [[nodiscard]] QStringList kanaToRomaji(const QStringList& kanaList,
@@ -24,7 +24,7 @@ namespace IKg2p
         [[nodiscard]] QStringList romajiToKana(const QStringList& romajiList) const;
 
     protected:
-        explicit JpG2p(JpG2pPrivate& d, QObject* parent = nullptr);
+        explicit JapaneseG2p(JpG2pPrivate& d, QObject* parent = nullptr);
 
         QScopedPointer<JpG2pPrivate> d_ptr;
     };

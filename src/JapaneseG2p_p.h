@@ -8,14 +8,14 @@
 namespace IKg2p {
 
     class JpG2pPrivate {
-        Q_DECLARE_PUBLIC(JpG2p)
+        Q_DECLARE_PUBLIC(JapaneseG2p)
     public:
         JpG2pPrivate();
         virtual ~JpG2pPrivate();
 
         void init();
 
-        JpG2p *q_ptr;
+        JapaneseG2p *q_ptr;
 
         QHash<QString, QString> kanaToRomajiMap;
         QHash<QString, QString> romajiToKanaMap;

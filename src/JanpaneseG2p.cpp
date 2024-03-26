@@ -119,13 +119,13 @@ namespace IKg2p
         return convertedList;
     }
 
-    JpG2p::JpG2p(QObject* parent) : JpG2p(*new JpG2pPrivate(), parent)
+    JapaneseG2p::JapaneseG2p(QObject* parent) : JapaneseG2p(*new JpG2pPrivate(), parent)
     {
     }
 
-    JpG2p::~JpG2p() = default;
+    JapaneseG2p::~JapaneseG2p() = default;
 
-    QStringList JpG2p::kanaToRomaji(const QStringList& kanaList, const bool& doubleWrittenSokuon) const
+    QStringList JapaneseG2p::kanaToRomaji(const QStringList& kanaList, const bool& doubleWrittenSokuon) const
     {
         Q_D(const JpG2p);
         QStringList inputList = IKg2p::JpG2pPrivate::convertKana(kanaList, JpG2pPrivate::KanaType::Hiragana);
@@ -151,26 +151,26 @@ namespace IKg2p
         return romajiList;
     }
 
-    QStringList JpG2p::kanaToRomaji(const QString& kanaStr, const bool& doubleWrittenSokuon) const
+    QStringList JapaneseG2p::kanaToRomaji(const QString& kanaStr, const bool& doubleWrittenSokuon) const
     {
         const QStringList input = viewList2strList(splitString(kanaStr));
         return kanaToRomaji(input, doubleWrittenSokuon);
     }
 
-    JpG2p::JpG2p(JpG2pPrivate& d, QObject* parent) : QObject(parent), d_ptr(&d)
+    JapaneseG2p::JapaneseG2p(JpG2pPrivate& d, QObject* parent) : QObject(parent), d_ptr(&d)
     {
         d.q_ptr = this;
 
         d.init();
     }
 
-    QStringList JpG2p::romajiToKana(const QString& romajiStr) const
+    QStringList JapaneseG2p::romajiToKana(const QString& romajiStr) const
     {
         const QStringList input = splitRomaji(romajiStr);
         return romajiToKana(input);
     }
 
-    QStringList JpG2p::romajiToKana(const QStringList& romajiList) const
+    QStringList JapaneseG2p::romajiToKana(const QStringList& romajiList) const
     {
         Q_D(const JpG2p);
         QStringList kanaList;

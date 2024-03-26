@@ -7,7 +7,7 @@ namespace IKg2p
 {
     class Syllable2pPrivate;
 
-    class Syllable2p final : public QObject
+    class Syllable2p : public QObject
     {
         Q_OBJECT
 
