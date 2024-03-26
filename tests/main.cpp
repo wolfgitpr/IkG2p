@@ -1,8 +1,8 @@
 #include <QtWidgets/QApplication>
 #include <QDebug>
 
-#include "g2pglobal.h"
-#include "mandarin.h"
+#include "G2pglobal.h"
+#include "MandarinG2p.h"
 #include <QCoreApplication>
 #include <QElapsedTimer>
 #include <iostream>
@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     IKg2p::setDictionaryPath(qApp->applicationDirPath() + "/dict");
 
     ManTest manTest;
-    qDebug() << "Mandarin G2P test:";
+    qDebug() << "MandarinG2p G2P test:";
     qDebug() << "--------------------";
     manTest.apiTest();
     manTest.convertNumTest();
@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     manTest.batchTest();
     qDebug() << "--------------------\n";
 
-    JyuptingTest jyuptingTest;
+    const JyuptingTest jyuptingTest;
     qDebug() << "Cantonese G2P test:";
     qDebug() << "--------------------";
     jyuptingTest.convertNumTest();
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
     qDebug() << "G2P mix test:";
     qDebug() << "--------------------";
-    auto g2p_man = new IKg2p::Mandarin();
+    auto g2p_man = new IKg2p::MandarinG2p();
     QString raw2 =
         "举杯あャ坐ュ饮放あ歌竹林间/清风拂 面悄word然xax asx a xxs拨？Q！动初弦/便推开烦恼与尘喧/便还是当时的少年";
     qDebug() << g2p_man->hanziToPinyin(raw2, false, false);

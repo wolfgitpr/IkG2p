@@ -3,7 +3,7 @@
 
 #include <QHash>
 
-#include "syllable2p.h"
+#include "Syllable2p.h"
 
 namespace IKg2p {
 

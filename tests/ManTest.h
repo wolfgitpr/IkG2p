@@ -1,8 +1,8 @@
 #ifndef DATASET_TOOLS_MANTEST_H
 #define DATASET_TOOLS_MANTEST_H
 
-#include "g2pglobal.h"
-#include "mandarin.h"
+#include "G2pglobal.h"
+#include "MandarinG2p.h"
 
 namespace G2pTest {
 
@@ -16,7 +16,7 @@ namespace G2pTest {
         bool batchTest(bool resDisplay = false);
 
     private:
-        QScopedPointer<IKg2p::ZhG2p> g2p_zh;
+        QScopedPointer<IKg2p::ChineseG2p> g2p_zh;
     };
 
 } // G2pTest

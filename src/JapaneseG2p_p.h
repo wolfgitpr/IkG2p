@@ -3,7 +3,7 @@
 
 #include <QHash>
 
-#include "jpg2p.h"
+#include "JapaneseG2p_p.h"
 
 namespace IKg2p {
 
