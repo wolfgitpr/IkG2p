@@ -1,9 +1,8 @@
-#include <QtWidgets/QApplication>
+#include <QApplication>
 #include <QDebug>
 
 #include "G2pglobal.h"
 #include "MandarinG2p.h"
-#include <QCoreApplication>
 #include <QElapsedTimer>
 #include <iostream>
 #include <sstream>
@@ -12,9 +11,11 @@
 #include "ManTest.h"
 
 using namespace G2pTest;
-int main(int argc, char *argv[]) {
+
+int main(int argc, char* argv[])
+{
     QCoreApplication app(argc, argv);
-    IKg2p::setDictionaryPath(qApp->applicationDirPath() + "/dict");
+    IKg2p::setDictionaryPath(QApplication::applicationDirPath() + "/dict");
 
     ManTest manTest;
     qDebug() << "MandarinG2p G2P test:";
