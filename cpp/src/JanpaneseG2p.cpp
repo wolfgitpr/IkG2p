@@ -153,8 +153,7 @@ namespace IKg2p
 
     QStringList JapaneseG2p::kanaToRomaji(const QString& kanaStr, const bool& doubleWrittenSokuon) const
     {
-        const QStringList input = viewList2strList(splitString(kanaStr));
-        return kanaToRomaji(input, doubleWrittenSokuon);
+        return kanaToRomaji(splitString(kanaStr), doubleWrittenSokuon);
     }
 
     JapaneseG2p::JapaneseG2p(JpG2pPrivate& d, QObject* parent) : QObject(parent), d_ptr(&d)

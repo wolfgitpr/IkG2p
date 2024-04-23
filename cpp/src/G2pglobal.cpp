@@ -43,16 +43,16 @@ namespace IKg2p
         return specialKana.contains(c);
     }
 
-    QList<QStringView> splitString(const QStringView& input)
+    QStringList splitString(const QString& input)
     {
-        QList<QStringView> res;
+        QStringList res;
         int pos = 0;
         while (pos < input.length())
         {
-            QChar currentChar = input[pos];
+            const QChar currentChar = input[pos];
             if (isLetter(currentChar))
             {
-                int start = pos;
+                const int start = pos;
                 while (pos < input.length() && isLetter(input[pos]))
                 {
                     pos++;
@@ -66,7 +66,7 @@ namespace IKg2p
             }
             else if (isKana(currentChar))
             {
-                int length = (pos + 1 < input.length() && isSpecialKana(input[pos + 1])) ? 2 : 1;
+                const int length = (pos + 1 < input.length() && isSpecialKana(input[pos + 1])) ? 2 : 1;
                 res.append(input.mid(pos, length));
                 pos += length;
             }
@@ -85,7 +85,7 @@ namespace IKg2p
 
     bool loadDict(const QString& dict_dir, const QString& fileName, QHash<QString, QString>& resultMap)
     {
-        QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
+        const QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
         QFile file(file_path);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         {
@@ -96,11 +96,11 @@ namespace IKg2p
         while (!file.atEnd())
         {
             QString line = file.readLine().trimmed();
-            QStringList keyValuePair = line.split(":");
+            const QStringList keyValuePair = line.split(":");
             if (keyValuePair.count() == 2)
             {
-                QString key = keyValuePair[0];
-                const QString value = keyValuePair[1];
+                const QString& key = keyValuePair[0];
+                const QString& value = keyValuePair[1];
                 resultMap[key] = value;
             }
         }
@@ -121,11 +121,11 @@ namespace IKg2p
         while (!file.atEnd())
         {
             QString line = file.readLine().trimmed();
-            QStringList keyValuePair = line.split(sep1);
+            const QStringList keyValuePair = line.split(sep1);
             if (keyValuePair.count() == 2)
             {
-                QString key = keyValuePair[0];
-                QString value = keyValuePair[1];
+                const QString& key = keyValuePair[0];
+                const QString& value = keyValuePair[1];
                 if (value.split(sep2).count() > 0)
                 {
                     resultMap[key] = value.split(sep2);
