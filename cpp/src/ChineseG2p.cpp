@@ -171,7 +171,7 @@ namespace IKg2p
     {
         QStringList result;
         for (const auto& res : input)
-            result.append(res.syllable);
+            result.append(res.error ? res.lyric : res.syllable);
         return result;
     }
 
