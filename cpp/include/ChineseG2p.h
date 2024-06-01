@@ -24,6 +24,8 @@ namespace IKg2p
 
         ~ChineseG2p() override;
 
+        [[nodiscard]] bool initialized() const;
+
         QList<G2pRes> hanziToPinyin(const QString& input, bool tone = true, bool convertNum = true,
                                     errorType error = errorType::Default);
 

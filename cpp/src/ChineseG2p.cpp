@@ -138,13 +138,18 @@ namespace IKg2p
         }
     }
 
-
     ChineseG2p::ChineseG2p(QString language, QObject* parent) : ChineseG2p(
         *new ChineseG2pPrivate(std::move(language)), parent)
     {
     }
 
     ChineseG2p::~ChineseG2p() = default;
+
+    bool ChineseG2p::initialized() const
+    {
+        Q_D(const ChineseG2p);
+        return d->initialized;
+    }
 
     QList<G2pRes> ChineseG2p::hanziToPinyin(const QString& input, bool tone, bool convertNum, errorType error)
     {
