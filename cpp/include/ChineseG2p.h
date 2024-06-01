@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+#include "G2pRes.h"
+
 namespace IKg2p
 {
     enum class errorType
@@ -22,11 +24,13 @@ namespace IKg2p
 
         ~ChineseG2p() override;
 
-        QStringList hanziToPinyin(const QString& input, bool tone = true, bool convertNum = true,
-                                  errorType error = errorType::Default);
+        QList<G2pRes> hanziToPinyin(const QString& input, bool tone = true, bool convertNum = true,
+                                    errorType error = errorType::Default);
 
-        QStringList hanziToPinyin(const QStringList& input, bool tone = true, bool convertNum = true,
-                                  errorType error = errorType::Default);
+        QList<G2pRes> hanziToPinyin(const QStringList& input, bool tone = true, bool convertNum = true,
+                                    errorType error = errorType::Default);
+
+        static QStringList resToStringList(const QList<G2pRes>& input);
 
         [[nodiscard]] QString tradToSim(const QString& text) const;
 
@@ -40,8 +44,8 @@ namespace IKg2p
         QScopedPointer<ChineseG2pPrivate> d_ptr;
 
     private:
-        QStringList hanziToPinyin(const QList<QStringView>& input, bool tone = true, bool convertNum = true,
-                                  errorType error = errorType::Default);
+        QList<G2pRes> hanziToPinyin(const QList<QStringView>& input, bool tone = true, bool convertNum = true,
+                                    errorType error = errorType::Default);
     };
 }
 

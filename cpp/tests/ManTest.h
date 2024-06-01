@@ -4,13 +4,14 @@
 #include "G2pglobal.h"
 #include "MandarinG2p.h"
 
-namespace G2pTest {
-
-    class ManTest {
+namespace G2pTest
+{
+    class ManTest
+    {
     public:
         explicit ManTest();
         ~ManTest();
-        bool apiTest();
+        bool apiTest() const;
         bool convertNumTest();
         bool removeToneTest();
         bool batchTest(bool resDisplay = false);
@@ -18,7 +19,6 @@ namespace G2pTest {
     private:
         QScopedPointer<IKg2p::ChineseG2p> g2p_zh;
     };
-
 } // G2pTest
 
 #endif // DATASET_TOOLS_MANTEST_H

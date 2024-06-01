@@ -26,7 +26,7 @@ namespace IKg2p
 
         // Key as QStringView
         QHash<QStringView, QStringView> phrases_map2;
-        QHash<QStringView, QList<QStringView>> phrases_dict2;
+        QHash<QStringView, QList<QStringView>> phrasesViewDict;
         QHash<QStringView, QList<QStringView>> word_dict2;
         QHash<QStringView, QStringView> trans_dict2;
 

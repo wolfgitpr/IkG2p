@@ -6,14 +6,18 @@
 #include <QElapsedTimer>
 #include <QTextCodec>
 
-namespace G2pTest {
-    ManTest::ManTest() : g2p_zh(new IKg2p::MandarinG2p()) {
+namespace G2pTest
+{
+    ManTest::ManTest() : g2p_zh(new IKg2p::MandarinG2p())
+    {
     }
 
-    ManTest::~ManTest() {
+    ManTest::~ManTest()
+    {
     }
 
-    bool ManTest::apiTest() {
+    bool ManTest::apiTest() const
+    {
         if (!g2p_zh->isPolyphonic("的"))
             return false;
         if (g2p_zh->isPolyphonic("犬"))
@@ -24,29 +28,36 @@ namespace G2pTest {
             return false;
         if (!(g2p_zh->getDefaultPinyin("杆").at(0) == "gan3" && g2p_zh->getDefaultPinyin("杆").at(1) == "gan1"))
             return false;
-        if (!(g2p_zh->getDefaultPinyin("杆", false).at(0) == "gan"))
+        if (g2p_zh->getDefaultPinyin("杆", false).at(0) != "gan")
             return false;
         qDebug() << "apiTest: success";
         return true;
     }
 
-    bool ManTest::convertNumTest() {
-        QString raw1 = "明月@1几32时有##一";
-        QString tar1 = "ming yue yi ji san er shi you yi";
-        QString res1 = g2p_zh->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore).join(" ");
-        QString res1List = g2p_zh->hanziToPinyin(raw1.split(""), false, true, IKg2p::errorType::Ignore).join(" ");
-        if (res1 != tar1 | res1List != tar1) {
+    bool ManTest::convertNumTest()
+    {
+        const QString raw1 = "明月@1几32时有##一";
+        const QString tar1 = "ming yue yi ji san er shi you yi";
+        const auto g2pRes1 = g2p_zh->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore);
+        const QString res1 = g2p_zh->resToStringList(g2pRes1).join(" ");
+        const auto g2pRes1List = g2p_zh->hanziToPinyin(raw1.split(""), false, true, IKg2p::errorType::Ignore);
+        const QString res1List = g2p_zh->resToStringList(g2pRes1List).join(" ");
+        if (res1 != tar1 | res1List != tar1)
+        {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
             qDebug() << "res1:" << res1;
             return false;
         }
 
-        QString raw2 = "明月@1几32时有##一";
-        QString tar2 = "ming yue ji shi you yi";
-        QString res2 = g2p_zh->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore).join(" ");
-        QString res2List = g2p_zh->hanziToPinyin(raw1.split(""), false, false, IKg2p::errorType::Ignore).join(" ");
-        if (res2 != tar2 | res2List != tar2) {
+        const QString raw2 = "明月@1几32时有##一";
+        const QString tar2 = "ming yue ji shi you yi";
+        const auto g2pRes2 = g2p_zh->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore);
+        const QString res2 = g2p_zh->resToStringList(g2pRes2).join(" ");
+        const auto g2pRes2List = g2p_zh->hanziToPinyin(raw1.split(""), false, false, IKg2p::errorType::Ignore);
+        const QString res2List = g2p_zh->resToStringList(g2pRes2List).join(" ");
+        if (res2 != tar2 | res2List != tar2)
+        {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
             qDebug() << "res2:" << res2;
@@ -57,21 +68,26 @@ namespace G2pTest {
         return true;
     }
 
-    bool ManTest::removeToneTest() {
-        QString raw1 = "明月@1几32时有##一";
-        QString tar1 = "ming2 yue4 yi1 ji3 san1 er4 shi2 you3 yi1";
-        QString res1 = g2p_zh->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore).join(" ");
-        if (res1 != tar1) {
+    bool ManTest::removeToneTest()
+    {
+        const QString raw1 = "明月@1几32时有##一";
+        const QString tar1 = "ming2 yue4 yi1 ji3 san1 er4 shi2 you3 yi1";
+        const auto g2pRes1 = g2p_zh->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore);
+        const QString res1 = g2p_zh->resToStringList(g2pRes1).join(" ");
+        if (res1 != tar1)
+        {
             qDebug() << "raw1:" << raw1;
             qDebug() << "tar1:" << tar1;
             qDebug() << "res1:" << res1;
             return false;
         }
 
-        QString raw2 = "明月@1几32时有##一";
-        QString tar2 = "ming2 yue4 ji3 shi2 you3 yi1";
-        QString res2 = g2p_zh->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore).join(" ");
-        if (res2 != tar2) {
+        const QString raw2 = "明月@1几32时有##一";
+        const QString tar2 = "ming2 yue4 ji3 shi2 you3 yi1";
+        const auto g2pRes2 = g2p_zh->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore);
+        const QString res2 = g2p_zh->resToStringList(g2pRes2).join(" ");
+        if (res2 != tar2)
+        {
             qDebug() << "raw2:" << raw2;
             qDebug() << "tar2:" << tar2;
             qDebug() << "res2:" << res2;
@@ -82,48 +98,56 @@ namespace G2pTest {
         return true;
     }
 
-    bool ManTest::batchTest(bool resDisplay) {
+    bool ManTest::batchTest(bool resDisplay)
+    {
         int count = 0;
         int error = 0;
 
-        QStringList dataLines;
-        dataLines = readData(qApp->applicationDirPath() + "/testData/op_lab.txt");
+        QStringList dataLines = readData(qApp->applicationDirPath() + "/testData/op_lab.txt");
 
         QElapsedTimer time;
         time.start();
-                foreach (const QString &line, dataLines) {
-                QStringList keyValuePair = line.trimmed().split('|');
+        foreach(const QString &line, dataLines)
+        {
+            QStringList keyValuePair = line.trimmed().split('|');
 
-                if (keyValuePair.size() == 2) {
-                    QString key = keyValuePair[0];
+            if (keyValuePair.size() == 2)
+            {
+                QString key = keyValuePair[0];
 
-                    QString value = keyValuePair[1];
-                    QString result = g2p_zh->hanziToPinyin(key, false, true).join(" ");
+                QString value = keyValuePair[1];
+                auto g2pRes = g2p_zh->hanziToPinyin(key, false, true);
+                QString result = g2p_zh->resToStringList(g2pRes).join(" ");
 
-                    QStringList words = value.split(" ");
-                    int wordSize = words.size();
-                    count += wordSize;
+                QStringList words = value.split(" ");
+                int wordSize = words.size();
+                count += wordSize;
 
-                    bool diff = false;
-                    QStringList resWords = result.split(" ");
-                    for (int i = 0; i < wordSize; i++) {
-                        if (words[i] != resWords[i] && !words[i].split("/").contains(resWords[i])) {
-                            diff = true;
-                            error++;
-                        }
+                bool diff = false;
+                QStringList resWords = result.split(" ");
+                for (int i = 0; i < wordSize; i++)
+                {
+                    if (words[i] != resWords[i] && !words[i].split("/").contains(resWords[i]))
+                    {
+                        diff = true;
+                        error++;
                     }
+                }
 
-                    if (resDisplay && diff) {
-                        qDebug() << "text: " << key;
-                        qDebug() << "raw: " << value;
-                        qDebug() << "res: " << result;
-                    }
-                } else {
-                    qDebug() << keyValuePair;
+                if (resDisplay && diff)
+                {
+                    qDebug() << "text: " << key;
+                    qDebug() << "raw: " << value;
+                    qDebug() << "res: " << result;
                 }
             }
+            else
+            {
+                qDebug() << keyValuePair;
+            }
+        }
 
-        double percentage = ((double) error / (double) count) * 100.0;
+        double percentage = ((double)error / (double)count) * 100.0;
 
         qDebug() << "batchTest: success";
         qDebug() << "batchTest time:" << time.elapsed() << "ms";
@@ -132,5 +156,4 @@ namespace G2pTest {
         qDebug() << "总字数: " << count;
         return true;
     }
-
 } // G2pTest

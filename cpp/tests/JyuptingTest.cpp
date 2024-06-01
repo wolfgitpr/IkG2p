@@ -19,7 +19,8 @@ namespace G2pTest
     {
         const QString raw1 = "明月@1几32时有##一";
         const QString tar1 = "ming jyut jat gei saam ji si jau jat";
-        const QString res1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore).join(" ");
+        const auto g2pRes1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore);
+        const QString res1 = g2p_can->resToStringList(g2pRes1).join(" ");
         if (res1 != tar1)
         {
             qDebug() << "raw1:" << raw1;
@@ -30,7 +31,8 @@ namespace G2pTest
 
         const QString raw2 = "明月@1几32时有##一";
         const QString tar2 = "ming jyut gei si jau jat";
-        const QString res2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore).join(" ");
+        const auto g2pRes2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore);
+        const QString res2 = g2p_can->resToStringList(g2pRes2).join(" ");
         if (res2 != tar2)
         {
             qDebug() << "raw2:" << raw2;
@@ -47,7 +49,8 @@ namespace G2pTest
     {
         const QString raw1 = "明月@1几32时有##一";
         const QString tar1 = "ming4 jyut6 jat1 gei2 saam1 ji6 si4 jau5 jat1";
-        const QString res1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore).join(" ");
+        const auto g2pRes1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore);
+        const QString res1 = g2p_can->resToStringList(g2pRes1).join(" ");
         if (res1 != tar1)
         {
             qDebug() << "raw1:" << raw1;
@@ -58,7 +61,8 @@ namespace G2pTest
 
         const QString raw2 = "明月@1几32时有##一";
         const QString tar2 = "ming4 jyut6 gei2 si4 jau5 jat1";
-        const QString res2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore).join(" ");
+        const auto g2pRes2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore);
+        const QString res2 = g2p_can->resToStringList(g2pRes2).join(" ");
         if (res2 != tar2)
         {
             qDebug() << "raw2:" << raw2;
@@ -89,7 +93,8 @@ namespace G2pTest
                 const QString& key = keyValuePair[0];
 
                 const QString& value = keyValuePair[1];
-                QString result = g2p_can->hanziToPinyin(key, false, true).join(" ");
+                const auto g2pRes = g2p_can->hanziToPinyin(key, false, true);
+                QString result = g2p_can->resToStringList(g2pRes).join(" ");
 
                 QStringList words = value.split(" ");
                 const int wordSize = static_cast<int>(words.size());

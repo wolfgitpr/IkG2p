@@ -36,12 +36,13 @@ int main(int argc, char* argv[])
 
     qDebug() << "G2P mix test:";
     qDebug() << "--------------------";
-    auto g2p_man = new IKg2p::MandarinG2p();
-    QString raw2 =
+    const auto g2p_man = new IKg2p::MandarinG2p();
+    const QString raw2 =
         "举杯あャ坐ュ饮放あ歌竹林间/清风拂 面悄word然xax asx a xxs拨？Q！动初弦/便推开烦恼与尘喧/便还是当时的少年";
-    qDebug() << g2p_man->hanziToPinyin(raw2, false, false);
+    qDebug() << IKg2p::MandarinG2p::resToStringList(g2p_man->hanziToPinyin(raw2, false, false));
     qDebug() << "--------------------";
-    qDebug() << g2p_man->hanziToPinyin(raw2, false, false, IKg2p::errorType::Ignore);
+    qDebug() << IKg2p::MandarinG2p::resToStringList(
+        g2p_man->hanziToPinyin(raw2, false, false, IKg2p::errorType::Ignore));
 
     return 0;
 }
