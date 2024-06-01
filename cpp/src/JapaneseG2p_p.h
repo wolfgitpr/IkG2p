@@ -15,6 +15,8 @@ namespace IKg2p {
 
         void init();
 
+        bool initialized = false;
+
         JapaneseG2p *q_ptr;
 
         QHash<QString, QString> kanaToRomajiMap;

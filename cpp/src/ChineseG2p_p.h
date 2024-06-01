@@ -17,6 +17,8 @@ namespace IKg2p
 
         void init();
 
+        bool initialized = false;
+
         ChineseG2p* q_ptr{};
 
         QHash<QString, QString> phrases_map;

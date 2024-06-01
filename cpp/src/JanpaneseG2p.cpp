@@ -57,7 +57,7 @@ namespace IKg2p
     void JpG2pPrivate::init()
     {
         const auto dict_dir = dictionaryPath();
-        loadDict(dict_dir, "kana2romaji.txt", kanaToRomajiMap);
+        initialized = loadDict(dict_dir, "kana2romaji.txt", kanaToRomajiMap);
 
         for (auto it = kanaToRomajiMap.begin(); it != kanaToRomajiMap.end(); ++it)
         {

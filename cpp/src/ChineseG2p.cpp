@@ -95,11 +95,11 @@ namespace IKg2p
     {
         const QString dict_dir = dictionaryPath() + "/" + m_language;
 
-        loadDict(dict_dir, "phrases_map.txt", phrases_map);
-        loadDict(dict_dir, "phrases_dict.txt", phrases_dict);
-        loadDict(dict_dir, "user_dict.txt", phrases_dict);
-        loadDict(dict_dir, "word.txt", word_dict);
-        loadDict(dict_dir, "trans_word.txt", trans_dict);
+        initialized = loadDict(dict_dir, "phrases_map.txt", phrases_map) &&
+            loadDict(dict_dir, "phrases_dict.txt", phrases_dict) &&
+            loadDict(dict_dir, "user_dict.txt", phrases_dict) &&
+            loadDict(dict_dir, "word.txt", word_dict) &&
+            loadDict(dict_dir, "trans_word.txt", trans_dict);
 
         copyStringViewHash(phrases_map, phrases_map2);
         copyStringViewListHash(phrases_dict, phrasesViewDict);

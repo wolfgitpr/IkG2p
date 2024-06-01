@@ -5,9 +5,10 @@
 
 #include "Syllable2p.h"
 
-namespace IKg2p {
-
-    class Syllable2pPrivate {
+namespace IKg2p
+{
+    class Syllable2pPrivate
+    {
         Q_DECLARE_PUBLIC(Syllable2p)
 
     public:
@@ -17,7 +18,10 @@ namespace IKg2p {
 
         void init();
 
-        Syllable2p *q_ptr;
+        bool initialized = false;
+
+        Syllable2p* q_ptr;
+
     private:
         QString phonemeDict;
         QString sep1;
