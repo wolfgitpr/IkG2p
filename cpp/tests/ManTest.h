@@ -12,12 +12,12 @@ namespace G2pTest
         explicit ManTest();
         ~ManTest();
         bool apiTest() const;
-        bool convertNumTest();
-        bool removeToneTest();
-        bool batchTest(bool resDisplay = false);
+        bool convertNumTest() const;
+        bool removeToneTest() const;
+        bool batchTest(bool resDisplay = false) const;
 
     private:
-        QScopedPointer<IKg2p::ChineseG2p> g2p_zh;
+        std::unique_ptr<IKg2p::ChineseG2p> g2p_zh;
     };
 } // G2pTest
 

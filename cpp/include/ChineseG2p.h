@@ -1,7 +1,7 @@
 #ifndef ChineseG2p_H
 #define ChineseG2p_H
 
-#include <QObject>
+#include "G2pglobal.h"
 
 #include "G2pRes.h"
 
@@ -14,40 +14,38 @@ namespace IKg2p
 
     class ChineseG2pPrivate;
 
-    class ChineseG2p : public QObject
+    class ChineseG2p
     {
-        Q_OBJECT
-        Q_DECLARE_PRIVATE(ChineseG2p)
-
     public:
-        explicit ChineseG2p(QString language, QObject* parent = nullptr);
+        explicit ChineseG2p(const std::string& language);
 
-        ~ChineseG2p() override;
+        ~ChineseG2p();
 
         [[nodiscard]] bool initialized() const;
 
-        QList<G2pRes> hanziToPinyin(const QString& input, bool tone = true, bool convertNum = true,
-                                    errorType error = errorType::Default);
+        std::vector<G2pRes> hanziToPinyin(const std::string& input, bool tone = true, bool convertNum = true,
+                                          errorType error = errorType::Default);
 
-        QList<G2pRes> hanziToPinyin(const QStringList& input, bool tone = true, bool convertNum = true,
-                                    errorType error = errorType::Default);
+        std::vector<G2pRes> hanziToPinyin(const std::vector<std::string>& input, bool tone = true,
+                                          bool convertNum = true,
+                                          errorType error = errorType::Default);
 
-        static QStringList resToStringList(const QList<G2pRes>& input);
+        static std::vector<std::string> resToStringList(const std::vector<G2pRes>& input);
 
-        [[nodiscard]] QString tradToSim(const QString& text) const;
+        [[nodiscard]] u8string tradToSim(const u8string& text) const;
 
-        [[nodiscard]] bool isPolyphonic(const QString& text) const;
+        [[nodiscard]] bool isPolyphonic(const u8string& text) const;
 
-        [[nodiscard]] QStringList getDefaultPinyin(const QString& text, bool tone = true) const;
+        [[nodiscard]] u8stringlist getDefaultPinyin(const u8string& text, bool tone = true) const;
 
     protected:
-        explicit ChineseG2p(ChineseG2pPrivate& d, QObject* parent = nullptr);
+        explicit ChineseG2p(ChineseG2pPrivate& d);
 
-        QScopedPointer<ChineseG2pPrivate> d_ptr;
+        std::unique_ptr<ChineseG2pPrivate> d_ptr;
 
     private:
-        QList<G2pRes> hanziToPinyin(const QList<QStringView>& input, bool tone = true, bool convertNum = true,
-                                    errorType error = errorType::Default);
+        std::vector<G2pRes> hanziToPinyin(const u8stringlist& input, bool tone = true, bool convertNum = true,
+                                          errorType error = errorType::Default);
     };
 }
 

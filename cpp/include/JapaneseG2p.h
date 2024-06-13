@@ -1,32 +1,35 @@
 #ifndef JPG2P_H
 #define JPG2P_H
 
-#include <QObject>
+#include "G2pglobal.h"
 
 namespace IKg2p
 {
     class JpG2pPrivate;
 
-    class JapaneseG2p final : public QObject
+    class JapaneseG2p final
     {
-        Q_OBJECT
-        Q_DECLARE_PRIVATE(JpG2p)
-
     public:
-        explicit JapaneseG2p(QObject* parent = nullptr);
-        ~JapaneseG2p() override;
+        explicit JapaneseG2p();
+        ~JapaneseG2p();
 
-        [[nodiscard]] QStringList kanaToRomaji(const QString& kanaStr, const bool& doubleWrittenSokuon = false) const;
-        [[nodiscard]] QStringList kanaToRomaji(const QStringList& kanaList,
-                                               const bool& doubleWrittenSokuon = false) const;
+        std::vector<std::string> kanaToRomaji(const std::string& kanaStr,
+                                              const bool& doubleWrittenSokuon = false) const;
+        std::vector<std::string> kanaToRomaji(const std::vector<std::string>& kanaList,
+                                              const bool& doubleWrittenSokuon = false) const;
 
-        [[nodiscard]] QStringList romajiToKana(const QString& romajiStr) const;
-        [[nodiscard]] QStringList romajiToKana(const QStringList& romajiList) const;
+        std::vector<std::string> romajiToKana(const std::string& romajiStr) const;
+        std::vector<std::string> romajiToKana(const std::vector<std::string>& romajiList) const;
 
     protected:
-        explicit JapaneseG2p(JpG2pPrivate& d, QObject* parent = nullptr);
+        explicit JapaneseG2p(JpG2pPrivate& d);
 
-        QScopedPointer<JpG2pPrivate> d_ptr;
+        std::unique_ptr<JpG2pPrivate> d_ptr;
+
+    private:
+        std::vector<std::string> romajiToKana(const u8stringlist& romajiList) const;
+        std::vector<std::string> kanaToRomaji(const u8stringlist& kanaList,
+                                              const bool& doubleWrittenSokuon = false) const;
     };
 }
 

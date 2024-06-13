@@ -25,7 +25,8 @@ endif ()
 # ----------------------------------
 # Main Project
 # ----------------------------------
-file(GLOB_RECURSE _src include/*.h src/*.cpp)
+include_directories(lib)
+file(GLOB_RECURSE _src include/*.h src/*.h src/*.cpp lib/*.h)
 add_library(${PROJECT_NAME} STATIC ${_src})
 
 if (IKG2P_BUILD_TESTS)
@@ -49,23 +50,8 @@ if (IKG2P_BUILD_TESTS)
 endif ()
 
 # ----------------------------------
-# find dependencies
-# ----------------------------------
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
-
-if (QT_VERSION_MAJOR GREATER_EQUAL 6)
-    find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core5Compat REQUIRED)
-    target_link_libraries(${PROJECT_NAME} PUBLIC Qt${QT_VERSION_MAJOR}::Core5Compat)
-endif ()
-
-# ----------------------------------
 # link libraries
 # ----------------------------------
-target_link_libraries(${PROJECT_NAME} PUBLIC
-        Qt${QT_VERSION_MAJOR}::Core
-)
-
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 # ----------------------------------

@@ -1,20 +1,39 @@
 #include "Common.h"
 
-namespace G2pTest {
-    QStringList readData(const QString &filename) {
-        QStringList dataLines;
-        QFile file(filename);
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QTextStream in(&file);
-#if (QT_VERSION <= QT_VERSION_CHECK(6, 0, 0))
-            in.setCodec("UTF-8");
+#include <codecvt>
+#include <iostream>
+#include <fstream>
+
+#include "../src/StringUtil.h"
+
+namespace G2pTest
+{
+    std::vector<std::string> readData(const std::string& filename)
+    {
+        std::vector<std::string> dataLines;
+
+#ifdef _WIN32
+        // Convert the UTF-8 string to a wide string
+        std::ifstream file(IKg2p::utf8ToWide(filename));
+#else
+        std::ifstream file(filename);
 #endif
-            while (!in.atEnd()) {
-                QString line = in.readLine();
-                dataLines.append(line);
+
+        std::string line;
+
+        if (file.is_open())
+        {
+            while (std::getline(file, line))
+            {
+                dataLines.push_back(line);
             }
             file.close();
         }
+        else
+        {
+            std::cerr << "Unable to open file: " << filename << std::endl;
+        }
+
         return dataLines;
     }
-} // G2pTest
+}

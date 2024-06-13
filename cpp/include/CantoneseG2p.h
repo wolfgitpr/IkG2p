@@ -8,10 +8,10 @@ namespace IKg2p
     class CantoneseG2p final : public ChineseG2p
     {
     public:
-        explicit CantoneseG2p(QObject* parent = nullptr) : ChineseG2p("cantonese", parent)
+        explicit CantoneseG2p() : ChineseG2p("cantonese")
         {
         };
-        ~CantoneseG2p() override = default;
+        ~CantoneseG2p();
     };
 }
 #endif // DATASET_TOOLS_CANTONESE_H

@@ -1,7 +1,8 @@
 #ifndef ChineseG2pPRIVATE_H
 #define ChineseG2pPRIVATE_H
 
-#include <QHash>
+#include <iostream>
+#include <unordered_map>
 
 #include "ChineseG2p_p.h"
 
@@ -9,10 +10,8 @@ namespace IKg2p
 {
     class ChineseG2pPrivate final
     {
-        Q_DECLARE_PUBLIC(ChineseG2p)
-
     public:
-        explicit ChineseG2pPrivate(QString language);
+        explicit ChineseG2pPrivate(std::string language);
         virtual ~ChineseG2pPrivate();
 
         void init();
@@ -21,36 +20,34 @@ namespace IKg2p
 
         ChineseG2p* q_ptr{};
 
-        QHash<QString, QString> phrases_map;
-        QHash<QString, QStringList> phrases_dict;
-        QHash<QString, QStringList> word_dict;
-        QHash<QString, QString> trans_dict;
+        std::unordered_map<u8string, u8string> phrases_map;
+        std::unordered_map<u8string, u8stringlist> phrases_dict;
+        std::unordered_map<u8string, u8stringlist> word_dict;
+        std::unordered_map<u8string, u8string> trans_dict;
 
-        // Key as QStringView
-        QHash<QStringView, QStringView> phrases_map2;
-        QHash<QStringView, QList<QStringView>> phrasesViewDict;
-        QHash<QStringView, QList<QStringView>> word_dict2;
-        QHash<QStringView, QStringView> trans_dict2;
+        std::string m_language;
 
-        QString m_language;
-
-        [[nodiscard]] inline bool isPolyphonic(const QStringView& text) const
+        inline bool isPolyphonic(const u8string& text) const
         {
-            return phrases_map2.contains(text);
+            return phrases_map.find(text) != phrases_map.end();
         }
 
-        [[nodiscard]] inline QStringView tradToSim(const QStringView& text) const
+        inline u8string tradToSim(const u8string& text) const
         {
-            return trans_dict2.value(text, text);
+            if (trans_dict.find(text) != trans_dict.end())
+                return trans_dict.find(text)->second;
+            return text;
         }
 
-        [[nodiscard]] inline QStringView getDefaultPinyin(const QStringView& text) const
+        inline u8string getDefaultPinyin(const u8string& text) const
         {
-            return word_dict2.value(text, {}).at(0);
+            if (word_dict.find(text) != word_dict.end())
+                return word_dict.find(text)->second.at(0);
+            return {};
         }
 
-        void zhPosition(const QList<QStringView>& input, QList<QStringView>& res, QList<int>& positions,
-                        const bool& convertNum) const;
+        void zhPosition(const u8stringlist& input, u8stringlist& res, std::vector<int>& positions,
+                        const bool& convertNum);
     };
 }
 

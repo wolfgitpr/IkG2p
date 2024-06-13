@@ -1,11 +1,9 @@
 #include "JyuptingTest.h"
+
+#include <chrono>
+#include <iostream>
+
 #include "Common.h"
-
-#include <QCoreApplication>
-#include <QDebug>
-#include <QElapsedTimer>
-#include <QTextCodec>
-
 
 namespace G2pTest
 {
@@ -17,94 +15,92 @@ namespace G2pTest
 
     bool JyuptingTest::convertNumTest() const
     {
-        const QString raw1 = "明月@1几32时有##一";
-        const QString tar1 = "ming jyut jat gei saam ji si jau jat";
+        const std::string raw1 = "明月@1几32时有##一";
+        const std::string tar1 = "ming jyut jat gei saam ji si jau jat";
         const auto g2pRes1 = g2p_can->hanziToPinyin(raw1, false, true, IKg2p::errorType::Ignore);
-        const QString res1 = g2p_can->resToStringList(g2pRes1).join(" ");
+        const std::string res1 = IKg2p::join(g2p_can->resToStringList(g2pRes1), " ");
         if (res1 != tar1)
         {
-            qDebug() << "raw1:" << raw1;
-            qDebug() << "tar1:" << tar1;
-            qDebug() << "res1:" << res1;
+            std::cout << "raw1:" << raw1 << std::endl;
+            std::cout << "tar1:" << tar1 << std::endl;
+            std::cout << "res1:" << res1 << std::endl;
             return false;
         }
 
-        const QString raw2 = "明月@1几32时有##一";
-        const QString tar2 = "ming jyut gei si jau jat";
+        const std::string raw2 = "明月@1几32时有##一";
+        const std::string tar2 = "ming jyut gei si jau jat";
         const auto g2pRes2 = g2p_can->hanziToPinyin(raw1, false, false, IKg2p::errorType::Ignore);
-        const QString res2 = g2p_can->resToStringList(g2pRes2).join(" ");
+        const std::string res2 = IKg2p::join(g2p_can->resToStringList(g2pRes2), " ");
         if (res2 != tar2)
         {
-            qDebug() << "raw2:" << raw2;
-            qDebug() << "tar2:" << tar2;
-            qDebug() << "res2:" << res2;
+            std::cout << "raw2:" << raw2 << std::endl;
+            std::cout << "tar2:" << tar2 << std::endl;
+            std::cout << "res2:" << res2 << std::endl;
             return false;
         }
-
-        qDebug() << "convertNumTest: success";
         return true;
     }
 
     bool JyuptingTest::removeToneTest() const
     {
-        const QString raw1 = "明月@1几32时有##一";
-        const QString tar1 = "ming4 jyut6 jat1 gei2 saam1 ji6 si4 jau5 jat1";
+        const std::string raw1 = "明月@1几32时有##一";
+        const std::string tar1 = "ming4 jyut6 jat1 gei2 saam1 ji6 si4 jau5 jat1";
         const auto g2pRes1 = g2p_can->hanziToPinyin(raw1, true, true, IKg2p::errorType::Ignore);
-        const QString res1 = g2p_can->resToStringList(g2pRes1).join(" ");
+        const std::string res1 = IKg2p::join(g2p_can->resToStringList(g2pRes1), " ");
         if (res1 != tar1)
         {
-            qDebug() << "raw1:" << raw1;
-            qDebug() << "tar1:" << tar1;
-            qDebug() << "res1:" << res1;
+            std::cout << "raw1:" << raw1 << std::endl;
+            std::cout << "tar1:" << tar1 << std::endl;
+            std::cout << "res1:" << res1 << std::endl;
             return false;
         }
 
-        const QString raw2 = "明月@1几32时有##一";
-        const QString tar2 = "ming4 jyut6 gei2 si4 jau5 jat1";
+        const std::string raw2 = "明月@1几32时有##一";
+        const std::string tar2 = "ming4 jyut6 gei2 si4 jau5 jat1";
         const auto g2pRes2 = g2p_can->hanziToPinyin(raw1, true, false, IKg2p::errorType::Ignore);
-        const QString res2 = g2p_can->resToStringList(g2pRes2).join(" ");
+        const std::string res2 = IKg2p::join(g2p_can->resToStringList(g2pRes2), " ");
         if (res2 != tar2)
         {
-            qDebug() << "raw2:" << raw2;
-            qDebug() << "tar2:" << tar2;
-            qDebug() << "res2:" << res2;
+            std::cout << "raw2:" << raw2 << std::endl;
+            std::cout << "tar2:" << tar2 << std::endl;
+            std::cout << "res2:" << res2 << std::endl;
             return false;
         }
-
-        qDebug() << "removeToneTest: success";
         return true;
     }
 
     bool JyuptingTest::batchTest(const bool& resDisplay) const
     {
-        int count = 0;
-        int error = 0;
+        size_t count = 0;
+        size_t error = 0;
 
-        QStringList dataLines = readData(qApp->applicationDirPath() + "/testData/jyutping_test.txt");
+        const auto dataLines = readData("testData/op_lab.txt");
 
-        QElapsedTimer time;
-        time.start();
-        foreach(const QString &line, dataLines)
+        const auto start = std::chrono::high_resolution_clock::now();
+
+        for (const auto& line : dataLines)
         {
-            const QStringList keyValuePair = line.trimmed().split('|');
+            const auto keyValuePair = IKg2p::split(line, "|");
 
             if (keyValuePair.size() == 2)
             {
-                const QString& key = keyValuePair[0];
+                const std::string& key = keyValuePair[0];
+                const std::string& value = keyValuePair[1];
 
-                const QString& value = keyValuePair[1];
                 const auto g2pRes = g2p_can->hanziToPinyin(key, false, true);
-                QString result = g2p_can->resToStringList(g2pRes).join(" ");
+                std::string result = IKg2p::join(g2p_can->resToStringList(g2pRes), " ");
 
-                QStringList words = value.split(" ");
-                const int wordSize = static_cast<int>(words.size());
+                auto words = IKg2p::split(value, " ");
+                const auto wordSize = words.size();
                 count += wordSize;
 
                 bool diff = false;
-                QStringList resWords = result.split(" ");
+                auto resWords = IKg2p::split(result, " ");
+
                 for (int i = 0; i < wordSize; i++)
                 {
-                    if (words[i] != resWords[i] && !words[i].split("/").contains(resWords[i]))
+                    const auto expectedWords = IKg2p::split(words[i], "/");
+                    if (std::find(expectedWords.begin(), expectedWords.end(), resWords[i]) == expectedWords.end())
                     {
                         diff = true;
                         error++;
@@ -113,24 +109,27 @@ namespace G2pTest
 
                 if (resDisplay && diff)
                 {
-                    qDebug() << "text: " << key;
-                    qDebug() << "raw: " << value;
-                    qDebug() << "res: " << result;
+                    std::cout << "text: " << key << std::endl;
+                    std::cout << "raw: " << value << std::endl;
+                    std::cout << "res: " << result << std::endl;
                 }
             }
             else
             {
-                qDebug() << keyValuePair;
+                std::cerr << "Invalid line format: " << line << std::endl;
             }
         }
 
-        const double percentage = static_cast<double>(error) / count * 100.0;
+        const auto end = std::chrono::high_resolution_clock::now();
+        const auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
-        qDebug() << "batchTest: success";
-        qDebug() << "batchTest time:" << time.elapsed() << "ms";
-        qDebug() << "错误率: " << percentage << "%";
-        qDebug() << "错误数: " << error;
-        qDebug() << "总字数: " << count;
+        const double percentage = (static_cast<double>(error) / static_cast<double>(count)) * 100.0;
+
+        std::cout << "batchTest: success" << std::endl;
+        std::cout << "batchTest time: " << duration << "ms" << std::endl;
+        std::cout << "错误率: " << percentage << "%" << std::endl;
+        std::cout << "错误数: " << error << std::endl;
+        std::cout << "总字数: " << count << std::endl;
         return true;
     }
 } // G2pTest

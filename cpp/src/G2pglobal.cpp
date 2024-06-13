@@ -1,55 +1,119 @@
 #include "G2pglobal.h"
 
-#include <QDebug>
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <unordered_set>
+
+#include "StringUtil.h"
 
 namespace IKg2p
 {
     class G2pGlobal
     {
     public:
-        QString path;
+        std::string path;
     };
 
-    Q_GLOBAL_STATIC(G2pGlobal, m_global)
+    auto* m_global = new G2pGlobal();
 
-    QString dictionaryPath()
+    std::string dictionaryPath()
     {
         return m_global->path;
     }
 
-    void setDictionaryPath(const QString& dir)
+    void setDictionaryPath(const std::string& dir)
     {
         m_global->path = dir;
     }
 
-    bool isLetter(QChar c)
+    std::vector<std::string> toStdList(const u8stringlist& input)
+    {
+        std::vector<std::string> result;
+        result.reserve(input.size());
+        for (const auto& item : input)
+        {
+            result.emplace_back(item.c_str());
+        }
+        return result;
+    }
+
+    bool isLetter(char32_t c)
     {
         return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
     }
 
-    bool isHanzi(QChar c)
+    bool isHanzi(char32_t c)
     {
-        return (c >= QChar(0x4e00) && c <= QChar(0x9fa5));
+        return c >= 0x4e00 && c <= 0x9fa5;
     }
 
-    bool isKana(QChar c)
+    bool isKana(char32_t c)
     {
-        return ((c >= QChar(0x3040) && c <= QChar(0x309F)) || (c >= QChar(0x30A0) && c <= QChar(0x30FF)));
+        return (c >= 0x3040 && c <= 0x309F) || (c >= 0x30A0 && c <= 0x30FF);
     }
 
-    bool isSpecialKana(QChar c)
+    bool isDigit(char32_t c)
     {
-        static QStringView specialKana = QStringLiteral("ャュョゃゅょァィゥェォぁぃぅぇぉ");
-        return specialKana.contains(c);
+        return c >= '0' && c <= '9';
     }
 
-    QStringList splitString(const QString& input)
+    bool isSpecialKana(char32_t c)
     {
-        QStringList res;
+        static const std::unordered_set<char32_t> specialKana = {
+            U'ャ', U'ュ', U'ョ', U'ゃ', U'ゅ', U'ょ',
+            U'ァ', U'ィ', U'ゥ', U'ェ', U'ォ', U'ぁ', U'ぃ', U'ぅ', U'ぇ', U'ぉ'
+        };
+        return specialKana.find(c) != specialKana.end();
+    }
+
+    std::vector<std::string> split(const std::string& s, const std::string& delimiter)
+    {
+        std::vector<std::string> tokens;
+        if (delimiter.empty())
+        {
+            for (char c : s)
+            {
+                tokens.push_back(std::string(1, c));
+            }
+        }
+        else
+        {
+            std::string::size_type start = 0;
+            std::string::size_type end = s.find(delimiter);
+            while (end != std::string::npos)
+            {
+                tokens.push_back(s.substr(start, end - start));
+                start = end + delimiter.size();
+                end = s.find(delimiter, start);
+            }
+            tokens.push_back(s.substr(start));
+        }
+        return tokens;
+    }
+
+    std::string join(const std::vector<std::string>& v, const std::string& delimiter)
+    {
+        if (v.empty())
+            return {};
+
+        std::string res;
+        for (int i = 0; i < v.size() - 1; ++i)
+        {
+            res.append(v[i]);
+            res.append(delimiter);
+        }
+        res.append(v.back());
+        return res;
+    }
+
+    u8stringlist splitString(const u8string& input)
+    {
+        u8stringlist res;
         int pos = 0;
         while (pos < input.length())
         {
-            const QChar currentChar = input[pos];
+            const auto currentChar = input[pos];
             if (isLetter(currentChar))
             {
                 const int start = pos;
@@ -57,22 +121,22 @@ namespace IKg2p
                 {
                     pos++;
                 }
-                res.append(input.mid(start, pos - start));
+                res.push_back(input.substr(start, pos - start));
             }
-            else if (isHanzi(currentChar) || currentChar.isDigit())
+            else if (isHanzi(currentChar) || isDigit(currentChar))
             {
-                res.append(input.mid(pos, 1));
+                res.push_back(input.substr(pos, 1));
                 pos++;
             }
             else if (isKana(currentChar))
             {
                 const int length = (pos + 1 < input.length() && isSpecialKana(input[pos + 1])) ? 2 : 1;
-                res.append(input.mid(pos, length));
+                res.push_back(input.substr(pos, length));
                 pos += length;
             }
-            else if (!currentChar.isSpace())
+            else if (currentChar != ' ')
             {
-                res.append(input.mid(pos, 1));
+                res.push_back(input.substr(pos, 1));
                 pos++;
             }
             else
@@ -83,53 +147,102 @@ namespace IKg2p
         return res;
     }
 
-    bool loadDict(const QString& dict_dir, const QString& fileName, QHash<QString, QString>& resultMap)
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<std::string, std::vector<std::string>>& resultMap, const char& sep1,
+                  const std::string& sep2)
     {
-        const QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
-        QFile file(file_path);
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+#ifdef _WIN32
+        std::ifstream file(IKg2p::utf8ToWide(dict_dir + "/" + fileName));
+#else
+        std::ifstream file(dict_dir + "/" + fileName);
+#endif
+        if (!file.is_open())
         {
-            qWarning() << fileName << " error: " << file.errorString();
+            std::cout << fileName << " error: Unable to open file" << std::endl;
             return false;
         }
 
-        while (!file.atEnd())
+        std::string line;
+        while (std::getline(file, line))
         {
-            QString line = file.readLine().trimmed();
-            const QStringList keyValuePair = line.split(":");
-            if (keyValuePair.count() == 2)
+            line.erase(0, line.find_first_not_of(" \t\r\n"));
+            line.erase(line.find_last_not_of(" \t\r\n") + 1);
+
+            std::istringstream iss(line);
+            std::string key, value;
+            if (std::getline(iss, key, sep1) && std::getline(iss, value))
             {
-                const QString& key = keyValuePair[0];
-                const QString& value = keyValuePair[1];
+                std::vector<std::string> strlist;
+                for (const auto& str : split(value, sep2))
+                {
+                    strlist.emplace_back(str);
+                }
+                resultMap[key] = strlist;
+            }
+        }
+        return true;
+    }
+
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<u8string, u8string>& resultMap)
+    {
+#ifdef _WIN32
+        std::ifstream file(IKg2p::utf8ToWide(dict_dir + "/" + fileName));
+#else
+        std::ifstream file(dict_dir + "/" + fileName);
+#endif
+        if (!file.is_open())
+        {
+            std::cout << fileName << " error: Unable to open file" << std::endl;
+            return false;
+        }
+
+        std::string line;
+        while (std::getline(file, line))
+        {
+            line.erase(0, line.find_first_not_of(" \t\r\n"));
+            line.erase(line.find_last_not_of(" \t\r\n") + 1);
+
+            std::istringstream iss(line);
+            std::string key, value;
+            if (std::getline(iss, key, ':') && std::getline(iss, value))
+            {
                 resultMap[key] = value;
             }
         }
         return true;
     }
 
-    bool loadDict(const QString& dict_dir, const QString& fileName, QHash<QString, QStringList>& resultMap,
-                  const QString& sep1, const QString& sep2)
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<u8string, u8stringlist>& resultMap)
     {
-        const QString file_path = QDir::cleanPath(dict_dir + "/" + fileName);
-        QFile file(file_path);
-        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+#ifdef _WIN32
+        std::ifstream file(IKg2p::utf8ToWide(dict_dir + "/" + fileName));
+#else
+        std::ifstream file(dict_dir + "/" + fileName);
+#endif
+        if (!file.is_open())
         {
-            qWarning() << fileName << " error: " << file.errorString();
+            std::cerr << fileName << " error: Unable to open file" << std::endl;
             return false;
         }
 
-        while (!file.atEnd())
+        std::string line;
+        while (std::getline(file, line))
         {
-            QString line = file.readLine().trimmed();
-            const QStringList keyValuePair = line.split(sep1);
-            if (keyValuePair.count() == 2)
+            line.erase(0, line.find_first_not_of(" \t\r\n"));
+            line.erase(line.find_last_not_of(" \t\r\n") + 1);
+
+            std::istringstream iss(line);
+            std::string key, value;
+            if (std::getline(iss, key, ':') && std::getline(iss, value))
             {
-                const QString& key = keyValuePair[0];
-                const QString& value = keyValuePair[1];
-                if (value.split(sep2).count() > 0)
+                u8stringlist u8strlist;
+                for (const auto& str : split(value, std::string(" ")))
                 {
-                    resultMap[key] = value.split(sep2);
+                    u8strlist.emplace_back(str);
                 }
+                resultMap[key] = u8strlist;
             }
         }
         return true;

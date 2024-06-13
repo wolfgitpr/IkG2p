@@ -1,31 +1,31 @@
 #ifndef SYLLABLE2P_H
 #define SYLLABLE2P_H
 
-#include <QObject>
+#include <string>
+#include <vector>
+#include <memory>
 
 namespace IKg2p
 {
     class Syllable2pPrivate;
 
-    class Syllable2p : public QObject
+    class Syllable2p
     {
-        Q_OBJECT
-
-        Q_DECLARE_PRIVATE(Syllable2p)
-
     public:
-        explicit Syllable2p(QString phonemeDict, QString sep1 = "\t", QString sep2 = " ", QObject* parent = nullptr);
+        explicit Syllable2p(std::string dictPath, std::string dictName, const char& sep1 = '\t',
+                            const std::string& sep2 = " ");
 
-        ~Syllable2p() override;
+        ~Syllable2p();
 
-        [[nodiscard]] QStringList syllableToPhoneme(const QString& syllable) const;
+        std::vector<std::string> syllableToPhoneme(const std::string& syllable) const;
 
-        [[nodiscard]] QList<QStringList> syllableToPhoneme(const QStringList& syllables) const;
+        std::vector<std::vector<std::string>> syllableToPhoneme(
+            const std::vector<std::string>& syllables) const;
 
     protected:
-        explicit Syllable2p(Syllable2pPrivate& d, QObject* parent = nullptr);
+        explicit Syllable2p(Syllable2pPrivate& d);
 
-        QScopedPointer<Syllable2pPrivate> d_ptr;
+        std::unique_ptr<Syllable2pPrivate> d_ptr;
     };
 }
 

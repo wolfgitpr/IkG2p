@@ -1,18 +1,17 @@
 #include "Syllable2p.h"
 #include "Syllable2p_p.h"
-#include <QDebug>
+
 #include <utility>
 
 #include "G2pglobal.h"
 
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-#  include <QtCore5Compat>
-#endif
 
 namespace IKg2p
 {
-    Syllable2pPrivate::Syllable2pPrivate(QString phonemeDict, QString sep1, QString sep2) : phonemeDict(
-            std::move(phonemeDict)), sep1(std::move(sep1)), sep2(std::move(sep2))
+    Syllable2pPrivate::Syllable2pPrivate(std::string dictPath, std::string dictName, const char& sep1,
+                                         std::string sep2) : dictPath(std::move(
+                                                                 dictPath)), dictName(std::move(dictName)),
+                                                             sep1(sep1), sep2(std::move(sep2))
     {
     }
 
@@ -20,36 +19,39 @@ namespace IKg2p
 
     void Syllable2pPrivate::init()
     {
-        const QFileInfo phonemeDictInfo(phonemeDict);
-        initialized = loadDict(phonemeDictInfo.absolutePath(), phonemeDictInfo.fileName(), phonemeMap, sep1, sep2);
+        initialized = loadDict(dictPath, dictName, phonemeMap, sep1, sep2);
     }
 
-    Syllable2p::Syllable2p(QString phonemeDict, QString sep1, QString sep2, QObject* parent) : Syllable2p(
-        *new Syllable2pPrivate(std::move(phonemeDict), std::move(sep1), std::move(sep2)), parent)
+    Syllable2p::Syllable2p(std::string dictPath, std::string dictName, const char& sep1,
+                           const std::string& sep2) : Syllable2p(
+        *new Syllable2pPrivate(std::move(dictPath), std::move(dictName), sep1, sep2))
     {
     }
 
     Syllable2p::~Syllable2p() = default;
 
-    QList<QStringList> Syllable2p::syllableToPhoneme(const QStringList& syllables) const
+    std::vector<std::vector<std::string>> Syllable2p::syllableToPhoneme(const std::vector<std::string>& syllables) const
     {
-        Q_D(const Syllable2p);
-        QList<QStringList> phonemeList;
-        for (const QString& word : syllables)
+        std::vector<std::vector<std::string>> phonemeList;
+        for (const std::string& word : syllables)
         {
-            phonemeList.append(d->phonemeMap.value(word, QStringList()));
+            std::vector<std::string> res;
+            if (d_ptr->phonemeMap.find(word) != d_ptr->phonemeMap.end())
+                res = d_ptr->phonemeMap.find(word)->second;
+            phonemeList.push_back(res);
         }
         return phonemeList;
     }
 
 
-    QStringList Syllable2p::syllableToPhoneme(const QString& syllable) const
+    std::vector<std::string> Syllable2p::syllableToPhoneme(const std::string& syllable) const
     {
-        Q_D(const Syllable2p);
-        return d->phonemeMap.value(syllable, QStringList());
+        if (d_ptr->phonemeMap.find(syllable) != d_ptr->phonemeMap.end())
+            return d_ptr->phonemeMap.find(syllable)->second;
+        return {};
     }
 
-    Syllable2p::Syllable2p(Syllable2pPrivate& d, QObject* parent) : QObject(parent), d_ptr(&d)
+    Syllable2p::Syllable2p(Syllable2pPrivate& d) : d_ptr(&d)
     {
         d.q_ptr = this;
 

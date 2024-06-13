@@ -2,125 +2,100 @@
 #include "G2pglobal.h"
 #include "ChineseG2p_p.h"
 
-#include <QDebug>
-#include <utility>
+#include <map>
+#include <stdexcept>
 
 namespace IKg2p
 {
-    static const QMap<QChar, QString> numMap = {
-        {'0', "零"},
-        {'1', "一"},
-        {'2', "二"},
-        {'3', "三"},
-        {'4', "四"},
-        {'5', "五"},
-        {'6', "六"},
-        {'7', "七"},
-        {'8', "八"},
-        {'9', "九"}
+    static const std::map<char32_t, u8string> numMap = {
+        {U'0', U"零"},
+        {U'1', U"一"},
+        {U'2', U"二"},
+        {U'3', U"三"},
+        {U'4', U"四"},
+        {U'5', U"五"},
+        {U'6', U"六"},
+        {U'7', U"七"},
+        {U'8', U"八"},
+        {U'9', U"九"}
     };
 
-    static QString joinView(const QList<QStringView>& viewList, const QStringView& separator)
+    static u8string mid(const u8stringlist& inputList, size_t cursor, size_t length)
     {
-        if (viewList.isEmpty())
-            return {};
-
-        QString result;
-        for (auto it = viewList.begin(); it != viewList.end() - 1; ++it)
+        if (cursor > inputList.size())
         {
-            result += it->toString();
-            result += separator;
+            throw std::out_of_range("Cursor is out of range");
         }
-        result += (viewList.end() - 1)->toString();
+
+        const size_t end = std::min(cursor + length, inputList.size());
+
+        u8string result;
+        for (size_t i = cursor; i < end; ++i)
+        {
+            result += inputList[i];
+        }
+
         return result;
     }
 
     // reset pinyin to raw string
-    static QList<G2pRes> resetZH(const QList<QStringView>& input, const QList<G2pRes>& res,
-                                 const QList<int>& positions)
+    static std::vector<G2pRes> resetZH(const u8stringlist& input, const std::vector<G2pRes>& res,
+                                       const std::vector<int>& positions)
     {
-        QList<G2pRes> result;
+        std::vector<G2pRes> result;
         for (const auto& lyric : input)
         {
             G2pRes g2pRes;
-            g2pRes.lyric = lyric.toString();
-            result.append(g2pRes);
+            g2pRes.lyric = lyric.cpp_str();
+            result.push_back(g2pRes);
         }
 
         for (int i = 0; i < positions.size(); i++)
         {
-            result.replace(positions[i], res.at(i));
+            result[positions[i]] = res.at(i);
         }
         return result;
     }
 
     // delete elements from the list
     template <class T>
-    static inline void removeElements(QList<T>& list, int start, int n)
+    static inline void removeElements(std::vector<T>& vector, int start, int n)
     {
-        list.erase(list.begin() + start, list.begin() + start + n);
+        vector.erase(vector.begin() + start, vector.begin() + start + n);
     }
 
-    ChineseG2pPrivate::ChineseG2pPrivate(QString language) : m_language(std::move(language))
+    ChineseG2pPrivate::ChineseG2pPrivate(std::string language) : m_language(std::move(language))
     {
     }
 
     ChineseG2pPrivate::~ChineseG2pPrivate() = default;
 
-    static void copyStringViewHash(const QHash<QString, QString>& src, QHash<QStringView, QStringView>& dest)
-    {
-        for (auto it = src.begin(); it != src.end(); ++it)
-        {
-            dest.insert(it.key(), it.value());
-        }
-    }
-
-    static void copyStringViewListHash(const QHash<QString, QStringList>& src,
-                                       QHash<QStringView, QList<QStringView>>& dest)
-    {
-        for (auto it = src.begin(); it != src.end(); ++it)
-        {
-            QList<QStringView> viewList;
-            viewList.reserve(it.value().size());
-            for (const auto& item : it.value())
-            {
-                viewList.push_back(item);
-            }
-            dest.insert(it.key(), viewList);
-        }
-    }
-
     // load zh convert dict
     void ChineseG2pPrivate::init()
     {
-        const QString dict_dir = dictionaryPath() + "/" + m_language;
+        const std::string dict_dir = dictionaryPath() + "/" + m_language;
 
         initialized = loadDict(dict_dir, "phrases_map.txt", phrases_map) &&
             loadDict(dict_dir, "phrases_dict.txt", phrases_dict) &&
             loadDict(dict_dir, "user_dict.txt", phrases_dict) &&
             loadDict(dict_dir, "word.txt", word_dict) &&
             loadDict(dict_dir, "trans_word.txt", trans_dict);
-
-        copyStringViewHash(phrases_map, phrases_map2);
-        copyStringViewListHash(phrases_dict, phrasesViewDict);
-        copyStringViewListHash(word_dict, word_dict2);
-        copyStringViewHash(trans_dict, trans_dict2);
     }
 
     // get all chinese characters and positions in the list
-    void ChineseG2pPrivate::zhPosition(const QList<QStringView>& input, QList<QStringView>& res, QList<int>& positions,
-                                       const bool& convertNum) const
+    void ChineseG2pPrivate::zhPosition(const u8stringlist& input, u8stringlist& res, std::vector<int>& positions,
+                                       const bool& convertNum)
     {
         for (int i = 0; i < input.size(); ++i)
         {
             const auto& item = input.at(i);
-            if (item.isEmpty())
+            if (item.empty())
                 continue;
 
-            if (word_dict2.contains(item) || trans_dict2.contains(item))
+            if (word_dict.find(item) != word_dict.end() || trans_dict.find(item) != trans_dict.end())
             {
-                res.append(item);
-                positions.append(i);
+                res.push_back(q_ptr->tradToSim(item));
+                positions.push_back(i);
                 continue;
             }
 
@@ -129,17 +104,17 @@ namespace IKg2p
                 continue;
             }
 
-            auto it = numMap.find(input.at(i).front());
+            const auto it = numMap.find(input.at(i).front());
             if (it != numMap.end())
             {
-                res.append(it.value());
-                positions.append(i);
+                res.push_back(it->second);
+                positions.push_back(i);
             }
         }
     }
 
-    ChineseG2p::ChineseG2p(QString language, QObject* parent) : ChineseG2p(
-        *new ChineseG2pPrivate(std::move(language)), parent)
+    ChineseG2p::ChineseG2p(const std::string& language) : ChineseG2p(
+        *new ChineseG2pPrivate(std::move(language)))
     {
     }
 
@@ -147,77 +122,70 @@ namespace IKg2p
 
     bool ChineseG2p::initialized() const
     {
-        Q_D(const ChineseG2p);
-        return d->initialized;
+        return d_ptr->initialized;
     }
 
-    QList<G2pRes> ChineseG2p::hanziToPinyin(const QString& input, bool tone, bool convertNum, errorType error)
+    std::vector<G2pRes> ChineseG2p::hanziToPinyin(const std::string& input, bool tone, bool convertNum, errorType error)
     {
-        return hanziToPinyin(splitString(input), tone, convertNum, error);
+        return hanziToPinyin(splitString(u8string(input)), tone, convertNum, error);
     }
 
-    QList<G2pRes> ChineseG2p::hanziToPinyin(const QStringList& input, bool tone, bool convertNum, errorType error)
+    std::vector<G2pRes> ChineseG2p::hanziToPinyin(const std::vector<std::string>& input, bool tone, bool convertNum,
+                                                  errorType error)
     {
-        QList<QStringView> inputList;
+        u8stringlist inputList;
         inputList.reserve(input.size());
         for (const auto& item : input)
         {
-            inputList.push_back(item);
+            inputList.emplace_back(item);
         }
         return hanziToPinyin(inputList, tone, convertNum, error);
     }
 
-    QStringList ChineseG2p::resToStringList(const QList<G2pRes>& input)
+    std::vector<std::string> ChineseG2p::resToStringList(const std::vector<G2pRes>& input)
     {
-        QStringList result;
+        std::vector<std::string> result;
         for (const auto& res : input)
-            result.append(res.error ? res.lyric : res.syllable);
+            result.push_back(res.error ? res.lyric : res.syllable);
         return result;
     }
 
-    QList<G2pRes> ChineseG2p::hanziToPinyin(const QList<QStringView>& input, bool tone, bool convertNum,
-                                            errorType error)
+    std::vector<G2pRes> ChineseG2p::hanziToPinyin(const u8stringlist& input, bool tone, bool convertNum,
+                                                  errorType error)
     {
-        Q_D(const ChineseG2p);
-        QList<QStringView> inputList;
-        QList<int> inputPos;
+        u8stringlist inputList;
+        std::vector<int> inputPos;
 
         // get char&pos in dict
-        d->zhPosition(input, inputList, inputPos, convertNum);
+        d_ptr->zhPosition(input, inputList, inputPos, convertNum);
 
-        // Alloc 1
-        QString cleanInputRaw = joinView(inputList, QString());
-        QStringView cleanInput(cleanInputRaw);
-
-        QList<G2pRes> result;
+        std::vector<G2pRes> result;
         int cursor = 0;
         while (cursor < inputList.size())
         {
             // get char
-            const QStringView& raw_current_char = inputList.at(cursor);
-            QStringView current_char;
-            current_char = d->tradToSim(raw_current_char);
+            const auto& current_char = inputList.at(cursor);
 
             // not in dict
-            if (d->word_dict2.find(current_char) == d->word_dict2.end())
+            if (d_ptr->word_dict.find(current_char) == d_ptr->word_dict.end())
             {
                 G2pRes g2pRes;
-                g2pRes.lyric = current_char.toString();
-                result.append(g2pRes);
+                g2pRes.lyric = current_char.cpp_str();
+                result.push_back(g2pRes);
                 cursor++;
                 continue;
             }
 
             // is polypropylene
-            if (!d->isPolyphonic(current_char))
+            if (!isPolyphonic(current_char))
             {
-                const auto pinyin = getDefaultPinyin(current_char.toString());
+                const auto pinyin = getDefaultPinyin(current_char);
                 G2pRes g2pRes;
-                g2pRes.lyric = current_char.toString();
-                g2pRes.syllable = pinyin.at(0);
-                g2pRes.candidates = pinyin;
+                g2pRes.lyric = current_char.cpp_str();
+                g2pRes.syllable = pinyin.at(0).cpp_str();
+                g2pRes.candidates = toStdList(pinyin);
                 g2pRes.error = false;
-                result.append(g2pRes);
+                result.push_back(g2pRes);
                 cursor++;
             }
             else
@@ -228,18 +196,18 @@ namespace IKg2p
                     if (cursor + length <= inputList.size())
                     {
                         // cursor: 地, subPhrase: 地久天长
-                        QStringView subPhrase = cleanInput.mid(cursor, length);
-                        if (d->phrasesViewDict.find(subPhrase) != d->phrasesViewDict.end())
+                        const u8string subPhrase = mid(inputList, cursor, length);
+                        if (d_ptr->phrases_dict.find(subPhrase) != d_ptr->phrases_dict.end())
                         {
-                            const auto subRes = d->phrasesViewDict[subPhrase];
+                            const auto subRes = d_ptr->phrases_dict[subPhrase];
                             for (int i = 0; i < subRes.size(); i++)
                             {
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhrase[i];
-                                g2pRes.syllable = subRes[i].toString();
-                                g2pRes.candidates = getDefaultPinyin(g2pRes.lyric);
+                                g2pRes.syllable = subRes[i].cpp_str();
+                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
-                                result.append(g2pRes);
+                                result.push_back(g2pRes);
                             }
                             cursor += length;
                             found = true;
@@ -253,20 +221,20 @@ namespace IKg2p
                         if (cursor >= 1)
                         {
                             // cursor: 重, subPhrase_1: 语重心长
-                            QStringView subPhrase1 = cleanInput.mid(cursor - 1, length);
-                            auto it = d->phrasesViewDict.find(subPhrase1);
-                            if (it != d->phrasesViewDict.end())
+                            const u8string subPhrase1 = mid(inputList, cursor - 1, length);
+                            auto it = d_ptr->phrases_dict.find(subPhrase1);
+                            if (it != d_ptr->phrases_dict.end())
                             {
-                                result.removeAt(result.size() - 1);
-                                const auto& subRes1 = it.value();
+                                result.pop_back();
+                                const auto& subRes1 = it->second;
                                 for (int i = 0; i < subRes1.size(); i++)
                                 {
                                     G2pRes g2pRes;
                                     g2pRes.lyric = subPhrase1[i];
-                                    g2pRes.syllable = subRes1[i].toString();
-                                    g2pRes.candidates = getDefaultPinyin(g2pRes.lyric);
+                                    g2pRes.syllable = subRes1[i].cpp_str();
+                                    g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                     g2pRes.error = false;
-                                    result.append(g2pRes);
+                                    result.push_back(g2pRes);
                                 }
                                 cursor += length - 1;
                                 found = true;
@@ -282,21 +250,21 @@ namespace IKg2p
                     if (cursor + 1 >= length && cursor + 1 <= inputList.size())
                     {
                         // cursor: 好, xSubPhrase: 各有所好
-                        QStringView subPhraseBack = cleanInput.mid(cursor + 1 - length, length);
-                        auto it = d->phrasesViewDict.find(subPhraseBack);
-                        if (it != d->phrasesViewDict.end())
+                        const u8string subPhraseBack = mid(inputList, cursor + 1 - length, length);
+                        auto it = d_ptr->phrases_dict.find(subPhraseBack);
+                        if (it != d_ptr->phrases_dict.end())
                         {
                             // overwrite pinyin
                             removeElements(result, cursor + 1 - length, length - 1);
-                            const auto& subResBack = it.value();
+                            const auto& subResBack = it->second;
                             for (int i = 0; i < subResBack.size(); i++)
                             {
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack[i];
-                                g2pRes.syllable = subResBack[i].toString();
-                                g2pRes.candidates = getDefaultPinyin(g2pRes.lyric);
+                                g2pRes.syllable = subResBack[i].cpp_str();
+                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
-                                result.append(g2pRes);
+                                result.push_back(g2pRes);
                             }
                             cursor += 1;
                             found = true;
@@ -311,21 +279,21 @@ namespace IKg2p
                     if (cursor + 2 >= length && cursor + 2 <= inputList.size())
                     {
                         // cursor: 好, xSubPhrase: 叶公好龙
-                        QStringView subPhraseBack1 = cleanInput.mid(cursor + 2 - length, length);
-                        auto it = d->phrasesViewDict.find(subPhraseBack1);
-                        if (it != d->phrasesViewDict.end())
+                        const u8string subPhraseBack1 = mid(inputList, cursor + 2 - length, length);
+                        auto it = d_ptr->phrases_dict.find(subPhraseBack1);
+                        if (it != d_ptr->phrases_dict.end())
                         {
                             // overwrite pinyin
                             removeElements(result, cursor + 2 - length, length - 2);
-                            const auto& subResBack1 = it.value();
+                            const auto& subResBack1 = it->second;
                             for (int i = 0; i < subResBack1.size(); i++)
                             {
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack1[i];
-                                g2pRes.syllable = subResBack1[i].toString();
-                                g2pRes.candidates = getDefaultPinyin(g2pRes.lyric);
+                                g2pRes.syllable = subResBack1[i].cpp_str();
+                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
-                                result.append(g2pRes);
+                                result.push_back(g2pRes);
                             }
                             cursor += 2;
                             found = true;
@@ -342,11 +310,11 @@ namespace IKg2p
                 if (!found)
                 {
                     G2pRes g2pRes;
-                    g2pRes.lyric = current_char.toString();
-                    g2pRes.syllable = d->getDefaultPinyin(current_char).toString();
-                    g2pRes.candidates.append(g2pRes.syllable);
+                    g2pRes.lyric = current_char.cpp_str();
+                    g2pRes.syllable = getDefaultPinyin(current_char).at(0).cpp_str();
+                    g2pRes.candidates.push_back(g2pRes.syllable);
                     g2pRes.error = false;
-                    result.append(g2pRes);
+                    result.push_back(g2pRes);
                     cursor++;
                 }
             }
@@ -356,9 +324,9 @@ namespace IKg2p
         {
             for (G2pRes& item : result)
             {
-                if (!item.error && item.syllable.back().isDigit())
+                if (!item.error && isDigit(item.syllable.back()))
                 {
-                    item.syllable.chop(1);
+                    item.syllable.pop_back();
                 }
             }
         }
@@ -371,39 +339,40 @@ namespace IKg2p
         return resetZH(input, result, inputPos);
     }
 
-    ChineseG2p::ChineseG2p(ChineseG2pPrivate& d, QObject* parent) : QObject(parent), d_ptr(&d)
+    ChineseG2p::ChineseG2p(ChineseG2pPrivate& d) : d_ptr(&d)
     {
         d.q_ptr = this;
 
         d.init();
     }
 
-    QString ChineseG2p::tradToSim(const QString& text) const
+    u8string ChineseG2p::tradToSim(const u8string& text) const
     {
-        Q_D(const ChineseG2p);
-        return d->tradToSim(text).toString();
+        return d_ptr->tradToSim(text);
     }
 
-    bool ChineseG2p::isPolyphonic(const QString& text) const
+    bool ChineseG2p::isPolyphonic(const u8string& text) const
     {
-        Q_D(const ChineseG2p);
-        return d->isPolyphonic(text);
+        return d_ptr->isPolyphonic(text);
     }
 
-    QStringList ChineseG2p::getDefaultPinyin(const QString& text, bool tone) const
+    u8stringlist ChineseG2p::getDefaultPinyin(const u8string& text, bool tone) const
     {
-        Q_D(const ChineseG2p);
-        QStringList res = d->word_dict.value(d->tradToSim(text).toString(), {});
+        const u8string simText = d_ptr->tradToSim(text);
+        u8stringlist res;
+
+        if (d_ptr->word_dict.find(simText) != d_ptr->word_dict.end())
+            res = d_ptr->word_dict.find(simText)->second;
+
         if (!tone)
         {
-            for (QString& item : res)
+            for (u8string& item : res)
             {
-                if (item.back().isDigit())
+                if (isDigit(item.back()))
                 {
-                    item.chop(1);
+                    item.pop_back();
                 }
             }
-            res.removeDuplicates();
         }
         return res;
     }

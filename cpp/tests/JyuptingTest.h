@@ -16,7 +16,7 @@ namespace G2pTest
         bool batchTest(const bool& resDisplay = false) const;
 
     private:
-        QScopedPointer<IKg2p::ChineseG2p> g2p_can;
+        std::unique_ptr<IKg2p::ChineseG2p> g2p_can;
     };
 } // G2pTest
 

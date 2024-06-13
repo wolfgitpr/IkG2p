@@ -8,10 +8,10 @@ namespace IKg2p
     class MandarinG2p final : public ChineseG2p
     {
     public:
-        explicit MandarinG2p(QObject* parent = nullptr) : ChineseG2p("mandarin", parent)
+        explicit MandarinG2p() : ChineseG2p("mandarin")
         {
         };
-        ~MandarinG2p() override = default;
+        ~MandarinG2p();
     };
 }
 

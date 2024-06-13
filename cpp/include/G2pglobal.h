@@ -1,40 +1,48 @@
 #ifndef G2PGLOBAL_H
 #define G2PGLOBAL_H
 
-#include <QDir>
-#include <QStringList>
+#include <string>
+#include <vector>
+#include <unordered_map>
+
+#include <tinyutf8.h>
+
+typedef tiny_utf8::string u8string;
+typedef std::vector<tiny_utf8::string> u8stringlist;
 
 namespace IKg2p
 {
-    QString dictionaryPath();
+    std::string dictionaryPath();
 
-    void setDictionaryPath(const QString& dir);
+    void setDictionaryPath(const std::string& dir);
 
-    QStringList splitString(const QString& input);
+    std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
-    inline QStringList viewList2strList(const QList<QStringView>& viewList)
-    {
-        QStringList res;
-        res.reserve(viewList.size());
-        for (const auto& item : viewList)
-        {
-            res.push_back(item.toString());
-        }
-        return res;
-    }
+    std::string join(const std::vector<std::string> &v, const std::string &delimiter);
 
-    bool loadDict(const QString& dict_dir, const QString& fileName, QHash<QString, QString>& resultMap);
+    u8stringlist splitString(const u8string& input);
 
-    bool loadDict(const QString& dict_dir, const QString& fileName, QHash<QString, QStringList>& resultMap,
-                  const QString& sep1 = ":", const QString& sep2 = " ");
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<std::string, std::vector<std::string>>& resultMap, const char& sep1 = ':',
+                  const std::string& sep2 = " ");
 
-    bool isLetter(QChar c);
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<u8string, u8string>& resultMap);
 
-    bool isHanzi(QChar c);
+    bool loadDict(const std::string& dict_dir, const std::string& fileName,
+                  std::unordered_map<u8string, u8stringlist>& resultMap);
 
-    bool isKana(QChar c);
+    std::vector<std::string> toStdList(const u8stringlist& input);
 
-    bool isSpecialKana(QChar c);
+    bool isLetter(char32_t c);
+
+    bool isHanzi(char32_t c);
+
+    bool isKana(char32_t c);
+
+    bool isDigit(char32_t c);
+
+    bool isSpecialKana(char32_t c);
 }
 
 #endif // G2PGLOBAL_H
