@@ -119,7 +119,7 @@ namespace IKg2p
 
             if (word_dict2.contains(item) || trans_dict2.contains(item))
             {
-                res.append(item);
+                res.append(tradToSim(item));
                 positions.append(i);
                 continue;
             }
@@ -194,9 +194,7 @@ namespace IKg2p
         while (cursor < inputList.size())
         {
             // get char
-            const QStringView& raw_current_char = inputList.at(cursor);
-            QStringView current_char;
-            current_char = d->tradToSim(raw_current_char);
+            const QStringView& current_char = inputList.at(cursor);
 
             // not in dict
             if (d->word_dict2.find(current_char) == d->word_dict2.end())
