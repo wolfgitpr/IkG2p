@@ -41,10 +41,12 @@ namespace IKg2p
 
         inline u8stringlist getDefaultPinyin(const u8string& text, bool tone) const
         {
-            u8stringlist res = {};
+            u8stringlist res = {text};
             const u8string simText = tradToSim(text);
             if (word_dict.find(simText) != word_dict.end())
                 res = word_dict.find(simText)->second;
+            else
+                return res;
 
             if (!tone)
             {

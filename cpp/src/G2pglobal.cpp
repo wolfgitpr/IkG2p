@@ -175,7 +175,8 @@ namespace IKg2p
                 std::vector<std::string> strlist;
                 for (const auto& str : split(value, sep2))
                 {
-                    strlist.emplace_back(str);
+                    if (!str.empty())
+                        strlist.emplace_back(str);
                 }
                 resultMap[key] = strlist;
             }
@@ -240,7 +241,8 @@ namespace IKg2p
                 u8stringlist u8strlist;
                 for (const auto& str : split(value, std::string(" ")))
                 {
-                    u8strlist.emplace_back(str);
+                    if (!str.empty())
+                        u8strlist.emplace_back(str);
                 }
                 resultMap[key] = u8strlist;
             }

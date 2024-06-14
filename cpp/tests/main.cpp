@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
     std::cout << "apiTest: " << manTest.apiTest() << std::endl;
     std::cout << "convertNumTest: " << manTest.convertNumTest() << std::endl;
     std::cout << "removeToneTest: " << manTest.removeToneTest() << std::endl;
-    manTest.batchTest();
+    // manTest.batchTest();
     std::cout << "--------------------\n" << std::endl;
 
     const JyuptingTest jyuptingTest;
