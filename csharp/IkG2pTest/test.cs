@@ -34,7 +34,7 @@ namespace IKg2pTest
 
             // mandarin or cantonese
             bool mandarin = true;
-            bool resDisplay = true;
+            bool resDisplay = false;
 
             ZhG2p zhG2p;
             if (mandarin)

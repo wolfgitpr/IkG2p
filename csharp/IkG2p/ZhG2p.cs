@@ -133,7 +133,15 @@ namespace IKg2p
                             {
                                 string key = keyValuePair[0];
                                 string value = keyValuePair[1];
-                                resultMap[key] = value.Split(' ').ToList();
+
+                                var vlist = value.Split(' ');
+                                var vRes = new List<string>();
+                                foreach (string v in vlist)
+                                {
+                                    if (!string.IsNullOrEmpty(v))
+                                        vRes.Add(v);
+                                }
+                                resultMap[key] = vRes;
                             }
                         }
 
@@ -163,7 +171,7 @@ namespace IKg2p
             {"9", "九"}
         };
 
-        static List<string> SplitString(string input)
+        public static List<string> SplitString(string input)
         {
             List<string> res = new List<string>();
 
@@ -256,7 +264,7 @@ namespace IKg2p
             {
                 var currentChar = inputList[cursor];
 
-                if (!WordDict.ContainsKey(currentChar))
+                if (!IsHanzi(currentChar))
                 {
                     G2pRes g2pRes = new G2pRes(currentChar);
                     result.Add(g2pRes);
@@ -389,19 +397,24 @@ namespace IKg2p
             return ResetZH(input, result, inputPos);
         }
 
-        bool IsPolyphonic(string text)
+        public bool IsHanzi(string text)
+        {
+            return WordDict.ContainsKey(TradToSim(text));
+        }
+
+        public bool IsPolyphonic(string text)
         {
             return PhrasesMap.ContainsKey(text);
         }
 
-        string TradToSim(string text)
+        public string TradToSim(string text)
         {
             return TransDict.ContainsKey(text) ? TransDict[text] : text;
         }
 
-        List<string> GetDefaultPinyin(string text, bool tone)
+        public List<string> GetDefaultPinyin(string text, bool tone)
         {
-            var res = WordDict.ContainsKey(text) ? WordDict[text] : null;
+            var res = WordDict.ContainsKey(text) ? WordDict[text] : new List<string> { text };
             for (var i = 0; i < res.Count; i++)
             {
                 if ('0' <= res[i].Last() && res[i].Last() <= '9')
