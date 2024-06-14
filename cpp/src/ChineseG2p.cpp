@@ -94,7 +94,7 @@ namespace IKg2p
 
             if (word_dict.find(item) != word_dict.end() || trans_dict.find(item) != trans_dict.end())
             {
-                res.push_back(q_ptr->tradToSim(item));
+                res.push_back(tradToSim(item));
                 positions.push_back(i);
                 continue;
             }
@@ -178,9 +178,9 @@ namespace IKg2p
             }
 
             // is polypropylene
-            if (!isPolyphonic(current_char))
+            if (!d_ptr->isPolyphonic(current_char))
             {
-                const auto pinyin = getDefaultPinyin(current_char);
+                const auto pinyin = d_ptr->getDefaultPinyin(current_char);
                 G2pRes g2pRes;
                 g2pRes.lyric = current_char.cpp_str();
                 g2pRes.syllable = pinyin.at(0).cpp_str();
@@ -206,7 +206,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhrase.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subRes[i].cpp_str();
-                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -233,7 +233,7 @@ namespace IKg2p
                                     G2pRes g2pRes;
                                     g2pRes.lyric = subPhrase1.substr(i, 1).cpp_str();
                                     g2pRes.syllable = subRes1[i].cpp_str();
-                                    g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
+                                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
                                     g2pRes.error = false;
                                     result.push_back(g2pRes);
                                 }
@@ -263,7 +263,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack[i].cpp_str();
-                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -292,7 +292,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack1.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack1[i].cpp_str();
-                                g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -312,7 +312,7 @@ namespace IKg2p
                 {
                     G2pRes g2pRes;
                     g2pRes.lyric = current_char.cpp_str();
-                    g2pRes.syllable = getDefaultPinyin(current_char).at(0).cpp_str();
+                    g2pRes.syllable = d_ptr->getDefaultPinyin(current_char).at(0).cpp_str();
                     g2pRes.candidates.push_back(g2pRes.syllable);
                     g2pRes.error = false;
                     result.push_back(g2pRes);
@@ -347,17 +347,17 @@ namespace IKg2p
         d.init();
     }
 
-    u8string ChineseG2p::tradToSim(const u8string& text) const
+    std::string ChineseG2p::tradToSim(const std::string& text) const
     {
-        return d_ptr->tradToSim(text);
+        return d_ptr->tradToSim(text).cpp_str();
     }
 
-    bool ChineseG2p::isPolyphonic(const u8string& text) const
+    bool ChineseG2p::isPolyphonic(const std::string& text) const
     {
         return d_ptr->isPolyphonic(text);
     }
 
-    u8stringlist ChineseG2p::getDefaultPinyin(const u8string& text, bool tone) const
+    std::vector<std::string> ChineseG2p::getDefaultPinyin(const std::string& text, bool tone) const
     {
         const u8string simText = d_ptr->tradToSim(text);
         u8stringlist res;
@@ -375,6 +375,6 @@ namespace IKg2p
                 }
             }
         }
-        return res;
+        return toStdList(res);
     }
 }

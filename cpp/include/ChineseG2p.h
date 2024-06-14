@@ -32,11 +32,11 @@ namespace IKg2p
 
         static std::vector<std::string> resToStringList(const std::vector<G2pRes>& input);
 
-        u8string tradToSim(const u8string& text) const;
+        std::string tradToSim(const std::string& text) const;
 
-        bool isPolyphonic(const u8string& text) const;
+        bool isPolyphonic(const std::string& text) const;
 
-        u8stringlist getDefaultPinyin(const u8string& text, bool tone = true) const;
+        std::vector<std::string> getDefaultPinyin(const std::string& text, bool tone = true) const;
 
     protected:
         explicit ChineseG2p(ChineseG2pPrivate& d);

@@ -39,10 +39,10 @@ namespace IKg2p
             return text;
         }
 
-        inline u8string getDefaultPinyin(const u8string& text) const
+        inline u8stringlist getDefaultPinyin(const u8string& text) const
         {
             if (word_dict.find(text) != word_dict.end())
-                return word_dict.find(text)->second.at(0);
+                return word_dict.find(text)->second;
             return {};
         }
 

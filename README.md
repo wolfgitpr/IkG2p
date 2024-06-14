@@ -29,7 +29,7 @@ const auto g2pRes = g2p_man->hanziToPinyin(raw, false, true, IKg2p::errorType::I
 const std::string res = IKg2p::join(g2p_man->resToStringList(g2pRes), " ");
 ```
 
-##  doc
+##  Doc
 
 ```c++
 //  cpp/include/G2pRes.h
@@ -71,6 +71,15 @@ std::vector<G2pRes> hanziToPinyin(const std::vector<std::string>& input, bool to
     @return utf-8 std::string vector.
 */
 std::vector<std::string> resToStringList(const std::vector<G2pRes>& input);
+
+//  Convert to Simplified Chinese.  utf-8 std::string
+std::string tradToSim(const std::string& text) const;
+
+//  Determine if it is a polyphonic character.
+bool isPolyphonic(const std::string& text) const;
+
+//  Get a pronunciation list.
+std::vector<std::string> getDefaultPinyin(const std::string& text, bool tone = true) const;
 ```
 
 ## Open-source softwares used
