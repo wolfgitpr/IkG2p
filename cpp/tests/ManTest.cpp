@@ -7,13 +7,11 @@
 
 namespace G2pTest
 {
-    ManTest::ManTest() : g2p_zh(new IKg2p::MandarinG2p())
+    ManTest::ManTest() : g2p_zh(std::make_unique<IKg2p::MandarinG2p>())
     {
     }
 
-    ManTest::~ManTest()
-    {
-    }
+    ManTest::~ManTest() = default;
 
     bool ManTest::apiTest() const
     {

@@ -11,7 +11,7 @@ namespace IKg2p
         explicit MandarinG2p() : ChineseG2p("mandarin")
         {
         };
-        ~MandarinG2p();
+        ~MandarinG2p() = default;
     };
 }
 

@@ -15,7 +15,7 @@ namespace IKg2p
         std::string path;
     };
 
-    auto* m_global = new G2pGlobal();
+    auto m_global = std::make_unique<G2pGlobal>();
 
     std::string dictionaryPath()
     {

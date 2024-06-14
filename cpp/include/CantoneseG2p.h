@@ -11,7 +11,7 @@ namespace IKg2p
         explicit CantoneseG2p() : ChineseG2p("cantonese")
         {
         };
-        ~CantoneseG2p();
+        ~CantoneseG2p() = default;
     };
 }
 #endif // DATASET_TOOLS_CANTONESE_H

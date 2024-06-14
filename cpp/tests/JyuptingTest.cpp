@@ -7,7 +7,7 @@
 
 namespace G2pTest
 {
-    JyuptingTest::JyuptingTest() : g2p_can(new IKg2p::CantoneseG2p())
+    JyuptingTest::JyuptingTest() : g2p_can(std::make_unique<IKg2p::CantoneseG2p>())
     {
     }
 

@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 
     std::cout << "G2P mix test:" << std::endl;
     std::cout << "--------------------" << std::endl;
-    const auto g2p_man = new IKg2p::MandarinG2p();
+    const auto g2p_man = std::make_unique<IKg2p::MandarinG2p>();
 
     const std::string raw2 =
         "举杯あャ坐ュ饮放あ歌竹林间/清风拂 面悄word然xax asx a xxs拨？Q！动初弦/便推开烦恼与尘喧/便还是当时的少年";
