@@ -39,12 +39,12 @@ namespace IKg2pTest
             ZhG2p zhG2p;
             if (mandarin)
             {
-                zhG2p = new ZhG2p("mandarin");
+                zhG2p = ZhG2p.MandarinInstance;
                 dataLines = ReadData("op_lab.txt");
             }
             else
             {
-                zhG2p = new ZhG2p("cantonses");
+                zhG2p = ZhG2p.CantoneseInstance;
                 dataLines = ReadData("jyutping_test.txt");
             }
 
@@ -66,7 +66,7 @@ namespace IKg2pTest
                     {
                         string key = keyValuePair[0];
                         string value = keyValuePair[1];
-                        string result = zhG2p.Convert(key, false, true);
+                        var result = zhG2p.Convert(key, false, true);
                         // var result = TinyPinyin.PinyinHelper.GetPinyin(key).ToLower();
 
                         var words = value.Split(" ");
@@ -74,7 +74,7 @@ namespace IKg2pTest
                         count += wordSize;
 
                         bool diff = false;
-                        var resWords = result.Split(" ");
+                        var resWords = ZhG2p.ToStrList(result);
                         for (int i = 0; i < wordSize; i++)
                         {
                             if (words[i] != resWords[i] && !words[i].Split("/").Contains(resWords[i]))

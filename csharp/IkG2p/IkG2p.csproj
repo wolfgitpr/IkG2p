@@ -48,6 +48,9 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,23 +63,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Zh_G2p.cs" />
+    <Compile Include="ZhG2p.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dicts\mandarin\License.txt" />
-    <EmbeddedResource Include="Dicts\mandarin\phrases_dict.txt" />
-    <EmbeddedResource Include="Dicts\mandarin\phrases_map.txt" />
-    <EmbeddedResource Include="Dicts\mandarin\trans_word.txt" />
-    <EmbeddedResource Include="Dicts\mandarin\user_dict.txt" />
-    <EmbeddedResource Include="Dicts\mandarin\word.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Dicts\cantonese\License.txt" />
-    <EmbeddedResource Include="Dicts\cantonese\phrases_dict.txt" />
-    <EmbeddedResource Include="Dicts\cantonese\phrases_map.txt" />
-    <EmbeddedResource Include="Dicts\cantonese\trans_word.txt" />
-    <EmbeddedResource Include="Dicts\cantonese\user_dict.txt" />
-    <EmbeddedResource Include="Dicts\cantonese\word.txt" />
+    <EmbeddedResource Include="dict\cantonese\License.txt" />
+    <EmbeddedResource Include="dict\cantonese\phrases_dict.txt" />
+    <EmbeddedResource Include="dict\cantonese\phrases_map.txt" />
+    <EmbeddedResource Include="dict\cantonese\trans_word.txt" />
+    <EmbeddedResource Include="dict\cantonese\user_dict.txt" />
+    <EmbeddedResource Include="dict\cantonese\word.txt" />
+    <EmbeddedResource Include="dict\mandarin\License.txt" />
+    <EmbeddedResource Include="dict\mandarin\phrases_dict.txt" />
+    <EmbeddedResource Include="dict\mandarin\phrases_map.txt" />
+    <EmbeddedResource Include="dict\mandarin\trans_word.txt" />
+    <EmbeddedResource Include="dict\mandarin\user_dict.txt" />
+    <EmbeddedResource Include="dict\mandarin\word.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
