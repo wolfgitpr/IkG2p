@@ -52,7 +52,7 @@ endif ()
 # ----------------------------------
 # link libraries
 # ----------------------------------
-target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_include_directories(${PROJECT_NAME} PUBLIC include lib)
 
 # ----------------------------------
 # copy dictionary
