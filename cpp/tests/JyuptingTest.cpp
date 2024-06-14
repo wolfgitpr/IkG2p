@@ -74,7 +74,7 @@ namespace G2pTest
         size_t count = 0;
         size_t error = 0;
 
-        const auto dataLines = readData("testData/op_lab.txt");
+        const auto dataLines = readData("testData/jyutping_test.txt");
 
         const auto start = std::chrono::high_resolution_clock::now();
 

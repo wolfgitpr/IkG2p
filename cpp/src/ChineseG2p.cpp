@@ -125,13 +125,14 @@ namespace IKg2p
         return d_ptr->initialized;
     }
 
-    std::vector<G2pRes> ChineseG2p::hanziToPinyin(const std::string& input, bool tone, bool convertNum, errorType error)
+    std::vector<G2pRes> ChineseG2p::hanziToPinyin(const std::string& input, bool tone, bool convertNum,
+                                                  errorType error) const
     {
         return hanziToPinyin(splitString(u8string(input)), tone, convertNum, error);
     }
 
     std::vector<G2pRes> ChineseG2p::hanziToPinyin(const std::vector<std::string>& input, bool tone, bool convertNum,
-                                                  errorType error)
+                                                  errorType error) const
     {
         u8stringlist inputList;
         inputList.reserve(input.size());
@@ -151,7 +152,7 @@ namespace IKg2p
     }
 
     std::vector<G2pRes> ChineseG2p::hanziToPinyin(const u8stringlist& input, bool tone, bool convertNum,
-                                                  errorType error)
+                                                  errorType error) const
     {
         u8stringlist inputList;
         std::vector<int> inputPos;
@@ -203,7 +204,7 @@ namespace IKg2p
                             for (int i = 0; i < subRes.size(); i++)
                             {
                                 G2pRes g2pRes;
-                                g2pRes.lyric = subPhrase[i];
+                                g2pRes.lyric = subPhrase.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subRes[i].cpp_str();
                                 g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
@@ -230,7 +231,7 @@ namespace IKg2p
                                 for (int i = 0; i < subRes1.size(); i++)
                                 {
                                     G2pRes g2pRes;
-                                    g2pRes.lyric = subPhrase1[i];
+                                    g2pRes.lyric = subPhrase1.substr(i, 1).cpp_str();
                                     g2pRes.syllable = subRes1[i].cpp_str();
                                     g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                     g2pRes.error = false;
@@ -260,7 +261,7 @@ namespace IKg2p
                             for (int i = 0; i < subResBack.size(); i++)
                             {
                                 G2pRes g2pRes;
-                                g2pRes.lyric = subPhraseBack[i];
+                                g2pRes.lyric = subPhraseBack.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack[i].cpp_str();
                                 g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;
@@ -289,7 +290,7 @@ namespace IKg2p
                             for (int i = 0; i < subResBack1.size(); i++)
                             {
                                 G2pRes g2pRes;
-                                g2pRes.lyric = subPhraseBack1[i];
+                                g2pRes.lyric = subPhraseBack1.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack1[i].cpp_str();
                                 g2pRes.candidates = toStdList(getDefaultPinyin(g2pRes.lyric));
                                 g2pRes.error = false;

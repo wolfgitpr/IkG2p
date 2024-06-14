@@ -21,22 +21,22 @@ namespace IKg2p
 
         ~ChineseG2p();
 
-        [[nodiscard]] bool initialized() const;
+        bool initialized() const;
 
         std::vector<G2pRes> hanziToPinyin(const std::string& input, bool tone = true, bool convertNum = true,
-                                          errorType error = errorType::Default);
+                                          errorType error = errorType::Default) const;
 
         std::vector<G2pRes> hanziToPinyin(const std::vector<std::string>& input, bool tone = true,
                                           bool convertNum = true,
-                                          errorType error = errorType::Default);
+                                          errorType error = errorType::Default) const;
 
         static std::vector<std::string> resToStringList(const std::vector<G2pRes>& input);
 
-        [[nodiscard]] u8string tradToSim(const u8string& text) const;
+        u8string tradToSim(const u8string& text) const;
 
-        [[nodiscard]] bool isPolyphonic(const u8string& text) const;
+        bool isPolyphonic(const u8string& text) const;
 
-        [[nodiscard]] u8stringlist getDefaultPinyin(const u8string& text, bool tone = true) const;
+        u8stringlist getDefaultPinyin(const u8string& text, bool tone = true) const;
 
     protected:
         explicit ChineseG2p(ChineseG2pPrivate& d);
@@ -45,7 +45,7 @@ namespace IKg2p
 
     private:
         std::vector<G2pRes> hanziToPinyin(const u8stringlist& input, bool tone = true, bool convertNum = true,
-                                          errorType error = errorType::Default);
+                                          errorType error = errorType::Default) const;
     };
 }
 
