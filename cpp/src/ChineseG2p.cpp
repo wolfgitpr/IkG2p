@@ -180,7 +180,7 @@ namespace IKg2p
             // is polypropylene
             if (!d_ptr->isPolyphonic(current_char))
             {
-                const auto pinyin = d_ptr->getDefaultPinyin(current_char);
+                const auto pinyin = d_ptr->getDefaultPinyin(current_char, tone);
                 G2pRes g2pRes;
                 g2pRes.lyric = current_char.cpp_str();
                 g2pRes.syllable = pinyin.at(0).cpp_str();
@@ -206,7 +206,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhrase.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subRes[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -233,7 +233,7 @@ namespace IKg2p
                                     G2pRes g2pRes;
                                     g2pRes.lyric = subPhrase1.substr(i, 1).cpp_str();
                                     g2pRes.syllable = subRes1[i].cpp_str();
-                                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
+                                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
                                     g2pRes.error = false;
                                     result.push_back(g2pRes);
                                 }
@@ -263,7 +263,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -292,7 +292,7 @@ namespace IKg2p
                                 G2pRes g2pRes;
                                 g2pRes.lyric = subPhraseBack1.substr(i, 1).cpp_str();
                                 g2pRes.syllable = subResBack1[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric));
+                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
                                 g2pRes.error = false;
                                 result.push_back(g2pRes);
                             }
@@ -312,7 +312,7 @@ namespace IKg2p
                 {
                     G2pRes g2pRes;
                     g2pRes.lyric = current_char.cpp_str();
-                    g2pRes.syllable = d_ptr->getDefaultPinyin(current_char).at(0).cpp_str();
+                    g2pRes.syllable = d_ptr->getDefaultPinyin(current_char, tone).at(0).cpp_str();
                     g2pRes.candidates.push_back(g2pRes.syllable);
                     g2pRes.error = false;
                     result.push_back(g2pRes);
@@ -359,22 +359,6 @@ namespace IKg2p
 
     std::vector<std::string> ChineseG2p::getDefaultPinyin(const std::string& text, bool tone) const
     {
-        const u8string simText = d_ptr->tradToSim(text);
-        u8stringlist res;
-
-        if (d_ptr->word_dict.find(simText) != d_ptr->word_dict.end())
-            res = d_ptr->word_dict.find(simText)->second;
-
-        if (!tone)
-        {
-            for (u8string& item : res)
-            {
-                if (isDigit(item.back()))
-                {
-                    item.pop_back();
-                }
-            }
-        }
-        return toStdList(res);
+        return toStdList(d_ptr->getDefaultPinyin(text, tone));
     }
 }

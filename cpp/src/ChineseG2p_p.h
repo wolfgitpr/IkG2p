@@ -39,11 +39,24 @@ namespace IKg2p
             return text;
         }
 
-        inline u8stringlist getDefaultPinyin(const u8string& text) const
+        inline u8stringlist getDefaultPinyin(const u8string& text, bool tone) const
         {
-            if (word_dict.find(text) != word_dict.end())
-                return word_dict.find(text)->second;
-            return {};
+            u8stringlist res = {};
+            const u8string simText = tradToSim(text);
+            if (word_dict.find(simText) != word_dict.end())
+                res = word_dict.find(simText)->second;
+
+            if (!tone)
+            {
+                for (u8string& item : res)
+                {
+                    if (isDigit(item.back()))
+                    {
+                        item.pop_back();
+                    }
+                }
+            }
+            return res;
         }
 
         void zhPosition(const u8stringlist& input, u8stringlist& res, std::vector<int>& positions,
