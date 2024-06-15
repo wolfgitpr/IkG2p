@@ -58,6 +58,11 @@ namespace IKg2p
         return c >= '0' && c <= '9';
     }
 
+    bool isSpace(char32_t c)
+    {
+        return c == ' ';
+    }
+
     bool isSpecialKana(char32_t c)
     {
         static const std::unordered_set<char32_t> specialKana = {
@@ -74,7 +79,7 @@ namespace IKg2p
         {
             for (char c : s)
             {
-                tokens.push_back(std::string(1, c));
+                tokens.emplace_back(1, c);
             }
         }
         else
@@ -123,7 +128,7 @@ namespace IKg2p
                 }
                 res.push_back(input.substr(start, pos - start));
             }
-            else if (isHanzi(currentChar) || isDigit(currentChar))
+            else if (isHanzi(currentChar) || isDigit(currentChar) || !isSpace(currentChar))
             {
                 res.push_back(input.substr(pos, 1));
                 pos++;
@@ -133,11 +138,6 @@ namespace IKg2p
                 const int length = (pos + 1 < input.length() && isSpecialKana(input[pos + 1])) ? 2 : 1;
                 res.push_back(input.substr(pos, length));
                 pos += length;
-            }
-            else if (currentChar != ' ')
-            {
-                res.push_back(input.substr(pos, 1));
-                pos++;
             }
             else
             {

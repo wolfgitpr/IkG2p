@@ -18,7 +18,7 @@ namespace IKg2p
 
     std::vector<std::string> split(const std::string& s, const std::string& delimiter);
 
-    std::string join(const std::vector<std::string> &v, const std::string &delimiter);
+    std::string join(const std::vector<std::string>& v, const std::string& delimiter);
 
     u8stringlist splitString(const u8string& input);
 
@@ -41,6 +41,8 @@ namespace IKg2p
     bool isKana(char32_t c);
 
     bool isDigit(char32_t c);
+
+    bool isSpace(char32_t c);
 
     bool isSpecialKana(char32_t c);
 }
