@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <unordered_map>
+#include <unordered_set>
 
 #include "ChineseG2p_p.h"
 
@@ -42,22 +43,32 @@ namespace IKg2p
         inline u8stringlist getDefaultPinyin(const u8string& text, bool tone) const
         {
             u8stringlist res = {text};
+            u8stringlist candidates;
             const u8string simText = tradToSim(text);
             if (word_dict.find(simText) != word_dict.end())
-                res = word_dict.find(simText)->second;
+                candidates = word_dict.find(simText)->second;
             else
                 return res;
 
-            if (!tone)
+            res.clear();
+
+            std::unordered_set<u8string> seen;
+
+            for (u8string& item : candidates)
             {
-                for (u8string& item : res)
+                if (!tone && isDigit(item.back()))
                 {
-                    if (isDigit(item.back()))
-                    {
-                        item.pop_back();
-                    }
+                    item.pop_back();
+                }
+                if (seen.find(item) == seen.end())
+                {
+                    seen.insert(item);
+                    res.push_back(item);
                 }
             }
+
+            if (res.empty())
+                return {text};
             return res;
         }
 
