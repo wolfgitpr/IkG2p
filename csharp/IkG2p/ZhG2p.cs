@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace IKg2p
@@ -56,11 +53,11 @@ namespace IKg2p
                 dictDir = "dict.cantonese";
             }
 
-            LoadDict(dictDir, "phrases_map.txt", PhrasesMap);
-            LoadDict(dictDir, "phrases_dict.txt", PhrasesDict);
-            LoadDict(dictDir, "user_dict.txt", PhrasesDict);
-            LoadDict(dictDir, "word.txt", WordDict);
-            LoadDict(dictDir, "trans_word.txt", TransDict);
+            IkG2p.Util.LoadDict(dictDir, "phrases_map.txt", PhrasesMap);
+            IkG2p.Util.LoadDict(dictDir, "phrases_dict.txt", PhrasesDict);
+            IkG2p.Util.LoadDict(dictDir, "user_dict.txt", PhrasesDict);
+            IkG2p.Util.LoadDict(dictDir, "word.txt", WordDict);
+            IkG2p.Util.LoadDict(dictDir, "trans_word.txt", TransDict);
         }
 
         public static List<string> ToStrList(List<G2pRes> input)
@@ -71,90 +68,6 @@ namespace IKg2p
                 res.Add(input[i].error ? input[i].lyric : input[i].syllable);
             }
             return res;
-        }
-
-        public static bool LoadDict(string dictDir, string fileName, Dictionary<string, string> resultMap)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            string resourceName = "IkG2p." + dictDir + "." + fileName;
-            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-            {
-                if (stream != null)
-                {
-                    using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-                    {
-                        string content = reader.ReadToEnd();
-                        string[] lines = content.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-
-                        foreach (string line in lines)
-                        {
-                            string trimmedLine = line.Trim();
-                            string[] keyValuePair = trimmedLine.Split(':');
-
-                            if (keyValuePair.Length == 2)
-                            {
-                                string key = keyValuePair[0];
-                                string value = keyValuePair[1];
-                                resultMap[key] = value;
-                            }
-                        }
-
-                        return true;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"Resource {fileName} not found.");
-                    return false;
-                }
-            }
-
-        }
-
-        public static bool LoadDict(string dictDir, string fileName, Dictionary<string, List<string>> resultMap)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            string resourceName = "IkG2p." + dictDir + "." + fileName;
-            using (Stream stream = assembly.GetManifestResourceStream(resourceName))
-            {
-                if (stream != null)
-                {
-                    using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-                    {
-                        string content = reader.ReadToEnd();
-                        string[] lines = content.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-
-                        foreach (string line in lines)
-                        {
-                            string trimmedLine = line.Trim();
-                            string[] keyValuePair = trimmedLine.Split(':');
-
-                            if (keyValuePair.Length == 2)
-                            {
-                                string key = keyValuePair[0];
-                                string value = keyValuePair[1];
-
-                                var vlist = value.Split(' ');
-                                var vRes = new List<string>();
-                                foreach (string v in vlist)
-                                {
-                                    if (!string.IsNullOrEmpty(v))
-                                        vRes.Add(v);
-                                }
-                                resultMap[key] = vRes;
-                            }
-                        }
-
-                        return true;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"Resource {fileName} not found.");
-                    return false;
-                }
-            }
-
         }
 
         private static readonly Dictionary<string, string> NumMap = new Dictionary<string, string>
@@ -173,43 +86,18 @@ namespace IKg2p
 
         public static List<string> SplitString(string input)
         {
-            List<string> res = new List<string>();
-
-            // 正则表达式模式
             string pattern = @"(?![ー゜])([a-zA-Z]+|[+-]|[0-9]|[\u4e00-\u9fa5]|[\u3040-\u309F\u30A0-\u30FF][ャュョゃゅょァィゥェォぁぃぅぇぉ]?)";
-
-            // 使用正则表达式匹配
-            MatchCollection matches = Regex.Matches(input, pattern);
-
-            foreach (Match match in matches)
-            {
-                res.Add(match.Value);
-            }
-
-            return res;
+            return Regex.Matches(input, pattern).Cast<Match>().Select(m => m.Value).ToList();
         }
 
         private static List<G2pRes> ResetZH(List<string> input, List<G2pRes> res, List<int> positions)
         {
-            List<G2pRes> result = new List<G2pRes>();
-
-            for (int i = 0; i < input.Count(); i++)
-            {
-                G2pRes g2pRes = new G2pRes(input[i]);
-                result.Add(g2pRes);
-            }
-
-            for (int i = 0; i < positions.Count(); i++)
+            var result = input.Select(i => new G2pRes(i)).ToList();
+            for (int i = 0; i < positions.Count; i++)
             {
                 result[positions[i]] = res[i];
             }
             return result;
-        }
-
-        private static void AddString(string text, List<string> res)
-        {
-            var temp = text.Split(' ');
-            res.AddRange(temp);
         }
 
         private static void RemoveElements(List<G2pRes> list, int start, int n)
@@ -223,27 +111,22 @@ namespace IKg2p
 
         private void ZhPosition(List<string> input, List<string> res, List<int> positions, bool convertNum)
         {
-            for (int i = 0; i < input.Count; i++)
+            foreach (var (item, index) in input.Select((item, index) => (item, index)))
             {
-                string item = input[i];
                 if (item == null)
                     continue;
 
                 if (WordDict.ContainsKey(item) || TransDict.ContainsKey(item))
                 {
                     res.Add(TradToSim(item));
-                    positions.Add(i);
+                    positions.Add(index);
                 }
 
-                if (!convertNum)
-                    continue;
-
-                if (NumMap.ContainsKey(item))
+                if (convertNum && NumMap.ContainsKey(item))
                 {
-                    res.Add(item);
-                    positions.Add(i);
+                    res.Add(NumMap[item]);
+                    positions.Add(index);
                 }
-
             }
         }
 
@@ -258,7 +141,7 @@ namespace IKg2p
             var inputPos = new List<int>();
             ZhPosition(input, inputList, inputPos, convertNum);
             var result = new List<G2pRes>();
-            var cursor = 0;
+            int cursor = 0;
 
             while (cursor < inputList.Count)
             {
@@ -266,18 +149,19 @@ namespace IKg2p
 
                 if (!IsHanzi(currentChar))
                 {
-                    G2pRes g2pRes = new G2pRes(currentChar);
-                    result.Add(g2pRes);
+                    result.Add(new G2pRes(currentChar));
                     cursor++;
                     continue;
                 }
 
                 if (!IsPolyphonic(currentChar))
                 {
-                    G2pRes g2pRes = new G2pRes(currentChar);
-                    g2pRes.candidates = GetDefaultPinyin(currentChar, tone);
-                    g2pRes.syllable = g2pRes.candidates == null ? "" : g2pRes.candidates[0];
-                    g2pRes.error = false;
+                    var g2pRes = new G2pRes(currentChar)
+                    {
+                        candidates = GetDefaultPinyin(currentChar, tone),
+                        syllable = GetDefaultPinyin(currentChar, tone).FirstOrDefault() ?? "",
+                        error = false
+                    };
                     result.Add(g2pRes);
                     cursor++;
                 }
@@ -290,58 +174,56 @@ namespace IKg2p
                         {
                             // cursor: 地, subPhrase: 地久天长
                             var subPhrase = string.Join("", inputList.GetRange(cursor, length));
-                            if (PhrasesDict.ContainsKey(subPhrase))
+
+                            if (PhrasesDict.TryGetValue(subPhrase, out var subRes))
                             {
-                                List<string> subRes = PhrasesDict[subPhrase];
-                                for (int i = 0; i < subPhrase.Count(); i++)
+                                for (int i = 0; i < subPhrase.Length; i++)
                                 {
-                                    var str = inputList[cursor + i];
-                                    G2pRes g2pRes = new G2pRes(str, subRes[i]);
-                                    g2pRes.candidates = GetDefaultPinyin(str, tone);
-                                    g2pRes.error = false;
-                                    result.Add(g2pRes);
+                                    result.Add(new G2pRes(inputList[cursor + i], subRes[i])
+                                    {
+                                        candidates = GetDefaultPinyin(inputList[cursor + i], tone),
+                                        error = false
+                                    });
                                 }
                                 cursor += length;
                                 found = true;
                             }
+                        }
 
-                            if (cursor >= 1 && !found)
+                        if (cursor >= 1 && cursor + length <= inputList.Count && !found)
+                        {
+                            // cursor: 重, subPhrase_1: 语重心长
+                            var subPhrase = string.Join("", inputList.GetRange(cursor - 1, length));
+                            if (PhrasesDict.TryGetValue(subPhrase, out var subRes))
                             {
-                                // cursor: 重, subPhrase_1: 语重心长
-                                var subPhrase_1 = string.Join("", inputList.GetRange(cursor - 1, length));
-                                if (PhrasesDict.ContainsKey(subPhrase_1))
+                                result.RemoveAt(result.Count - 1);
+                                for (int i = 0; i < subPhrase.Length; i++)
                                 {
-                                    result.RemoveAt(result.Count - 1);
-                                    List<string> subRes = PhrasesDict[subPhrase_1];
-                                    for (int i = 0; i < subPhrase_1.Count(); i++)
+                                    result.Add(new G2pRes(inputList[cursor - 1 + i], subRes[i])
                                     {
-                                        var str = inputList[cursor - 1 + i];
-                                        G2pRes g2pRes = new G2pRes(str, subRes[i]);
-                                        g2pRes.candidates = GetDefaultPinyin(str, tone);
-                                        g2pRes.error = false;
-                                        result.Add(g2pRes);
-                                    }
-                                    cursor += length - 1;
-                                    found = true;
+                                        candidates = GetDefaultPinyin(inputList[cursor - 1 + i], tone),
+                                        error = false
+                                    });
                                 }
+                                cursor += length - 1;
+                                found = true;
                             }
                         }
 
                         if (cursor + 1 - length >= 0 && !found && cursor + 1 <= inputList.Count)
                         {
                             // cursor: 好, xSubPhrase: 各有所好
-                            var xSubPhrase = string.Join("", inputList.GetRange(cursor + 1 - length, length));
-                            if (PhrasesDict.ContainsKey(xSubPhrase))
+                            var subPhrase = string.Join("", inputList.GetRange(cursor + 1 - length, length));
+                            if (PhrasesDict.TryGetValue(subPhrase, out var subRes))
                             {
-                                RemoveElements(result, cursor + 1 - length, length - 1);
-                                List<string> subRes = PhrasesDict[xSubPhrase];
-                                for (int i = 0; i < xSubPhrase.Count(); i++)
+                                result.RemoveRange(result.Count - (length - 1), length - 1);
+                                for (int i = 0; i < subPhrase.Length; i++)
                                 {
-                                    var str = inputList[cursor + 1 - length + i];
-                                    G2pRes g2pRes = new G2pRes(str, subRes[i]);
-                                    g2pRes.candidates = GetDefaultPinyin(str, tone);
-                                    g2pRes.error = false;
-                                    result.Add(g2pRes);
+                                    result.Add(new G2pRes(inputList[cursor + 1 - length + i], subRes[i])
+                                    {
+                                        candidates = GetDefaultPinyin(inputList[cursor + 1 - length + i], tone),
+                                        error = false
+                                    });
                                 }
                                 cursor += 1;
                                 found = true;
@@ -351,18 +233,17 @@ namespace IKg2p
                         if (cursor + 2 - length >= 0 && cursor + 2 <= inputList.Count && !found)
                         {
                             // cursor: 好, xSubPhrase: 叶公好龙
-                            var xSubPhrase_1 = string.Join("", inputList.GetRange(cursor + 2 - length, length));
-                            if (PhrasesDict.ContainsKey(xSubPhrase_1))
+                            var subPhrase = string.Join("", inputList.GetRange(cursor + 2 - length, length));
+                            if (PhrasesDict.TryGetValue(subPhrase, out var subRes))
                             {
-                                RemoveElements(result, cursor + 2 - length, length - 2);
-                                List<string> subRes = PhrasesDict[xSubPhrase_1];
-                                for (int i = 0; i < xSubPhrase_1.Count(); i++)
+                                result.RemoveRange(result.Count - (length - 2), length - 2);
+                                for (int i = 0; i < subPhrase.Length; i++)
                                 {
-                                    var str = inputList[cursor + 2 - length + i];
-                                    G2pRes g2pRes = new G2pRes(str, subRes[i]);
-                                    g2pRes.candidates = GetDefaultPinyin(str, tone);
-                                    g2pRes.error = false;
-                                    result.Add(g2pRes);
+                                    result.Add(new G2pRes(inputList[cursor + 2 - length + i], subRes[i])
+                                    {
+                                        candidates = GetDefaultPinyin(inputList[cursor + 2 - length + i], tone),
+                                        error = false
+                                    });
                                 }
                                 cursor += 2;
                                 found = true;
@@ -372,10 +253,12 @@ namespace IKg2p
 
                     if (!found)
                     {
-                        G2pRes g2pRes = new G2pRes(currentChar);
-                        g2pRes.candidates = GetDefaultPinyin(currentChar, tone);
-                        g2pRes.syllable = g2pRes.candidates == null ? "" : g2pRes.candidates[0];
-                        g2pRes.error = false;
+                        var g2pRes = new G2pRes(currentChar)
+                        {
+                            candidates = GetDefaultPinyin(currentChar, tone),
+                            syllable = GetDefaultPinyin(currentChar, tone).FirstOrDefault() ?? "",
+                            error = false
+                        };
                         result.Add(g2pRes);
                         cursor++;
                     }
@@ -386,9 +269,9 @@ namespace IKg2p
             {
                 for (var i = 0; i < result.Count; i++)
                 {
-                    if ('0' <= result[i].syllable.Last() && result[i].syllable.Last() <= '9')
+                    G2pRes g2pRes = result[i];
+                    if (char.IsDigit(g2pRes.syllable.Last()))
                     {
-                        G2pRes g2pRes = result[i];
                         g2pRes.syllable = g2pRes.syllable.Remove(g2pRes.syllable.Length - 1);
                         result[i] = g2pRes;
                     }
@@ -417,7 +300,7 @@ namespace IKg2p
             var res = WordDict.ContainsKey(text) ? WordDict[text] : new List<string> { text };
             for (var i = 0; i < res.Count; i++)
             {
-                if ('0' <= res[i].Last() && res[i].Last() <= '9')
+                if (char.IsDigit(res[i].Last()))
                     res[i] = res[i].Remove(res[i].Length - 1);
             }
             return res;
