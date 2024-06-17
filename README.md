@@ -16,6 +16,27 @@ IkG2p is a lightweight Chinese/Cantonese to Pinyin library.
 
 ## Usage
 
+c#
+
+Using NuGet to search for IKg2p for installation.
+
+```c#
+public struct G2pRes
+{
+    public string lyric;
+    public string syllable;
+    public List<string> candidates;
+    public bool error;   
+}
+
+public List<G2pRes> Convert(List<string> input, bool tone = false, bool convertNum = false)
+
+List<G2pRes> pinyin = ZhG2p.MandarinInstance.Convert(lyric, false, true)
+List<G2pRes> jyutping = ZhG2p.CantoneseInstance.Convert(lyric, false, true)
+```
+
+c++
+
 ```c++
 #include <filesystem>
 

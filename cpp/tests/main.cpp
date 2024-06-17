@@ -3,7 +3,6 @@
 #include "G2pglobal.h"
 #include "MandarinG2p.h"
 #include <iostream>
-#include <sstream>
 
 #include "JyuptingTest.h"
 #include "ManTest.h"
