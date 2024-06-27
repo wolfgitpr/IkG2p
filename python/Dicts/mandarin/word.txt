@@ -515,7 +515,7 @@
 莫:mo4 mo5
 箩:luo2
 筐:kuang1
-系:ji4 xi4 xi5
+系:xi4 xi5 ji4
 列:lie4 lie1
 纸:zhi3
 级:ji2
@@ -2202,7 +2202,7 @@
 亻:ren2
 亼:ji2
 亽:xx5
-什:shi2 shen2 shi5
+什:shen2 shi2 shi5
 献:xian4
 邡:fang1
 兄:xiong1 xiong5

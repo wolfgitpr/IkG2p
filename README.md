@@ -4,6 +4,8 @@
 
 IkG2p is a lightweight Chinese/Cantonese to Pinyin library.
 
+Chinese dialects can be used to create their own dictionaries using makedict.
+
 ## Feature
 
 + Only Unicode within the range of  [ 0x4E00 - 0x9FFF ]  is supported.
@@ -115,6 +117,9 @@ std::vector<std::string> getDefaultPinyin(const std::string& text, bool tone = t
 
 + [cc-edict](https://cc-cedict.org/wiki/) 
   The dictionary source.
+
++ [pinyin](https://github.com/kfcd/pinyin)
+  The fan-jian dictionary source.
 
 ## Contributors
 

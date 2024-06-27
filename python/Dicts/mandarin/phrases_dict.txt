@@ -33,7 +33,6 @@
 三地门:san1 di4 men2
 三地门乡:san1 di4 men2 xiang1
 三相点:san1 xiang4 dian3
-三角关系:san1 jiao3 guan1 xi4
 三部曲:san1 bu4 qu3
 三都县:san1 du1 xian4
 三点全露:san1 dian3 quan2 lou4
@@ -70,13 +69,10 @@
 不适当:bu4 shi4 dang4
 不长眼睛:bu4 zhang3 yan3 jing5
 丢三落四:diu1 san1 la4 si4
-并系群:bing4 xi4 qun2
-中俄关系:zhong1 e2 guan1 xi4
 中圈套:zhong4 quan1 tao4
 中子弹:zhong1 zi3 dan4
 中山狼传:zhong1 shan1 lang2 zhuan4
 中微子:zhong1 wei1 zi3
-中日关系:zhong1 ri4 guan1 xi4
 中乐透:zhong4 le4 tou4
 中箭落马:zhong4 jian4 luo4 ma3
 中规中矩:zhong4 gui1 zhong4 ju3
@@ -112,10 +108,9 @@
 人杰地灵:ren2 jie2 di4 ling2
 人模狗样:ren2 mu2 gou3 yang4
 人给家足:ren2 ji3 jia1 zu2
-人际关系:ren2 ji4 guan1 xi4
+什一奉献:shi2 yi1 feng4 xian4
 什刹海:shi2 cha4 hai3
 今儿个:jin1 er5 ge5
-介系词:jie4 xi4 ci2
 仡佬族:ge1 lao3 zu2
 令人发指:ling4 ren2 fa4 zhi3
 以太坊:yi3 tai4 fang2
@@ -169,6 +164,8 @@
 先王之乐:xian1 wang2 zhi1 yue4
 光背地鸫:guang1 bei4 di4 dong1
 光电子:guang1 dian4 zi3
+克什克腾:ke4 shi2 ke4 teng2
+克什米尔:ke4 shi2 mi3 er3
 克仑特罗:ke4 lun2 te4 luo1
 克罗地亚:ke4 luo2 di4 ya4
 免不得:mian3 bu5 de5
@@ -177,14 +174,12 @@
 儿茶素:er2 cha2 su4
 内比都:nei4 bi3 du1
 全地形车:quan2 di4 xing2 che1
-两国关系:liang3 guo2 guan1 xi4
 两岸三地:liang3 an4 san1 di4
 两弹一星:liang3 dan4 yi1 xing1
 两着儿:liang3 zhao1 er5
 八爪鱼:ba1 zhua3 yu2
 八相成道:ba1 xiang4 cheng2 dao4
 八行书:ba1 hang2 shu1
-公共关系:gong1 gong4 guan1 xi4
 公羊传:gong1 yang2 zhuan4
 六合区:lu4 he2 qu1
 六枝特区:lu4 zhi1 te4 qu1
@@ -193,7 +188,6 @@
 冰天雪地:bing1 tian1 xue3 di4
 冷不丁:leng3 bu5 ding1
 冷不防:leng3 bu5 fang2
-冷淡关系:leng3 dan4 guan1 xi4
 冷笑话:leng3 xiao4 hua5
 凡夫俗子:fan2 fu1 su2 zi3
 凹朴皮:ao1 po4 pi2
@@ -220,6 +214,7 @@
 划得来:hua2 de5 lai2
 列别杰夫:lie4 bie4 jie2 fu1
 列车长:lie4 che1 zhang3
+利什曼病:li4 shi2 man4 bing4
 利息率:li4 xi5 lv4
 制服呢:zhi4 fu2 ni2
 剃发令:ti4 fa4 ling4
@@ -249,15 +244,12 @@
 勒脖子:lei1 bo2 zi5
 动不动:dong4 bu5 dong4
 动弹不得:dong4 tan5 bu5 de2
+劳什子:lao2 shi2 zi5
 劳劳叨叨:lao2 lao5 dao1 dao1
-劳资关系:lao2 zi1 guan1 xi4
-劳雇关系:lao2 gu4 guan1 xi4
 势利小人:shi4 li5 xiao3 ren2
 包皮环切:bao1 pi2 huan2 qie1
-化学系:hua4 xue2 xi4
 化学航弹:hua4 xue2 hang2 dan4
 北朝鲜:bei3 chao2 xian3
-北洋系:bei3 yang2 xi4
 汇出行:hui4 chu1 hang2
 十四行诗:shi2 si4 hang2 shi1
 千乘之国:qian1 sheng4 zhi1 guo2
@@ -277,25 +269,23 @@
 卡地亚:ka3 di4 ya4
 卡拉奇那:ka3 la1 ji1 na4
 卡拉季奇:ka3 la1 ji4 ji1
+卡文迪什:ka3 wen2 di2 shi2
 卡尔扎伊:ka3 er3 za1 yi1
 卡脖子:qia3 bo2 zi5
+印古什:yin4 gu3 shi2
 印地安:yin4 di4 an1
 印地安纳:yin4 di4 an1 na4
 印地语:yin4 di4 yu3
 危地马拉:wei1 di4 ma3 la1
 即时即地:ji2 shi2 ji2 di4
 卸磨杀驴:xie4 mo4 sha1 lv2
-厄什塔:e4 shen2 ta3
 厚生相:hou4 sheng1 xiang4
 原则上:yuan2 ze2 shang5
 原子弹:yuan2 zi3 dan4
 原产地:yuan2 chan3 di4
 去皮重:qu4 pi2 zhong4
-参照系:can1 zhao4 xi4
-参考系:can1 kao3 xi4
 参谋长:can1 mou2 zhang3
 参鸡汤:shen1 ji1 tang1
-友好关系:you3 hao3 guan1 xi4
 反动分子:fan3 dong4 fen4 zi3
 反叛分子:fan3 pan4 fen4 zi3
 反导弹:fan3 dao3 dan4
@@ -411,7 +401,6 @@
 回旋曲:hui2 xuan2 qu3
 因地制宜:yin1 di4 zhi4 yi2
 国子监:guo2 zi3 jian4
-国际关系:guo2 ji4 guan1 xi4
 圆舞曲:yuan2 wu3 qu3
 图穷匕见:tu2 qiong2 bi3 xian4
 团团转:tuan2 tuan2 zhuan4
@@ -458,6 +447,7 @@
 堂姐夫:tang2 jie3 fu5
 堆案盈几:dui1 an4 ying2 ji1
 堰塞湖:yan4 se4 hu2
+塔什干:ta3 shi2 gan1
 涂浆台:tu2 jiang4 tai2
 塞内加尔:sai4 nei4 jia1 er3
 塞哥维亚:se4 ge1 wei2 ya4
@@ -481,13 +471,12 @@
 坏分子:huai4 fen4 zi3
 寿数已尽:shou4 shu4 yi3 jin3
 夕发朝至:xi1 fa1 zhao1 zhi4
-外交关系:wai4 jiao1 guan1 xi4
 外场人:wai4 chang2 ren2
-外文系:wai4 wen2 xi4
 多子多福:duo1 zi3 duo1 fu2
 多得是:duo1 de5 shi4
 多灾多难:duo1 zai1 duo1 nan4
 多粒子:duo1 li4 zi3
+多菲什:duo1 fei1 shi2
 多那太罗:duo1 na3 tai4 luo2
 多钱善贾:duo1 qian2 shan4 gu3
 多难兴邦:duo1 nan4 xing1 bang1
@@ -532,7 +521,6 @@
 天雨路滑:tian1 yu4 lu4 hua2
 太仆寺旗:tai4 pu1 si4 qi2
 太行山:tai4 hang2 shan1
-太阳系:tai4 yang2 xi4
 太阳黑子:tai4 yang2 hei1 zi3
 夫妻相:fu1 qi1 xiang4
 失身分:shi1 shen1 fen4
@@ -549,7 +537,6 @@
 奥塞梯:ao4 se4 ti1
 奥米伽:ao4 mi3 ga1
 奥西娜斯:ao4 xi1 nuo2 si1
-奥陶系:ao4 tao2 xi4
 女体盛:nv3 ti3 cheng2
 奴儿干:nu2 er2 gan1
 好不好:hao3 bu5 hao3
@@ -637,7 +624,6 @@
 对不住:dui4 bu5 zhu4
 对不起:dui4 bu5 qi3
 对口相声:dui4 kou3 xiang4 sheng1
-对外关系:dui4 wai4 guan1 xi4
 对得起:dui4 de5 qi3
 对着干:dui4 zhe5 gan4
 小不点:xiao3 bu5 dian3
@@ -712,7 +698,6 @@
 几内亚:ji1 nei4 ya4
 几可乱真:ji1 ke3 luan4 zhen1
 几维鸟:ji1 wei2 niao3
-坐标系:zuo4 biao1 xi4
 康巴藏区:kang1 ba1 zang4 qu1
 厨师长:chu2 shi1 zhang3
 弄不懂:nong4 bu5 dong3
@@ -757,7 +742,6 @@
 必有重谢:bi4 you3 zhong4 xie4
 忍不住:ren3 bu5 zhu4
 忍得住:ren3 de5 zhu4
-志留系:zhi4 liu2 xi4
 忙忙叨叨:mang2 mang5 dao1 dao1
 念想儿:nian4 xiang5 er5
 怎么着:zen3 me5 zhao1
@@ -767,7 +751,6 @@
 怨不得:yuan4 bu5 de5
 怪不得:guai4 bu5 de5
 怪模怪样:guai4 mu2 guai4 yang4
-恒星系:heng2 xing1 xi4
 恐怖分子:kong3 bu4 fen4 zi3
 恨不得:hen4 bu5 de5
 恨不能:hen4 bu5 neng2
@@ -792,7 +775,6 @@
 感天动地:gan3 tian1 dong4 di4
 愧悔无地:kui4 hui3 wu2 di4
 慢慢吞吞:man4 man5 tun1 tun1
-惯性系:guan4 xing4 xi4
 慷慨输将:kang1 kai3 shu1 jiang1
 憋不住:bie1 bu5 zhu4
 应仁之乱:ying1 ren2 zhi1 luan4
@@ -857,7 +839,6 @@
 拉个手:la1 ge5 shou3
 拉勾儿:la1 gou4 er5
 拉拉蛄:la4 la4 gu3
-拉关系:la1 guan1 xi4
 拐弯抹角:guai3 wan1 mo4 jiao3
 拖儿带女:tuo1 er2 dai4 nv3
 拗不过:niu4 bu5 guo4
@@ -901,6 +882,7 @@
 摸不着:mo1 bu5 zhao2
 摸不着边:mo1 bu5 zhao2 bian1
 摸得着:mo1 de5 zhao2
+捞什子:lao1 shi2 zi5
 撒切尔:sa1 qie1 er3
 撒呓挣:sa1 yi4 zheng5
 撒狗粮:sa3 gou3 liang2
@@ -923,7 +905,6 @@
 放得下:fang4 de5 xia4
 放烟幕弹:fang4 yan1 mu4 dan4
 政教处:zheng4 jiao4 chu3
-政治关系:zheng4 zhi4 guan1 xi4
 败家子:bai4 jia1 zi3
 教务长:jiao4 wu4 zhang3
 教学相长:jiao4 xue2 xiang1 zhang3
@@ -978,10 +959,10 @@
 晃晃悠悠:huang4 huang5 you1 you1
 晚半天儿:wan3 ban5 tian1 er5
 晨昏定省:chen2 hun1 ding4 xing3
+普什图语:pu3 shi2 tu2 yu3
 景宁畲乡:jing3 ning2 she1 xiang1
 暗地里:an4 di4 li5
 暴虎冯河:bao4 hu3 ping2 he2
-暧昧关系:ai4 mei4 guan1 xi4
 曲柄钻:qu1 bing3 zuan4
 曲终奏雅:qu3 zhong1 zou4 ya3
 曲线锯:qu1 xian4 ju5
@@ -1061,7 +1042,6 @@
 核电荷数:he2 dian4 he4 shu4
 根据地:gen1 ju4 di4
 格子呢:ge2 zi5 ni2
-桂系军阀:gui4 xi4 jun1 fa2
 桑给巴尔:sang1 ji3 ba1 er3
 棋高一着:qi2 gao1 yi1 zhao1
 棕顶树莺:zong4 ding3 shu4 ying1
@@ -1069,7 +1049,6 @@
 栖息地:qi1 xi1 di4
 杨振宁:yang2 zhen4 ning4
 极右分子:ji2 you4 fen4 zi3
-极坐标系:ji2 zuo4 biao1 xi4
 极端分子:ji2 duan1 fen4 zi3
 榜葛剌:bang3 ge2 la4
 榴霰弹:liu2 xian4 dan4
@@ -1113,6 +1092,7 @@
 毒剂弹:du2 ji4 dan4
 毒气弹:du2 qi4 dan4
 比一比:bi3 yi5 bi3
+比什凯克:bi3 shi2 kai3 ke4
 比杆赛:bi3 gan1 sai4
 毛茸茸:mao2 rong1 rong1
 毫不介意:hao2 bu5 jie4 yi4
@@ -1145,12 +1125,11 @@
 河曲县:he2 qu3 xian4
 河西堡:he2 xi1 pu4
 河西堡镇:he2 xi1 pu3 zhen4
-治愈系:zhi4 yu4 xi4
 沼泽地:zhao3 ze2 di4
+法尔卡什:fa3 er3 ka3 shi2
 法相宗:fa3 xiang4 zong1
 法轮常转:fa3 lun2 chang2 zhuan4
 法隆寺:fa3 long1 si4
-波什格伦:bo1 shen2 ge2 lun2
 波带片:bo1 dai4 pian1
 波浪鼓:bo1 lang5 gu3
 波罗的:bo1 luo2 di4
@@ -1193,7 +1172,6 @@
 满地可:man3 di4 ke3
 满地找牙:man3 di4 zhao3 ya2
 漏脯充饥:lou4 fu3 chong1 ji1
-汉学系:han4 xue2 xi4
 汉藏语系:han4 zang4 yu3 xi4
 洁身自好:jie2 shen1 zi4 hao4
 润发液:run4 fa4 ye4
@@ -1251,8 +1229,8 @@
 爵士乐:jue2 shi4 yue4
 父慈子孝:fu4 ci2 zi3 xiao4
 牛肝菌:niu2 gan1 jun4
+牢什子:lao2 shi2 zi5
 牢靠妥当:lao2 kao4 tuo3 dang4
-特殊关系:te4 shu1 guan1 xi4
 犬夜叉:quan3 ye4 cha4
 犯不上:fan4 bu5 shang4
 犯不着:fan4 bu5 zhao2
@@ -1294,9 +1272,7 @@
 瓶塞钻:ping2 sai1 zuan4
 甜得发腻:tian2 de5 fa1 ni4
 生儿育女:sheng1 er2 yu4 nv3
-生态系:sheng1 tai4 xi4
 生理假:sheng1 li3 jia4
-生产关系:sheng1 chan3 guan1 xi4
 生发剂:sheng1 fa4 ji4
 用不了:yong4 bu5 liao3
 用不着:yong4 bu5 zhao2
@@ -1306,7 +1282,6 @@
 用武之地:yong4 wu3 zhi1 di4
 由不得:you2 bu5 de5
 男人家:nan2 ren2 jia5
-男女关系:nan2 nv3 guan1 xi4
 畜产品:xu4 chan3 pin3
 毕宿五:bi4 xiu4 wu3
 画地为牢:hua4 di4 wei2 lao2
@@ -1353,14 +1328,11 @@
 百里挑一:bai3 li3 tiao1 yi1
 的士高:di2 shi4 gao1
 的黎波里:di4 li2 bo1 li3
-皖系战败:wan3 xi4 zhan4 bai4
-皖系军阀:wan3 xi4 jun1 fa2
 皮诺切特:pi2 nuo4 qie1 te4
 卢塞恩:lu2 sai4 en1
 目下十行:mu4 xia4 shi2 hang2
 目的地:mu4 di4 di4
 直系血亲:zhi2 xi4 xue4 qing4
-相互关系:xiang1 hu4 guan1 xi4
 相夫教子:xiang4 fu1 jiao4 zi3
 相对象:xiang4 dui4 xiang4
 相差不多:xiang1 cha4 bu5 duo1
@@ -1409,7 +1381,6 @@
 石榴子:shi2 liu5 zi3
 石河子:shi2 he2 zi3
 石河子市:shi2 he2 zi3 shi4
-石炭系:shi2 tan4 xi4
 破甲弹:po4 jia3 dan4
 破体字:po4 ti3 zi5
 磁单极子:ci2 dan1 ji2 zi3
@@ -1418,7 +1389,6 @@
 磨工病:mo4 gong1 bing4
 磨得开:mo2 de5 kai1
 磨豆腐:mo4 dou4 fu5
-社会关系:she4 hui4 guan1 xi4
 神出鬼没:shen2 chu1 gui3 mo4
 神差鬼使:shen2 chai1 gui3 shi3
 神神叨叨:shen2 shen5 dao1 dao1
@@ -1457,7 +1427,6 @@
 第三地:di4 san1 di4
 第二个人:di4 er4 ge5 ren2
 第比利斯:di4 bi4 li4 si1
-等价关系:deng3 jia4 guan1 xi4
 等离子体:deng3 li2 zi3 ti3
 筒子米糕:tong3 zi3 mi3 gao1
 策源地:ce4 yuan2 di4
@@ -1477,8 +1446,6 @@
 糊糊涂涂:hu2 hu5 tu2 tu5
 糊里糊涂:hu2 li5 hu2 tu2
 粪金龟子:fen4 jin1 gui1 zi3
-系主任:xi4 zhu3 ren4
-系出名门:xi4 chu1 ming2 men2
 纪传体:ji4 zhuan4 ti3
 约维克:yao1 wei2 ke4
 红寡妇鸟:hong2 gua3 fu5 niao3
@@ -1544,6 +1511,7 @@
 老地方:lao3 di4 fang1
 老太太:lao3 tai4 tai5
 老玉米:lao3 yu4 mi5
+考波什堡:kao3 bo1 shi2 bao3
 考试卷:kao3 shi4 juan4
 耙耳朵:pa1 er3 duo5
 圣经贤传:sheng4 jing1 xian2 zhuan4
@@ -1614,7 +1582,6 @@
 苦不唧儿:ku3 bu5 ji1 er5
 苦差事:ku3 chai1 shi5
 英语教学:ying1 yu3 jiao1 xue2
-英语系:ying1 yu3 xi4
 茅塞顿开:mao2 se4 dun4 kai1
 茉莉花:mo4 li5 hua1
 茉莉花茶:mo4 li5 hua1 cha2
@@ -1684,7 +1651,6 @@
 螺丝钻:luo2 si1 zuan4
 血液透析:xue4 ye4 tou4 xi5
 血淋淋:xie3 lin2 lin2
-血缘关系:xue4 yuan2 guan1 xi4
 行不通:xing2 bu5 tong1
 行得通:xing2 de5 tong1
 街坊四邻:jie1 fang5 si4 lin2
@@ -1702,7 +1668,6 @@
 里海地鸦:li3 hai3 di4 ya1
 裸子植物:luo3 zi3 zhi2 wu4
 褪套儿:tun4 tao4 er5
-褶皱山系:zhe3 zhou4 shan1 xi4
 西地那非:xi1 di4 na4 fei1
 西塞山:xi1 sai4 shan1
 西塞山区:xi1 sai4 shan1 qu1
@@ -1717,11 +1682,9 @@
 见不得:jian4 bu5 de2
 见不得人:jian4 bu5 de2 ren2
 视微知着:shi4 wei1 zhi1 zhuo2
-亲缘关系:qin1 yuan2 guan1 xi4
 观星台:guan4 xing1 tai2
 角宿一:jiao3 xiu4 yi1
 解痉剂:xie4 jing4 ji4
-解铃系铃:jie3 ling2 xi4 ling2
 触地得分:chu4 di4 de2 fen1
 触技曲:chu4 ji4 qu3
 记不住:ji4 bu5 zhu4
@@ -1822,14 +1785,12 @@
 连中三元:lian2 zhong4 san1 yuan2
 连哄带骗:lian2 hong3 dai4 pian4
 连轴转:lian2 zhou2 zhuan4
-周期系:zhou1 qi1 xi4
 进行曲:jin4 xing2 qu3
 游手好闲:you2 shou3 hao4 xian2
 过不下:guo4 bu5 xia4
 过不去:guo4 bu5 qu4
 过肩摔:guo4 jian1 shuai3
 达姆弹:da2 mu3 dan4
-递推关系:di4 tui1 guan1 xi4
 遗妻弃子:yi2 qi1 qi4 zi3
 遗腹子:yi2 fu4 zi3
 避重就轻:bi4 zhong4 jiu4 qing1
@@ -1855,7 +1816,6 @@
 酸不溜丢:suan1 bu5 liu1 diu1
 酸不溜秋:suan1 bu5 liu1 qiu1
 酸儿辣女:suan1 er2 la4 nv3
-医学系:yi1 xue2 xi4
 里长伯:li3 zhang3 bo2
 重中之重:zhong4 zhong1 zhi1 zhong4
 重元素:zhong4 yuan2 su4
@@ -1891,13 +1851,10 @@
 钓鱼杆:diao4 yu2 gan1
 铆起来:mao3 qi3 lai5
 银晃晃:yin2 huang3 huang3
-银河系:yin2 he2 xi4
 铜臭味:tong2 xiu4 wei4
 铺天盖地:pu1 tian1 gai4 di4
 铺盖卷儿:pu1 gai4 juan3 er5
-锕系元素:a1 xi4 yuan2 su4
 镇得住:zhen4 de5 zhu4
-镧系元素:lan2 xi4 yuan2 su4
 长嘴地鸫:chang2 zui3 di4 dong1
 长子县:chang2 zi3 xian4
 长尾地鸫:chang2 wei3 di4 dong1
@@ -1915,14 +1872,14 @@
 间不容发:jian1 bu4 rong2 fa4
 闵行区:min3 hang2 qu1
 阙特勤:que1 te4 qin2
-关系到:guan1 xi4 dao4
-关系式:guan1 xi4 shi4
 防毒斗篷:fang2 du2 dou3 peng2
 阻差办公:zu3 chai1 ban4 gong1
-阿什拉维:a1 shen2 la1 wei2
 阿克塞县:a1 ke4 sai4 xian4
 阿其所好:e1 qi2 suo3 hao4
 阿卡提:a1 ka3 di1
+阿图什:a1 tu2 shi2
+阿图什市:a1 tu2 shi2 shi4
+阿图什县:a1 tu2 shi2 xian4
 阿塞拜疆:a1 sai4 bai4 jiang1
 阿弥陀佛:e1 mi2 tuo2 fo2
 阿房宫:e1 pang2 gong1
@@ -1947,6 +1904,7 @@
 雀儿喜:que4 er2 xi3
 雀儿山:que4 er2 shan1
 雀盲眼:qiao3 mang5 yan3
+雅诺什:ya3 nuo4 shi2
 集散地:ji2 san4 di4
 双栖双宿:shuang1 qi1 shuang1 su1
 杂和面:za2 huo5 mian4
@@ -1961,7 +1919,6 @@
 雪地靴:xue3 di4 xue1
 雪里蕻:xue3 li3 hong2
 雷扎耶湖:lei2 zha2 ye1 hu2
-电子学系:dian4 zi3 xue2 xi4
 震天价响:zhen4 tian1 ga5 xiang3
 震天动地:zhen4 tian1 dong4 di4
 震撼弹:zhen4 han4 dan4
@@ -2008,7 +1965,6 @@
 惊天动地:jing1 tian1 dong4 di4
 骨碌碌:gu1 lu4 lu4
 脏乱差:zang1 luan4 cha4
-体育系:ti3 yu4 xi4
 高分子:gao1 fen1 zi3
 高勾丽:gao1 gou1 li2
 高句丽:gao1 gou1 li2
@@ -2023,6 +1979,7 @@
 鲁子敬:lu3 zi3 jing4
 鲜为人知:xian3 wei2 ren2 zhi1
 鲗鱼涌:zei2 yu2 chong1
+鸠摩罗什:jiu1 mo2 luo2 shi2
 鸳鸯蝴蝶:yuan1 yang5 hu2 die2
 鸳鸯锅:yuan1 yang5 guo1
 鸭仔蛋:ya1 zi3 dan4
@@ -2094,7 +2051,6 @@
 世子:shi4 zi3
 世故:shi4 gu5
 世相:shi4 xiang4
-世系:shi4 xi4
 世行:shi4 hang2
 丙子:bing3 zi3
 丞相:cheng2 xiang4
@@ -2169,7 +2125,11 @@
 人子:ren2 zi3
 人家:ren2 jia5
 人相:ren2 xiang4
-什么:shen2 me5
+什器:shi2 qi4
+什菜:shi2 cai4
+什叶:shi2 ye4
+什邡:shi2 fang1
+什锦:shi2 jin3
 仁义:ren2 yi5
 仆街:pu1 jie1
 今朝:jin1 zhao1
@@ -2212,7 +2172,6 @@
 住地:zhu4 di4
 何为:he2 wei4
 佛爷:fo2 ye5
-佛系:fo2 xi4
 作坊:zuo1 fang5
 作料:zuo4 liao5
 作曲:zuo4 qu3
@@ -2244,7 +2203,6 @@
 便溺:bian4 niao4
 便血:bian4 xie3
 便难:bian4 nan4
-系数:xi4 shu4
 俏皮:qiao4 pi5
 俐落:li4 luo5
 保重:bao3 zhong4
@@ -2722,7 +2680,6 @@
 哀乐:ai1 yue4
 哀号:ai1 hao2
 品相:pin3 xiang4
-品系:pin3 xi4
 哄劝:hong3 quan4
 哄瞒:hong3 man2
 哄诱:hong3 you4
@@ -2753,6 +2710,7 @@
 哑巴:ya3 ba5
 啦呱:la1 gua5
 啫哩:zhe3 li2
+喀什:ka1 shi2
 喇舌:la3 ji1
 喇赛:la1 sai4
 唤头:huan4 tou5
@@ -2975,7 +2933,6 @@
 基地:ji1 di4
 尧都:yao2 du1
 报丧:bao4 sang1
-报系:bao4 xi4
 报载:bao4 zai3
 报酬:bao4 chou5
 场地:chang3 di4
@@ -3040,7 +2997,6 @@
 大方:da4 fang5
 大爷:da4 ye5
 大王:dai4 wang5
-大系:da4 xi4
 大都:da4 du1
 大难:da4 nan4
 天分:tian1 fen4
@@ -3067,7 +3023,6 @@
 奇数:ji1 shu4
 奇羡:ji1 xian4
 奉承:feng4 cheng5
-奉系:feng4 xi4
 奉还:feng4 huan2
 奏乐:zou4 yue4
 契子:qi4 zi3
@@ -3082,6 +3037,7 @@
 套色:tao4 shai3
 奠都:dian4 du1
 奢靡:she1 mi2
+奥什:ao4 shi2
 夺冠:duo2 guan4
 女人:nv3 ren5
 女儿:nv3 er2
@@ -3151,7 +3107,6 @@
 嫌恶:xian2 wu4
 嫏嬛:lang2 huan2
 嫡子:di2 zi3
-嫡系:di2 xi4
 娇儿:jiao1 er2
 娇嫩:jiao1 nen5
 嬷嬷:mo2 mo5
@@ -3370,6 +3325,7 @@
 巷弄:xiang4 long4
 市担:shi4 dan4
 市长:shi4 zhang3
+布什:bu4 shi2
 布斐:bu3 fei3
 希罕:xi1 han5
 帑藏:tang3 zang4
@@ -3382,7 +3338,6 @@
 帐棚:zhang4 peng5
 帐篷:zhang4 peng5
 带去:dai4 qu5
-干系:gan1 xi4
 干与:gan1 yu4
 平地:ping2 di4
 年份:nian2 fen5
@@ -3843,7 +3798,6 @@
 搅混:jiao3 hun5
 支吾:zhi1 wu5
 支差:zhi1 chai1
-支系:zhi1 xi4
 支行:zhi1 hang2
 收假:shou1 jia4
 收地:shou1 di4
@@ -3928,14 +3882,12 @@
 方丈:fang1 zhang5
 于都:yu2 du1
 施舍:shi1 she3
-旁系:pang2 xi4
 旄车:mao2 che1
 旋子:xuan4 zi5
 旋风:xuan4 feng1
 族长:zu2 zhang3
 旗杆:qi2 gan1
 日没:ri4 mo4
-日系:ri4 xi4
 旦角:dan4 jue2
 早上:zao3 shang5
 昌都:chang1 du1
@@ -3949,7 +3901,6 @@
 星斗:xing1 dou3
 星星:xing1 xing5
 星相:xing1 xiang4
-星系:xing1 xi4
 春假:chun1 jia4
 春兴:chun1 xing4
 昧没:mei4 mo4
@@ -3961,7 +3912,6 @@
 晌午:shang3 wu5
 晏子:yan4 zi3
 晚上:wan3 shang5
-晶系:jing1 xi4
 暄腾:xuan1 teng5
 晕乎:yun1 hu5
 晕倒:yun1 dao3
@@ -4098,7 +4048,6 @@
 核子:he2 zi3
 核弹:he2 dan4
 核桃:he2 tao5
-根系:gen1 xi4
 格栅:ge2 shan1
 格格:ge2 ge5
 栽种:zai1 zhong4
@@ -4114,7 +4063,6 @@
 梗塞:geng3 se4
 条几:tiao2 ji1
 梯己:ti1 ji5
-械系:xie4 xi4
 梵刹:fan4 cha4
 梵呗:fan4 bai4
 梵高:fan2 gao1
@@ -4236,7 +4184,6 @@
 母丧:mu3 sang1
 母子:mu3 zi3
 母弹:mu3 dan4
-母系:mu3 xi4
 毒参:du2 shen1
 毒爪:du2 zhua3
 比划:bi3 hua5
@@ -4258,7 +4205,6 @@
 氢弹:qing1 dan4
 水分:shui3 fen4
 水相:shui3 xiang4
-水系:shui3 xi4
 求子:qiu2 zi3
 汗国:han2 guo2
 江都:jiang1 du1
@@ -4298,7 +4244,6 @@
 活泛:huo2 fan5
 活泼:huo2 po5
 活路:huo2 lu5
-派系:pai4 xi4
 流弹:liu2 dan4
 流眄:liu2 mian3
 浚县:xun4 xian4
@@ -4398,6 +4343,7 @@
 为毛:wei4 mao2
 为着:wei4 zhe5
 为重:wei2 zhong4
+乌什:wu1 shi2
 乌涂:wu1 tu5
 烙铁:lao4 tie5
 烹调:peng1 tiao2
@@ -4445,7 +4391,6 @@
 爪蟾:zhua3 chan2
 父丧:fu4 sang1
 父子:fu4 zi3
-父系:fu4 xi4
 爸比:ba3 bi2
 爸爸:ba4 ba5
 爹地:die1 di4
@@ -4502,6 +4447,7 @@
 玩兴:wan2 xing4
 玩转:wan2 zhuan4
 珍重:zhen1 zhong4
+班什:ban1 shi2
 班长:ban1 zhang3
 球弹:qiu2 dan4
 球杆:qiu2 gan1
@@ -4619,7 +4565,6 @@
 直奔:zhi2 ben4
 直敪:zhi2 duo1
 直率:zhi2 shuai4
-直系:zhi2 xi4
 直发:zhi2 fa4
 相中:xiang1 zhong4
 相位:xiang4 wei4
@@ -4713,7 +4658,6 @@
 磨难:mo2 nan4
 矿难:kuang4 nan4
 社长:she4 zhang3
-祖系:zu3 xi4
 祝发:zhu4 fa4
 神父:shen2 fu5
 神甫:shen2 fu5
@@ -4733,7 +4677,6 @@
 私了:si1 liao3
 私房:si1 fang5
 科斗:ke1 dou3
-科系:ke1 xi4
 科长:ke1 zhang3
 秘鲁:bi4 lu3
 租地:zu1 di4
@@ -4748,7 +4691,6 @@
 种植:zhong4 zhi2
 种树:zhong4 shu4
 种田:zhong4 tian2
-种系:zhong3 xi4
 种花:zhong4 hua1
 种草:zhong4 cao3
 称呼:cheng1 hu5
@@ -4818,6 +4760,7 @@
 算计:suan4 ji5
 节子:jie1 zi5
 节气:jie2 qi5
+篇什:pian1 shi2
 篇幅:pian1 fu5
 簸箕:bo4 ji1
 笼槛:long2 jian4
@@ -4845,13 +4788,12 @@
 粮行:liang2 hang2
 粮食:liang2 shi5
 糨糊:jiang4 hu5
-系列:xi4 lie4
-系统:xi4 tong3
 纠葛:jiu1 ge2
 约塔:yao1 ta3
 约摸:yue1 mo5
 约莫:yue1 mo5
 红苕:hong2 shao2
+纳什:na4 shi2
 纳降:na4 xiang2
 级长:ji2 zhang3
 素净:su4 jing5
@@ -4894,7 +4836,6 @@
 绿地:lv4 di4
 绿林:lu4 lin2
 绸缪:chou2 mou2
-维系:wei2 xi4
 缘分:yuan2 fen4
 编曲:bian1 qu3
 绉褶:zhou4 zhe3
@@ -4918,8 +4859,7 @@
 绕地:rao4 di4
 绕腾:rao4 teng5
 系上:ji4 shang5
-系囚:xi4 qiu2
-系放:xi4 fang4
+系泊:ji4 bo2
 继子:ji4 zi3
 续假:xu4 jia4
 罐头:guan4 tou5
@@ -4970,7 +4910,6 @@
 耽误:dan1 wu5
 圣地:sheng4 di4
 圣子:sheng4 zi3
-联系:lian2 xi4
 聪明:cong1 ming5
 声乐:sheng1 yue4
 职分:zhi2 fen4
@@ -5131,7 +5070,6 @@
 菌盖:jun4 gai4
 菌褶:jun4 zhe3
 菜地:cai4 di4
-菜系:cai4 xi4
 华佗:hua4 tuo2
 华山:hua4 shan1
 华陀:hua4 tuo2
@@ -5414,7 +5352,6 @@
 认得:ren4 de5
 认识:ren4 shi5
 语塞:yu3 se4
-语系:yu3 xi4
 说中:shuo1 zhong4
 说客:shui4 ke4
 说法:shuo1 fa5
@@ -5484,7 +5421,6 @@
 谢谢:xie4 xie5
 识得:shi2 de5
 识相:shi2 xiang4
-谱系:pu3 xi4
 谱曲:pu3 qu3
 议长:yi4 zhang3
 护士:hu4 shi5
@@ -5644,9 +5580,9 @@
 这个:zhe4 ge5
 这末:zhe4 me5
 这麽:zhe4 me5
+通什:tong1 shi2
 逛逛:guang4 guang5
 造化:zao4 hua5
-连系:lian2 xi4
 连翘:lian2 qiao2
 连载:lian2 zai3
 连长:lian2 zhang3
@@ -5668,7 +5604,6 @@
 过重:guo4 zhong4
 道地:dao4 di4
 道理:dao4 li5
-道系:dao4 xi4
 道藏:dao4 zang4
 道行:dao4 heng2
 道观:dao4 guan4
@@ -5996,6 +5931,7 @@
 隐没:yin3 mo4
 雀子:qiao1 zi5
 雄长:xiong2 zhang3
+雅什:ya3 shi2
 雅乐:ya3 yue4
 雅片:ya1 pian4
 雅相:ya3 xiang4
@@ -6118,7 +6054,6 @@
 骨头:gu3 tou5
 脏弹:zang1 dan4
 体己:ti1 ji5
-体系:ti3 xi4
 体重:ti3 zhong4
 高中:gao1 zhong4
 高地:gao1 di4
