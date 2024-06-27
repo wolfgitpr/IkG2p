@@ -192,7 +192,7 @@ namespace IKg2p
             else
             {
                 bool found = false;
-                for (int length = 4; length >= 2; length--)
+                for (int length = 4; length >= 2 && !found; length--)
                 {
                     if (cursor + length <= inputList.size())
                     {
@@ -212,11 +212,6 @@ namespace IKg2p
                             }
                             cursor += length;
                             found = true;
-                        }
-
-                        if (found)
-                        {
-                            break;
                         }
 
                         if (cursor >= 1)
@@ -243,11 +238,6 @@ namespace IKg2p
                         }
                     }
 
-                    if (found)
-                    {
-                        break;
-                    }
-
                     if (cursor + 1 >= length && cursor + 1 <= inputList.size())
                     {
                         // cursor: 好, xSubPhrase: 各有所好
@@ -272,11 +262,6 @@ namespace IKg2p
                         }
                     }
 
-                    if (found)
-                    {
-                        break;
-                    }
-
                     if (cursor + 2 >= length && cursor + 2 <= inputList.size())
                     {
                         // cursor: 好, xSubPhrase: 叶公好龙
@@ -299,11 +284,6 @@ namespace IKg2p
                             cursor += 2;
                             found = true;
                         }
-                    }
-
-                    if (found)
-                    {
-                        break;
                     }
                 }
 
