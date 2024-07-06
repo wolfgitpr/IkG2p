@@ -24,7 +24,7 @@
 币:bai6
 盟:mang4
 资:zi1
-回:wui4 
+回:wui4
 旋:syun4
 转:zyun2 zyun3
 炮:paau3 paau4
@@ -79,7 +79,7 @@
 结:git3 jat6
 帐:zoeng3
 孙:syun1
-逸:jat6 
+逸:jat6
 仙:sin1
 囊:nong4
 揣:cyun2 ceoi2
@@ -210,7 +210,7 @@
 份:fan6 fan2
 檀:taan4
 香:hoeng1
-山:saan1 
+山:saan1
 月:jyut6 jyut2
 氏:si6
 人:jan4 mo1
@@ -280,7 +280,7 @@
 喀:haak3 kaa3 kaa1 haak1
 嚓:caat3
 咔:kaa1
-字:zi6  zi2
+字:zi6 zi2
 型:jing4 ciu1
 形:jing4
 渺:miu5
@@ -374,7 +374,7 @@
 识:sik1
 点:dim2
 下:haa6 haa5 haa2
-世:sai3 
+世:sai3
 丘:jau1
 之:zi1
 貉:hok6
@@ -386,10 +386,10 @@
 干:gon1 gon3
 净:zing6 zeng6
 百:baak3
-无:mou4 mou5  mou2
+无:mou4 mou5 mou2
 成:sing4
 八:baat3
-变:bin3 
+变:bin3
 五:ng5
 十:sap6
 些:se1
@@ -576,7 +576,7 @@
 厅:teng1
 办:baan6
 遮:ze1
-打:daa2 daa1 
+打:daa2 daa1
 技:gei6
 长:coeng4 zoeng2
 把:baa2
@@ -693,7 +693,7 @@
 有:jau5 jau6
 获:wok6 waai4
 闻:man4 man6
-是:si6 
+是:si6
 处:cyu3 cyu2
 片:pin2 pin3
 降:gong3 hong4
@@ -752,7 +752,7 @@
 纸:zi2
 级:kap1
 官:gun1
-棒:paang5 
+棒:paang5
 统:tung2
 丝:si1
 挂:gwaa3
@@ -794,7 +794,7 @@
 障:zoeng3
 满:mun5
 皆:gaai1
-输:syu1 
+输:syu1
 电:din6
 池:ci4
 衣:ji1
@@ -826,7 +826,7 @@
 平:ping4 peng4
 蹴:cuk1
 至:zi3
-几:gei2 gei1 
+几:gei2 gei1
 蹶:kyut3
 振:zan3
 跃:joek6 joek3
@@ -942,7 +942,7 @@
 痒:joeng5
 彩:coi2
 扭:nau2
-歪:waai1  me2
+歪:waai1 me2
 拼:ping3
 凑:cau3
 热:jit6
@@ -1039,7 +1039,7 @@
 框:kwaang1
 栏:laan4
 极:gik6
-权:kyun4 
+权:kyun4
 幂:mik6
 曲:kuk1
 依:ji1
@@ -1133,7 +1133,7 @@
 叩:kau3
 军:gwan1
 农:nung4
-题:tai4 
+题:tai4
 迭:dit6
 退:teoi3
 胜:sing3 sing1
@@ -1232,7 +1232,7 @@
 导:dou6
 缴:giu2
 膛:tong4
-船:syun4 
+船:syun4
 艾:ngaai6
 瑟:sat1
 尔:ji5
@@ -1489,7 +1489,7 @@
 插:caap3
 冒:mou6
 撞:zong6 cong4
-南:naam4 
+南:naam4
 墙:coeng4
 扩:kwong3 kong3 kwok3
 核:hat6 wat6
@@ -1557,11 +1557,11 @@
 莠:jau5
 稳:wan2
 佛:fat6 fat1
-换:wun6  bin3
+换:wun6 bin3
 答:daap3
 搭:daap3
 简:gaan2
-果:gwo2 
+果:gwo2
 绝:zyut6 zyut3
 缕:leoi5 lau5
 耳:ji5
@@ -3254,7 +3254,7 @@
 咚:dung1
 咛:ning4
 贺:ho6 ho4
-塑:sou3 sok3 
+塑:sou3 sok3
 寻:cam4
 恼:nou5
 憎:zang1

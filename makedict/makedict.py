@@ -25,9 +25,9 @@ class MakeMandarin(MakeDict):
                         self.phrase_pinyin_dict[char] = " ".join(values)
 
     def fill_unicode_pinyin(self):
-        for i in range(0x4E00, 0x9FFF + 1):
-            text = chr(i)
-            text = zhconv.convert(text, "zh-cn")
+        char_list = [chr(i) for i in range(0x4E00, 0x9FFF + 1)] + list(self.transdict.values())
+        for i in char_list:
+            text = zhconv.convert(i, "zh-cn")
             if self.default_pinyin.get(text) is None:
                 pinyin = pypinyin.pinyin(text, style=pypinyin.TONE3)[0][0]
                 if re.search(r"([^a-z\d])", pinyin) is None:
@@ -50,9 +50,9 @@ class MakeCantonese(MakeDict):
                         self.phrase_pinyin_dict[key] = " ".join(values)
 
     def fill_unicode_pinyin(self):
-        for i in range(0x4E00, 0x9FFF + 1):
-            text = chr(i)
-            text = zhconv.convert(text, "zh-cn")
+        char_list = [chr(i) for i in range(0x4E00, 0x9FFF + 1)] + list(self.transdict.values())
+        for i in char_list:
+            text = zhconv.convert(i, "zh-cn")
             if self.default_pinyin.get(text) is None:
                 pinyin = ToJyutping.get_jyutping(text)
                 if re.search(r"([^a-z\d])", pinyin) is None:
@@ -74,6 +74,11 @@ chinese_transdict = {}
 with open("fanjian.txt", "r", encoding="utf-8") as f:
     for line in f:
         k, v = line.strip('\n').split('	')
+        chinese_transdict[k] = v
+
+with open("fanjian2.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        k, v = line.strip('\n').split(',')
         chinese_transdict[k] = v
 
 if mandarin:

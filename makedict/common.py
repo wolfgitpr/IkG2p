@@ -142,8 +142,9 @@ class MakeDict:
 
         with open(f"{self.out_path}/word.txt", "w", encoding='utf-8') as f:
             for k, v in self.default_pinyin.items():
-                v_list = " ".join(v)
-                f.write(f"{k}:{v_list}\n")
+                if len(k) == 1:
+                    v_list = " ".join([item for item in v if item])
+                    f.write(f"{k}:{v_list}\n")
 
         with open(f"{self.out_path}/trans_word.txt", "w", encoding='utf-8') as f:
             for k, v in self.default_pinyin.items():
