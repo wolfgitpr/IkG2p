@@ -293,7 +293,7 @@ namespace IKg2p
                     G2pRes g2pRes;
                     g2pRes.lyric = current_char.cpp_str();
                     g2pRes.syllable = d_ptr->getDefaultPinyin(current_char, tone).at(0).cpp_str();
-                    g2pRes.candidates.push_back(g2pRes.syllable);
+                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(current_char, tone));
                     g2pRes.error = false;
                     result.push_back(g2pRes);
                     cursor++;
