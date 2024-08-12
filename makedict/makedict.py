@@ -46,7 +46,7 @@ class MakeCantonese(MakeDict):
                 if key and not re.search("[0-9A-Za-z·:，]", key):
                     if res.group(5):
                         pinyin = res.group(5).lower()
-                        values = [i for i in pinyin.split(" ")]
+                        values = [i.replace(":", "") for i in pinyin.split(" ")]
                         self.phrase_pinyin_dict[key] = " ".join(values)
 
     def fill_unicode_pinyin(self):
@@ -74,12 +74,14 @@ chinese_transdict = {}
 with open("fanjian.txt", "r", encoding="utf-8") as f:
     for line in f:
         k, v = line.strip('\n').split('	')
-        chinese_transdict[k] = v
+        if len(k) == 1:
+            chinese_transdict[k] = v
 
 with open("fanjian2.txt", "r", encoding="utf-8") as f:
     for line in f:
         k, v = line.strip('\n').split(',')
-        chinese_transdict[k] = v
+        if len(k) == 1:
+            chinese_transdict[k] = v
 
 if mandarin:
     MakeMandarin(out_path, overwrite_pinyin, extra_pinyin, chinese_transdict)
