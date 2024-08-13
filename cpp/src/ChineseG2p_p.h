@@ -35,22 +35,19 @@ namespace IKg2p
 
         inline u8string tradToSim(const u8string& text) const
         {
-            if (trans_dict.find(text) != trans_dict.end())
-                return trans_dict.find(text)->second;
-            return text;
+            const auto it = trans_dict.find(text);
+            return it != trans_dict.end() ? it->second : text;
         }
 
         inline u8stringlist getDefaultPinyin(const u8string& text, bool tone) const
         {
-            u8stringlist res = {text};
-            u8stringlist candidates;
-            const u8string simText = tradToSim(text);
-            if (word_dict.find(simText) != word_dict.end())
-                candidates = word_dict.find(simText)->second;
-            else
-                return res;
+            const auto it = word_dict.find(tradToSim(text));
+            if (it == word_dict.end())
+                return {text};
 
-            res.clear();
+            u8stringlist candidates = it->second;
+            u8stringlist res;
+            res.reserve(candidates.size());
 
             std::unordered_set<u8string> seen;
 
@@ -60,9 +57,8 @@ namespace IKg2p
                 {
                     item.pop_back();
                 }
-                if (seen.find(item) == seen.end())
+                if (seen.insert(item).second)
                 {
-                    seen.insert(item);
                     res.push_back(item);
                 }
             }

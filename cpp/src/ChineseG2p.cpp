@@ -2,12 +2,12 @@
 #include "G2pglobal.h"
 #include "ChineseG2p_p.h"
 
-#include <map>
+#include <unordered_map>
 #include <stdexcept>
 
 namespace IKg2p
 {
-    static const std::map<char32_t, u8string> numMap = {
+    static const std::unordered_map<char32_t, u8string> numMap = {
         {U'0', U"零"},
         {U'1', U"一"},
         {U'2', U"二"},
@@ -22,11 +22,6 @@ namespace IKg2p
 
     static u8string mid(const u8stringlist& inputList, size_t cursor, size_t length)
     {
-        if (cursor > inputList.size())
-        {
-            throw std::out_of_range("Cursor is out of range");
-        }
-
         const size_t end = std::min(cursor + length, inputList.size());
 
         u8string result;
@@ -43,16 +38,15 @@ namespace IKg2p
                                        const std::vector<int>& positions)
     {
         std::vector<G2pRes> result;
+        result.reserve(input.size());
         for (const auto& lyric : input)
         {
-            G2pRes g2pRes;
-            g2pRes.lyric = lyric.cpp_str();
-            result.push_back(g2pRes);
+            result.emplace_back(G2pRes{lyric.cpp_str()});
         }
 
         for (int i = 0; i < positions.size(); i++)
         {
-            result[positions[i]] = res.at(i);
+            result[positions[i]] = res[i];
         }
         return result;
     }
@@ -86,35 +80,37 @@ namespace IKg2p
     void ChineseG2pPrivate::zhPosition(const u8stringlist& input, u8stringlist& res, std::vector<int>& positions,
                                        const bool& convertNum)
     {
+        res.reserve(input.size());
+        positions.reserve(input.size());
         for (int i = 0; i < input.size(); ++i)
         {
-            const auto& item = input.at(i);
+            const auto& item = input[i];
             if (item.empty())
                 continue;
 
-            if (word_dict.find(item) != word_dict.end() || trans_dict.find(item) != trans_dict.end())
+            const auto simItem = trans_dict.find(item) != trans_dict.end() ? trans_dict[item] : item;
+
+            if (word_dict.find(simItem) != word_dict.end())
             {
-                res.push_back(tradToSim(item));
-                positions.push_back(i);
+                res.emplace_back(simItem);
+                positions.emplace_back(i);
                 continue;
             }
 
-            if (!convertNum)
+            if (convertNum)
             {
-                continue;
-            }
-
-            const auto it = numMap.find(input.at(i).front());
-            if (it != numMap.end())
-            {
-                res.push_back(it->second);
-                positions.push_back(i);
+                const auto it = numMap.find(input[i].front());
+                if (it != numMap.end())
+                {
+                    res.emplace_back(it->second);
+                    positions.emplace_back(i);
+                }
             }
         }
     }
 
     ChineseG2p::ChineseG2p(const std::string& language) : ChineseG2p(
-        *new ChineseG2pPrivate(std::move(language)))
+        *new ChineseG2pPrivate(language))
     {
     }
 
@@ -146,8 +142,9 @@ namespace IKg2p
     std::vector<std::string> ChineseG2p::resToStringList(const std::vector<G2pRes>& input)
     {
         std::vector<std::string> result;
+        result.reserve(input.size());
         for (const auto& res : input)
-            result.push_back(res.error ? res.lyric : res.syllable);
+            result.emplace_back(res.error ? res.lyric : res.syllable);
         return result;
     }
 
@@ -161,18 +158,17 @@ namespace IKg2p
         d_ptr->zhPosition(input, inputList, inputPos, convertNum);
 
         std::vector<G2pRes> result;
+        result.reserve(inputList.size());
         int cursor = 0;
         while (cursor < inputList.size())
         {
             // get char
-            const auto& current_char = inputList.at(cursor);
+            const auto& current_char = inputList[cursor];
 
             // not in dict
             if (d_ptr->word_dict.find(current_char) == d_ptr->word_dict.end())
             {
-                G2pRes g2pRes;
-                g2pRes.lyric = current_char.cpp_str();
-                result.push_back(g2pRes);
+                result.emplace_back(G2pRes{current_char.cpp_str()});
                 cursor++;
                 continue;
             }
@@ -181,12 +177,12 @@ namespace IKg2p
             if (!d_ptr->isPolyphonic(current_char))
             {
                 const auto pinyin = d_ptr->getDefaultPinyin(current_char, tone);
-                G2pRes g2pRes;
-                g2pRes.lyric = current_char.cpp_str();
-                g2pRes.syllable = pinyin.at(0).cpp_str();
-                g2pRes.candidates = toStdList(pinyin);
-                g2pRes.error = false;
-                result.push_back(g2pRes);
+                result.emplace_back(G2pRes{
+                    current_char.cpp_str(),
+                    pinyin[0].cpp_str(),
+                    toStdList(pinyin),
+                    false
+                });
                 cursor++;
             }
             else
@@ -203,12 +199,13 @@ namespace IKg2p
                             const auto subRes = d_ptr->phrases_dict[subPhrase];
                             for (int i = 0; i < subRes.size(); i++)
                             {
-                                G2pRes g2pRes;
-                                g2pRes.lyric = subPhrase.substr(i, 1).cpp_str();
-                                g2pRes.syllable = subRes[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
-                                g2pRes.error = false;
-                                result.push_back(g2pRes);
+                                const auto lyric = subPhrase.substr(i, 1).cpp_str();
+                                result.emplace_back(G2pRes{
+                                    lyric,
+                                    subRes[i].cpp_str(),
+                                    toStdList(d_ptr->getDefaultPinyin(lyric, tone)),
+                                    false
+                                });
                             }
                             cursor += length;
                             found = true;
@@ -225,12 +222,13 @@ namespace IKg2p
                                 const auto& subRes1 = it->second;
                                 for (int i = 0; i < subRes1.size(); i++)
                                 {
-                                    G2pRes g2pRes;
-                                    g2pRes.lyric = subPhrase1.substr(i, 1).cpp_str();
-                                    g2pRes.syllable = subRes1[i].cpp_str();
-                                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
-                                    g2pRes.error = false;
-                                    result.push_back(g2pRes);
+                                    const auto lyric = subPhrase1.substr(i, 1).cpp_str();
+                                    result.emplace_back(G2pRes{
+                                        lyric,
+                                        subRes1[i].cpp_str(),
+                                        toStdList(d_ptr->getDefaultPinyin(lyric, tone)),
+                                        false
+                                    });
                                 }
                                 cursor += length - 1;
                                 found = true;
@@ -250,12 +248,13 @@ namespace IKg2p
                             const auto& subResBack = it->second;
                             for (int i = 0; i < subResBack.size(); i++)
                             {
-                                G2pRes g2pRes;
-                                g2pRes.lyric = subPhraseBack.substr(i, 1).cpp_str();
-                                g2pRes.syllable = subResBack[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
-                                g2pRes.error = false;
-                                result.push_back(g2pRes);
+                                const auto lyric = subPhraseBack.substr(i, 1).cpp_str();
+                                result.emplace_back(G2pRes{
+                                    lyric,
+                                    subResBack[i].cpp_str(),
+                                    toStdList(d_ptr->getDefaultPinyin(lyric, tone)),
+                                    false
+                                });
                             }
                             cursor += 1;
                             found = true;
@@ -266,7 +265,7 @@ namespace IKg2p
                     {
                         // cursor: 好, xSubPhrase: 叶公好龙
                         const u8string subPhraseBack1 = mid(inputList, cursor + 2 - length, length);
-                        auto it = d_ptr->phrases_dict.find(subPhraseBack1);
+                        const auto it = d_ptr->phrases_dict.find(subPhraseBack1);
                         if (it != d_ptr->phrases_dict.end())
                         {
                             // overwrite pinyin
@@ -274,12 +273,13 @@ namespace IKg2p
                             const auto& subResBack1 = it->second;
                             for (int i = 0; i < subResBack1.size(); i++)
                             {
-                                G2pRes g2pRes;
-                                g2pRes.lyric = subPhraseBack1.substr(i, 1).cpp_str();
-                                g2pRes.syllable = subResBack1[i].cpp_str();
-                                g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(g2pRes.lyric, tone));
-                                g2pRes.error = false;
-                                result.push_back(g2pRes);
+                                const auto lyric = subPhraseBack1.substr(i, 1).cpp_str();
+                                result.emplace_back(G2pRes{
+                                    lyric,
+                                    subResBack1[i].cpp_str(),
+                                    toStdList(d_ptr->getDefaultPinyin(lyric, tone)),
+                                    false
+                                });
                             }
                             cursor += 2;
                             found = true;
@@ -290,12 +290,12 @@ namespace IKg2p
                 // not found, use default pinyin
                 if (!found)
                 {
-                    G2pRes g2pRes;
-                    g2pRes.lyric = current_char.cpp_str();
-                    g2pRes.syllable = d_ptr->getDefaultPinyin(current_char, tone).at(0).cpp_str();
-                    g2pRes.candidates = toStdList(d_ptr->getDefaultPinyin(current_char, tone));
-                    g2pRes.error = false;
-                    result.push_back(g2pRes);
+                    result.emplace_back(G2pRes{
+                        current_char.cpp_str(),
+                        d_ptr->getDefaultPinyin(current_char, tone)[0].cpp_str(),
+                        toStdList(d_ptr->getDefaultPinyin(current_char, tone)),
+                        false
+                    });
                     cursor++;
                 }
             }
@@ -339,6 +339,6 @@ namespace IKg2p
 
     std::vector<std::string> ChineseG2p::getDefaultPinyin(const std::string& text, bool tone) const
     {
-        return toStdList(d_ptr->getDefaultPinyin(text, tone));
+        return toStdList(d_ptr->getDefaultPinyin(d_ptr->tradToSim(text), tone));
     }
 }
