@@ -6,6 +6,8 @@ IkG2p is a lightweight Chinese/Cantonese to Pinyin library.
 
 Chinese dialects can be used to create their own dictionaries using makedict.
 
+[python_version](https://github.com/wolfgitpr/PyIKG2p)
+
 ## Feature
 
 + Only Unicode within the range of  [ 0x4E00 - 0x9FFF ]  is supported.
